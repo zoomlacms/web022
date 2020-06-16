@@ -1,0 +1,144 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}{ZL.Source id="竞标方案数据源标签地址栏"/}{ZL.Source id="方案项目模型数据源标签地址栏"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="方案项目模型数据源标签地址栏" FD="Title" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+</head>
+<body> 
+{ZL.Label id="设计院头部"/}
+
+<div class="mypeo_banner">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<!-- Indicators -->
+<ol class="carousel-indicators">
+<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+</ol>
+<!-- Wrapper for slides -->
+<div class="carousel-inner" role="listbox">
+<div class="item mypeo_banner1 active">
+<div class="carousel-caption">
+<a href="#">立即发表项目<span class="fa fa-play-circle-o"></span></a>
+</div>
+</div>
+<div class="item mypeo_banner2">
+<div class="carousel-caption">
+<a href="#">立即发表项目<span class="fa fa-play-circle-o"></span></a>
+</div>
+</div>
+<div class="item mypeo_banner3">
+<div class="carousel-caption">
+<a href="#">立即发表项目<span class="fa fa-play-circle-o"></span></a>
+</div>
+</div>
+</div>
+<!-- Controls -->
+<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+<div class="container" style="position:relative;">
+{ZL.Label id="获取当前登录信息"/}
+</div>
+</div><!--mypeo_banner end-->
+
+<div class="container evalu_new">
+<h3><span class="pull-left">项目名称：</span>{SField sid="方案项目模型数据源标签地址栏" FD="Title" page="0"/}
+<a href="#" class="pull-right"><span class="fa-stack fa-lg evalu_news"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-cny fa-stack-1x fa-inverse"></i></span>打赏激励</a></h3>
+<div class="evalu_new_d">
+<div class="row">
+<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12 evalu_newd"><i class="fa fa-cog fa-spin"></i></div>
+<div class="col-lg-8 col-md-9 col-sm-9 col-xs-12 evalu_newd_l">
+<p>设计师正在拼命赶图中</p>
+<p>是否还要催促他尽快完成设计</p>
+</div>
+</div>
+</div>
+<div class="checked_bott">
+<a href="/User/Message/MessageSend.aspx?userid={ZL.Label id="根据会员名抽取用户ID" Uname="{SField sid="竞标方案数据源标签地址栏" FD="Inputer" page="0"/}" /}&title={$GetUrlencode(幸苦了请按时完成)$}&content={$GetUrlencode(幸苦了请按时完成)$}" class="btn btn-default" target="_blank">幸苦了请按时完成</a>
+<a href="/User/Message/MessageSend.aspx?userid={ZL.Label id="根据会员名抽取用户ID" Uname="{SField sid="竞标方案数据源标签地址栏" FD="Inputer" page="0"/}" /}&title={$GetUrlencode(请加紧进度)$}&content={$GetUrlencode(请加紧进度)$}" class="btn btn-default" target="_blank">请加紧进度</a>
+<a class="btn btn-default" href="/User/Message/MessageSend.aspx?userid={ZL.Label id="根据会员名抽取用户ID" Uname="{SField sid="竞标方案数据源标签地址栏" FD="Inputer" page="0"/}" /}&title={$GetUrlencode(增加需求)$}&content={$GetUrlencode(增加需求)$}" target="_blank">增加需求</a>
+</div>
+</div>
+
+<div class="container ">
+<div class="checked_speed">
+<h3><span>项目进度</span></h3>
+<div class="checked_speed_d">
+<table class="table table-bordered">
+<tr>
+<th>进度名称</th>
+<th>日期</th>
+<th>状态</th>
+</tr>
+<tbody id="table_pay"></tbody>
+</table>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script>
+var IO=document.getElementById('design_nav'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+	".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+ if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//]]>
+//兼容wp8
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+var msViewportStyle = document.createElement("style");
+msViewportStyle.appendChild(
+document.createTextNode(
+  "@-ms-viewport{width:auto!important}"
+)
+);
+document.getElementsByTagName("head")[0].
+appendChild(msViewportStyle);
+}
+
+var paystr='{SField sid="方案项目模型数据源标签地址栏" FD="fkxq" page="0"/}';
+var paynum='{ZL.Label id="输出指定项目实际付款次数" /}';
+var xmjd=(parseInt(paynum)+1);
+if(paystr&&paystr!="")
+{
+	var paylist = JSON.parse(paystr);
+	var str="";
+	for(var i=1;i<paylist.length+1;i++)
+	{
+		if(i<=paynum)
+			str+="<tr><td>第"+i+"次付款</td><td>"+paylist[i-1].paymoney+"%</td><td><i class=\"glyphicon glyphicon-ok-circle\"></i>已付款</td></tr>";
+		else if(i==xmjd)
+			str+="<tr><td>第"+i+"次付款</td><td>"+paylist[i-1].paymoney+"%</td><td><i class=\"glyphicon glyphicon-adjust\"></i>进行中</td></tr>"
+		else
+			str+="<tr><td>第"+i+"次付款</td><td>"+paylist[i-1].paymoney+"%</td><td><i class=\"fa fa-clock-o\"></i>未付款</td></tr>"
+	}
+	$("#table_pay").html(str);
+	if(paystr>=(paynum+1))
+	{
+		$("#txt_fkje").val(paylist[paynum].paymoney)
+	}
+}
+</script>

@@ -1,0 +1,46 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <NodeID>106</NodeID>
+    <NodeName>网站地图</NodeName>
+    <NodeType>2</NodeType>
+    <NodeDir>WZDT</NodeDir>
+    <ParentID>105</ParentID>
+    <OrderID>11</OrderID>
+    <Child>0</Child>
+    <Depth>2</Depth>
+    <OpenType>false</OpenType>
+    <PurviewType>true</PurviewType>
+    <CommentType>1</CommentType>
+    <HitsOfHot>0</HitsOfHot>
+    <IndexTemplate>/栏目列表/网站地图.html</IndexTemplate>
+    <ListTemplateFile>栏目列表/网站地图.html</ListTemplateFile>
+    <ItemOpenType>false</ItemOpenType>
+    <ContentHtmlRule>0</ContentHtmlRule>
+    <ListPageHtmlEx>3</ListPageHtmlEx>
+    <ContentFileEx>0</ContentFileEx>
+    <HtmlPosition>1</HtmlPosition>
+    <NodeListType>0</NodeListType>
+    <ConsumePoint>0</ConsumePoint>
+    <ConsumeType>0</ConsumeType>
+    <ConsumeTime>0</ConsumeTime>
+    <ConsumeCount>0</ConsumeCount>
+    <Shares>0</Shares>
+    <Custom />
+    <SafeGuard>1</SafeGuard>
+    <ItemOpenTypeTrue>0</ItemOpenTypeTrue>
+    <OpenTypeTrue>0</OpenTypeTrue>
+    <NodeBySite>0</NodeBySite>
+    <Contribute>0</Contribute>
+    <SiteContentAudit>0</SiteContentAudit>
+    <AddPoint>0</AddPoint>
+    <AddMoney>0.0000</AddMoney>
+    <ClickTimeout>0</ClickTimeout>
+    <AddUserExp>0</AddUserExp>
+    <DeducUserExp>0</DeducUserExp>
+    <ListPageEx>0</ListPageEx>
+    <LastinfoPageEx>0</LastinfoPageEx>
+    <HotinfoPageEx>0</HotinfoPageEx>
+    <ProposePageEx>0</ProposePageEx>
+  </Table>
+</NewDataSet>

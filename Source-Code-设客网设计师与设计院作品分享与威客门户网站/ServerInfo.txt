@@ -1,0 +1,4 @@
+name=value
+siteurl=http://192.168.1.24/manage/
+sitename=ÖğÀËÈí¼ş
+sitelogo=http://192.168.1.24/images/logo.gif

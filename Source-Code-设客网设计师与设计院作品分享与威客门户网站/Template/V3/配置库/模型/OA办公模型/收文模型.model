@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>35</ModelID>
+    <ModelName>收文模型</ModelName>
+    <Description />
+    <TableName>ZL_OAC_swmx</TableName>
+    <ItemName>文章</ItemName>
+    <ItemUnit>篇</ItemUnit>
+    <ItemIcon>Default.gif</ItemIcon>
+    <ModelType>12</ModelType>
+    <ContentModule>内容页/默认收文模型内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>false</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail>0</Thumbnail>
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

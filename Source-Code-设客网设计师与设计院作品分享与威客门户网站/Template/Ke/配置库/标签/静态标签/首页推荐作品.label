@@ -1,0 +1,75 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>951</LabelID>
+    <LabelName>首页推荐作品</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div class="slide"&gt;
+&lt;ul class="list-unstyled"&gt;
+&lt;li class="col-xs-4 padding10"&gt;
+&lt;a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank"&gt;&lt;img src="/UploadFiles/zptk/jpg/2015/10/201510161921317075.jpg" class="center-block img-responsive" alt="家庭儿童房设计装饰大全"&gt;&lt;/a&gt;
+&lt;span&gt;&lt;a href="{ZL:GetNodeLinkUrl(2)/}" title="家庭儿童房设计装饰大全" target="_blank"&gt;家庭儿童房设计装饰大全&lt;/a&gt;&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="col-xs-4 padding10"&gt;
+&lt;a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank"&gt;&lt;img src="/UploadFiles/zptk/jpg/2015/10/201510161920529975.jpg" class="center-block img-responsive" alt="休闲创意小阳台装潢"&gt;&lt;/a&gt;
+&lt;span&gt;&lt;a href="{ZL:GetNodeLinkUrl(2)/}" title="休闲创意小阳台装潢" target="_blank"&gt;休闲创意小阳台装潢&lt;/a&gt;&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="col-xs-4 padding10"&gt;
+&lt;a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank"&gt;&lt;img src="/UploadFiles/zptk/jpg/2015/10/201510161920015465.jpg" class="center-block img-responsive" alt="中式家居大阳台装潢"&gt;&lt;/a&gt;
+&lt;span&gt;&lt;a href="{ZL:GetNodeLinkUrl(2)/}" title="中式家居大阳台装潢" target="_blank"&gt;中式家居大阳台装潢&lt;/a&gt;&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="slide"&gt;
+&lt;ul class="list-unstyled"&gt;
+&lt;li class="col-xs-4 padding10"&gt;
+&lt;a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank"&gt;&lt;img src="/UploadFiles/zptk/jpg/2015/10/201510161919116632.jpg" class="center-block img-responsive" alt="15平米儿童房装潢效果图"&gt;&lt;/a&gt;
+&lt;span&gt;&lt;a href="{ZL:GetNodeLinkUrl(2)/}" title="15平米儿童房装潢效果图" target="_blank"&gt;15平米儿童房装潢效果图&lt;/a&gt;&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="col-xs-4 padding10"&gt;
+&lt;a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank"&gt;&lt;img src="/UploadFiles/zptk/jpg/2015/10/201510161918183564.jpg" class="center-block img-responsive" alt="5平米休闲阳台设计"&gt;&lt;/a&gt;
+&lt;span&gt;&lt;a href="{ZL:GetNodeLinkUrl(2)/}" title="5平米休闲阳台设计" target="_blank"&gt;5平米休闲阳台设计&lt;/a&gt;&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="col-xs-4 padding10"&gt;
+&lt;a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank"&gt;&lt;img src="/UploadFiles/zptk/jpg/2015/10/201510161917005091.jpg" class="center-block img-responsive" alt="阳台书房改造设计"&gt;&lt;/a&gt;
+&lt;span&gt;&lt;a href="{ZL:GetNodeLinkUrl(2)/}" title="阳台书房改造设计" target="_blank"&gt;阳台书房改造设计&lt;/a&gt;&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="slide"&gt;
+&lt;ul class="list-unstyled"&gt;
+&lt;li class="col-xs-4 padding10"&gt;
+&lt;a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank"&gt;&lt;img src="/UploadFiles/zptk/jpg/2015/10/201510161916221164.jpg" class="center-block img-responsive" alt="实木吊柜阳台装潢"&gt;&lt;/a&gt;
+&lt;span&gt;&lt;a href="{ZL:GetNodeLinkUrl(2)/}" title="实木吊柜阳台装潢" target="_blank"&gt;实木吊柜阳台装潢&lt;/a&gt;&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="col-xs-4 padding10"&gt;
+&lt;a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank"&gt;&lt;img src="/UploadFiles/zptk/jpg/2015/10/201510161915330309.jpg" class="center-block img-responsive" alt="阳台装饰效果图"&gt;&lt;/a&gt;
+&lt;span&gt;&lt;a href="{ZL:GetNodeLinkUrl(2)/}" title="阳台装饰效果图" target="_blank"&gt;阳台装饰效果图&lt;/a&gt;&lt;/span&gt;
+&lt;/li&gt;
+&lt;li class="col-xs-4 padding10"&gt;
+&lt;a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank"&gt;&lt;img src="/UploadFiles/zptk/jpg/2015/10/201510161914052860.jpg" class="center-block img-responsive" alt="简约时尚家装吧台设计效果图"&gt;&lt;/a&gt;
+&lt;span&gt;&lt;a href="{ZL:GetNodeLinkUrl(2)/}" title="简约时尚家装吧台设计效果图" target="_blank"&gt;简约时尚家装吧台设计效果图&lt;/a&gt;&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;  </LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+  </Table>
+</NewDataSet>

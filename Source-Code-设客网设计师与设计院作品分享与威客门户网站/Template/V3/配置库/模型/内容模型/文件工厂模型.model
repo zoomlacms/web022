@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>25</ModelID>
+    <ModelName>文件工厂模型</ModelName>
+    <Description>用字段信息配合Word模板，生成新的Word文档.</Description>
+    <TableName>ZL_C_Factory</TableName>
+    <ItemName>文件工厂</ItemName>
+    <ItemUnit>份</ItemUnit>
+    <ItemIcon>glyphicon glyphicon-camera</ItemIcon>
+    <ModelType>1</ModelType>
+    <ContentModule>/内容页/默认文件工厂模型内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>false</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail>1</Thumbnail>
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

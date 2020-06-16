@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>18</ModelID>
+    <ModelName>问券在线调查的模型</ModelName>
+    <Description />
+    <TableName>ZL_Pub_ZXDC</TableName>
+    <ItemName>问券</ItemName>
+    <ItemUnit>条</ItemUnit>
+    <ItemIcon>Cosmetic.gif</ItemIcon>
+    <ModelType>7</ModelType>
+    <ContentModule>/互动模板/默认问券在线调查模板.html</ContentModule>
+    <MultiFlag>false</MultiFlag>
+    <IsNull>false</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>0</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail />
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

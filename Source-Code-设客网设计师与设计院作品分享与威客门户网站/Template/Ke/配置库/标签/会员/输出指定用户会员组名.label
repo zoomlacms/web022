@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>877</LabelID>
+    <LabelName>输出指定用户会员组名</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>会员</LabelCate>
+    <LabelDesc />
+    <LabelParam>UserID,,1,会员ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Group</LabelTable>
+    <LabelField>GroupName</LabelField>
+    <LabelWhere>GroupID=(select GroupID from ZL_User where UserID='@UserID')</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="GroupName"/}</LabelContent>
+    <LabelCount>10</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

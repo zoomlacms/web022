@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>54</ModelID>
+    <ModelName>施工服务项目</ModelName>
+    <Description />
+    <TableName>ZL_C_sgfwxm</TableName>
+    <ItemName>施工服务项目</ItemName>
+    <ItemUnit>个</ItemUnit>
+    <ItemIcon>fa fa-server</ItemIcon>
+    <ModelType>1</ModelType>
+    <ContentModule>内容页/默认施工服务项目内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>true</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail>0</Thumbnail>
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

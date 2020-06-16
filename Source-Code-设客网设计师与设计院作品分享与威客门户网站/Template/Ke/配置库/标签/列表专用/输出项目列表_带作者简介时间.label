@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>843</LabelID>
+    <LabelName>输出项目列表_带作者简介时间</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>列表专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,0,1,节点ID|ShowNum,6,1,显示个数|TitleNum,30,1,标题长度|ClassName,,1,标签名|SynNum,200,1,简介长度</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_zpmx on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_zpmx.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.CreateTime,{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_CommonModel.Inputer,{table1}.dbo.ZL_CommonModel.Title,{table1}.dbo.ZL_C_zpmx.content</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID) and Status=99</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li class="@ClassName"&gt;
+&lt;div class="media"&gt;
+&lt;div class="media-left media-top"&gt;&lt;a href="{ZL:GetNodeLinkUrl(13)/}"&gt;&lt;img class="media-object" src="{ZL.Label id="根据会员名抽取用户头像" Uname="{Field="Inputer"/}" /}" alt="{Field="Inputer"/}"&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class="media-body"&gt;
+&lt;h4 class="media-heading"&gt;&lt;a href="{ZL:GetNodeLinkUrl(13)/}"&gt;{ZL:CutText({Field="Title"/},@TitleNum,)/}&lt;/a&gt;&lt;span class="pull-right"&gt;{ZL:FormatDate({Field="CreateTime"/},yyyy-MM-dd)/}&lt;/span&gt;&lt;/h4&gt;
+&lt;div class="media_syn"&gt;{ZL:RemoveHtmlTag({Field="content"/},1,@SynNum)/}&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="design_find_b"&gt;&lt;a href="{ZL:GetNodeLinkUrl(13)/}"&gt;来源：{Field="Inputer"/}&lt;/a&gt;&lt;/div&gt;
+&lt;/li&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

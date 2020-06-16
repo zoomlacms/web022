@@ -1,0 +1,199 @@
+﻿{ZL.Source id="方案项目模型数据源标签"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{SField sid="方案项目模型数据源标签" FD="Title" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="方案项目模型数据源标签" FD="Tagkey" page="0"/}">
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script type="text/javascript" src="/JS/DatePicker/WdatePicker.js"></script>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+
+<div class="item_banner"></div>
+<div class="container item_con">
+<div class="item_con_t">
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">项目详情</a></li>
+</ul>
+<a href="{ZL:GetInfoUrl({SField sid="方案项目模型数据源标签" FD="GeneralID" page="0"/})/}?type=1" class="btn btn-success"><i class="fa fa-building-o"></i> 我要应标</a>
+<div class="clearfix"></div>
+</div>
+<div class="item_con_tc">
+<div class="row padding10">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 padding5">
+<div class="item_con_tcl">
+<div class="item_con_tclt">
+<h1>{SField sid="方案项目模型数据源标签" FD="Title" page="0"/}</h1>
+<a href="{ZL:GetInfoUrl({SField sid="方案项目模型数据源标签" FD="GeneralID" page="0"/})/}?type=1" class="btn btn-success pull-right">我要应标</a>
+<span class="pull-right">已有{ZL.Label id="获取指定项目应标人数" GID="{SField sid="方案项目模型数据源标签" FD="GeneralID" page="0"/}" /}人应标</span>
+<div class="clearfix"></div>
+</div>
+<div class="item_con_tcld">
+<ul class="list-unstyled">
+<li>项目地点：<span>{SField sid="方案项目模型数据源标签" FD="xmdd" page="0"/}</span></li>
+<li>项目类型：<span>{SField sid="方案项目模型数据源标签" FD="xmlx" page="0"/}</span></li>
+<li>设计风格：<span>{SField sid="方案项目模型数据源标签" FD="sjfg" page="0"/}</span></li>
+<li>项目规模：<span>{SField sid="方案项目模型数据源标签" FD="xmgm" page="0"/}</span></li>
+<li>项目规模：<span>{SField sid="方案项目模型数据源标签" FD="xmgm" page="0"/}</span></li>
+<li>完成时间：<span>{ZL:FormatDate({SField sid="方案项目模型数据源标签" FD="wcsj" page="0"/},yyyy年MM月dd日)/}</span></li>
+<li>设计费用：<span>{SField sid="方案项目模型数据源标签" FD="sjfy" page="0"/}</span><span>{SField sid="方案项目模型数据源标签" FD="jffs" page="0"/}</span></li>
+<li>方案项目内容要求：<span>{SField sid="方案项目模型数据源标签" FD="faxmnryq" page="0"/}</span></li>
+<li style="width:100%;">方案项目内容要求详细：{SField sid="方案项目模型数据源标签" FD="faxmnryqxx" page="0"/}</li>
+<li style="width:100%;">其他设计要求：{SField sid="方案项目模型数据源标签" FD="qtyq" page="0"/}</li>
+<li style="width:100%;">资料上传：{SField sid="方案项目模型数据源标签" FD="zlsz" page="0"/}</li>
+<li>经验要求：<span>{SField sid="方案项目模型数据源标签" FD="jyyq" page="0"/}年以上</span></li>
+<li>职称要求：<span>{SField sid="方案项目模型数据源标签" FD="zcyq" page="0"/}以上</span></li>
+<li>设计人员所在地：<span>{SField sid="方案项目模型数据源标签" FD="sjryszd" page="0"/}</span></li>
+<li>设计师性别：<span>{SField sid="方案项目模型数据源标签" FD="sjsxb" page="0"/}</span></li>
+<li style="width:100%;">设计师其他要求：{SField sid="方案项目模型数据源标签" FD="sjsqtyq" page="0"/}</li>
+<li>对设计师的选择倾向：<span>{SField sid="方案项目模型数据源标签" FD="xmxzqx" page="0"/}</span></li>
+<li>是否需要设计师缴纳保证金：<span>{SField sid="方案项目模型数据源标签" FD="xybzj" page="0"/}</span></li>
+<li>保证金金额：<span>{SField sid="方案项目模型数据源标签" FD="bzjje" page="0"/}</span></li>
+<li>中标人数：<span>{SField sid="方案项目模型数据源标签" FD="zbrs" page="0"/}</span></li>
+<li>付款次数：<span>{SField sid="方案项目模型数据源标签" FD="fkcs" page="0"/}</span></li>
+<li style="width:100%;">
+<table class="table table-bordered">
+<tr>
+<th>分次付款</th>
+<th>付款比例</th>
+<th>需设计师提供内容</th>
+<th>完成时间</th>
+</tr>
+<tbody id="table_pay"></tbody>
+</table>
+</li>
+<li>修改次数：<span>{SField sid="方案项目模型数据源标签" FD="xgcs" page="0"/}</span></li>
+<li>修改面积：<span>{SField sid="方案项目模型数据源标签" FD="xgmj" page="0"/}</span></li>
+<li>自定修改付费：<span>{SField sid="方案项目模型数据源标签" FD="zdxgff" page="0"/}</span></li>
+<div class="clearfix"></div>
+</ul>
+</div>
+<div class="item_con_tclc">                                  
+<p>{ZL:FormatDate({SField sid="方案项目模型数据源标签" FD="UpdateTime" page="0"/},yyyy年MM月dd日)/}更新</p>
+</div>
+
+<div class="item_con_tcly">
+<div class="item_con_tclyt"><a href="{ZL:GetInfoUrl({SField sid="方案项目模型数据源标签" FD="GeneralID" page="0"/})/}?type=1" class="btn btn-success pull-right">我要应标</a><div class="clearfix"></div></div>
+<div class="item_con_tclyc">
+<h3>竞标方案</h3>
+<iframe src="/User/Content/AddMarked.aspx?ModelID=49&NodeID=37&GID={SField sid="方案项目模型数据源标签" FD="GeneralID" page="0"/}" frameborder="0" scrolling="no" width="100%" onload="this.height = $(this).contents().height() + 'px';"></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 padding5">
+<div class="item_con_tcr">
+<div class="item_con_tcrt">
+<h3>公司信息</h3>
+<div class="media">
+<div class="media-left">
+<a href="#"><img class="media-object" src="{$CssDir/}images/bar2.jpg" alt="..."></a>
+</div>
+<div class="media-body">
+<h4 class="media-heading">该公司信息已保护！</h4>
+<span class="btn btn-info btn-sm">已认证</span>
+</div>
+<p>设客网严格保障每一个发标单位和应标设计师 关于匿名保护政策<a href="#">点此了解></a></p>
+</div>
+</div>
+<div class="item_con_tcrb">
+
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+<!-- Tab panes -->
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="home">
+
+</div>
+<div role="tabpanel" class="tab-pane" id="profile">...</div>
+<div role="tabpanel" class="tab-pane" id="messages">...</div>
+<div role="tabpanel" class="tab-pane" id="settings">...</div>
+</div>
+</div>
+
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script>
+var IO=document.getElementById('design_nav'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+	".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+ if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//]]>
+//兼容wp8
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+var msViewportStyle = document.createElement("style");
+msViewportStyle.appendChild(
+document.createTextNode(
+  "@-ms-viewport{width:auto!important}"
+)
+);
+document.getElementsByTagName("head")[0].
+appendChild(msViewportStyle);
+}
+$().ready(function(e) {
+    var type="{$GetRequest(type)$}";
+	if(type!="1")
+	{
+		$(".item_con_tcly").remove();
+	}
+});
+function GoUser()
+{
+	window.location.href="/User/Default1.aspx";
+}
+var groupid='{ZL.Label id="抽取当前会员的会员组" /}';
+if(groupid=="1")
+{
+	$(".item_con_tcly").remove();
+	$(".item_con_t .btn").remove();
+	$(".item_con_tclt .btn").remove();
+}
+$().ready(function(e) {
+	var paystr='{SField sid="方案项目模型数据源标签" FD="fkxq" page="0"/}'
+    if(paystr!=""&&paystr)
+	{
+		var daylist = JSON.parse(ReplaceSeperator(paystr));
+		var str="";
+		for(var i=0;i<daylist.length;i++)
+		{
+			var detial=daylist[i].paydetial;
+			detial=detial.replace(/<br>/g, "\n");
+			str+="<tr><td><strong>第"+(i+1)+"次付款</strong></td><td>"+daylist[i].paymoney+"</td><td>"+detial+"</td><td>"+daylist[i].paytime+"</td></tr>";
+		}
+		$("#table_pay").html(str);
+	}
+});
+function ReplaceSeperator(mobiles) {
+	var i;
+	var result = "";
+	var c;
+	for (i = 0; i < mobiles.length; i++) {
+		c = mobiles.substr(i, 1);
+		if (c == "\n")
+			result = result + "<br>";
+		else
+			result = result + c;
+	}
+	return result;
+}
+</script>

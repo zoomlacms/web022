@@ -1,0 +1,48 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>935</LabelID>
+    <LabelName>会员中心输出推荐项目列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>项目</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,1,1,节点ID|ShowNum,30,1,显示数|TitleNum,30,1,标题长|SysNum,100,1,简介数</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel</LabelTable>
+    <LabelField>CreateTime,GeneralID,Inputer,Title,NodeID</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID) And (GeneralID in (select GeneralID from ZL_CommonModel left join ZL_C_faxmmx on ItemID=ID where jyyq&lt;=(select top 1 gzjy from ZL_CommonModel left join ZL_C_Designer on ItemID=ID where ModelID=48 And inputer='{ZL:GetuserName()/}' And Status=99) And ModelID=50 And sjsxb=(select top 1 sex from ZL_CommonModel left join ZL_C_Designer on ItemID=ID where ModelID=48 And inputer='{ZL:GetuserName()/}' And Status=99) And Status=99) or GeneralID in (select GeneralID from ZL_CommonModel left join ZL_C_sgtxmmx on ItemID=ID where jyyq&lt;=(select top 1 gzjy from ZL_CommonModel left join ZL_C_Designer on ItemID=ID where ModelID=48 And inputer='{ZL:GetuserName()/}' And Status=99) And ModelID=51 And sjsxb=(select top 1 sex from ZL_CommonModel left join ZL_C_Designer on ItemID=ID where ModelID=48 And inputer='{ZL:GetuserName()/}' And Status=99) And Status=99) or GeneralID in (select GeneralID from ZL_CommonModel left join ZL_C_sgfwxm on ItemID=ID where jyyq&lt;=(select top 1 gzjy from ZL_CommonModel left join ZL_C_Designer on ItemID=ID where ModelID=48 And inputer='{ZL:GetuserName()/}' And Status=99) And ModelID=54 And sjsxb=(select top 1 sex from ZL_CommonModel left join ZL_C_Designer on ItemID=ID where ModelID=48 And inputer='{ZL:GetuserName()/}' And Status=99) And Status=99))</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li&gt;
+&lt;div class="media"&gt;
+&lt;div class="media-left media-middle"&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" title="{Field="Title"/}"&gt;&lt;img src="{ZL.Label id="根据会员名抽取用户头像" Uname="{Field="Inputer"/}" /}" onerror="javascript:this.src='/UploadFiles/nopic.gif';" alt="{Field="Title"/}" /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class="media-body"&gt;
+&lt;h4 class="media-heading"&gt;{ZL:CutText({Field="Title"/},@TitleNum,)/}&lt;span class="tuoguan{ZL.Label id="输出项目托管状态" GID="{Field="GeneralID"/}" /}"&gt;项目已托管&lt;/span&gt;&lt;/h4&gt;
+&lt;div class="mypro_item_t"&gt;&lt;span&gt;{ZL:FormatDate({Field="CreateTime"/},yyyy-MM-dd HH:mm:ss)/}&lt;/span&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" class="btn btn-default btn-sm"&gt;立即应标&lt;/a&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" class="btn btn-default btn-sm"&gt;查看详情&lt;/a&gt;&lt;/div&gt;
+&lt;div class="mypro_item_p"&gt;
+阶段：&lt;span&gt;{ZL.Label id="输出指定ID节点名" NodeID="{Field="NodeID"/}" /}&lt;/span&gt;
+地点：&lt;span&gt;{ZL.Label id="获取指定项目地点" GeneralID="{Field="GeneralID"/}" /}&lt;/span&gt;
+类型：&lt;span&gt;{ZL.Label id="获取指定项目类型" GeneralID="{Field="GeneralID"/}" /}&lt;/span&gt;
+风格：&lt;span&gt;{ZL.Label id="获取指定项目风格" GeneralID="{Field="GeneralID"/}" /}&lt;/span&gt;
+规模：&lt;span&gt;{ZL.Label id="获取指定项目规模" GeneralID="{Field="GeneralID"/}" /}&lt;/span&gt;
+费用：&lt;span&gt;{ZL.Label id="获取指定项目费用" GeneralID="{Field="GeneralID"/}" /}&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="mypro_item_f"&gt;发包方&lt;a href="#"&gt;{Field="Inputer"/}&lt;/a&gt;邀请您承接项目，立刻参与竞标吧。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

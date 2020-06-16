@@ -1,0 +1,48 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>990</LabelID>
+    <LabelName>输出指定节点的作品关注度降序列表_分页</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>列表专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,2,1,节点ID|TitleNum,50,1,标题长度|ShowNum,6,1,显示个数|ClassName,0,1,标签名|Type,,1,作品分类|Style,,1,作品风格|Title,,1,作品名</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_zpmx on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_zpmx.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_CommonModel.Hits,{table1}.dbo.ZL_CommonModel.Inputer,{table1}.dbo.ZL_CommonModel.Title,{table1}.dbo.ZL_C_zpmx.image</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID) and Status=99  And style like '%@Style%' And Title like '%@Title%'</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_CommonModel.Hits DESC</LabelOrder>
+    <LabelContent>&lt;div class="photos_all"&gt;
+&lt;div style="margin-left:-10px; margin-right:-10px;"&gt;
+&lt;ul class="list-unstyled"&gt;
+&lt;li&gt;{ZL.Label id="图库热门标签"/}&lt;/li&gt;
+{Repeate}
+&lt;li&gt;
+&lt;div class="photos_li"&gt;
+&lt;div class="photo_info"&gt;
+&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" title="{Field="Title"/}"&gt;&lt;img src="{ZL:GetPicUrl({Field="image"/})/}" class="center-block img-responsive" alt="{Field="Title"/}" /&gt;&lt;/a&gt;
+&lt;h3&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" title="{Field="Title"/}"&gt;{ZL:CutText({Field="Title"/},@TitleNum,)/}&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class="photo_fav"&gt;&lt;span&gt;&lt;i class="fa  fa-thumbs-o-up"&gt;&lt;/i&gt;45&lt;/span&gt;&lt;span&gt;&lt;i class="fa  fa-heart-o"&gt;&lt;/i&gt;246&lt;/span&gt;&lt;span&gt;&lt;i class="fa fa-comment-o"&gt;&lt;/i&gt;199&lt;/span&gt;&lt;/div&gt;
+&lt;div class="photo_author"&gt;&lt;img src="{ZL.Label id="根据会员名抽取用户头像" Uname="{Field="Inputer"/}" /}" alt="{Field="Inputer"/}" onerror="javascript:this.src='/Images/userface/noface.gif';" /&gt;{ZL.Label id="获取指定设计师显示名称" UserName="{Field="Inputer"/}" /}&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;{/Repeate}
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;
+{ZL.Page id="大图标响应式列表分页v3"/}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

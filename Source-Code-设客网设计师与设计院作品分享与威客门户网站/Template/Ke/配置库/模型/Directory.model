@@ -1,0 +1,483 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <ModelID>43</ModelID>
+    <ModelName>会议模型</ModelName>
+    <Description />
+    <TableName>ZL_OAC_kymx</TableName>
+    <ItemIcon>glyphicon glyphicon-compressed</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>文章</ItemName>
+    <ModelType>OA办公模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/OA办公模型/会议模型.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>41</ModelID>
+    <ModelName>发文模型</ModelName>
+    <Description />
+    <TableName>ZL_OAC_fwmx</TableName>
+    <ItemIcon>glyphicon glyphicon-briefcase</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>文章</ItemName>
+    <ModelType>OA办公模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/OA办公模型/发文模型.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>40</ModelID>
+    <ModelName>收文模型</ModelName>
+    <Description />
+    <TableName>ZL_OAC_swmx</TableName>
+    <ItemIcon>glyphicon glyphicon-briefcase</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>文章</ItemName>
+    <ModelType>OA办公模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/OA办公模型/收文模型.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>42</ModelID>
+    <ModelName>请假模型</ModelName>
+    <Description />
+    <TableName>ZL_OAC_qjmx</TableName>
+    <ItemIcon>glyphicon glyphicon-bookmark</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>文章</ItemName>
+    <ModelType>OA办公模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/OA办公模型/请假模型.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>21</ModelID>
+    <ModelName>留言提问的模型</ModelName>
+    <Description />
+    <TableName>ZL_Pub_TW</TableName>
+    <ItemIcon>glyphicon glyphicon-align-center</ItemIcon>
+    <SysModel>0</SysModel>
+    <ItemName>留言</ItemName>
+    <ModelType>互动模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/互动模型/留言提问的模型.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>17</ModelID>
+    <ModelName>留言文章投票的模型</ModelName>
+    <Description />
+    <TableName>ZL_Pub_WZTP</TableName>
+    <ItemIcon>glyphicon glyphicon-align-center</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>留言</ItemName>
+    <ModelType>互动模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/互动模型/留言文章投票的模型.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>46</ModelID>
+    <ModelName>竞标项目应标的模型</ModelName>
+    <Description />
+    <TableName>ZL_Pub_xmyb</TableName>
+    <ItemIcon>Article.gif</ItemIcon>
+    <SysModel>0</SysModel>
+    <ItemName>竞标</ItemName>
+    <ModelType>互动模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/互动模型/竞标项目应标的模型.model</FileUrl>
+    <CreateTime>2015/10/14 15:40:07</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>23</ModelID>
+    <ModelName>评论最佳答案的模型</ModelName>
+    <Description />
+    <TableName>ZL_Pub_ZJDA</TableName>
+    <ItemIcon>glyphicon glyphicon-align-center</ItemIcon>
+    <SysModel>0</SysModel>
+    <ItemName>评论</ItemName>
+    <ModelType>互动模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/互动模型/评论最佳答案的模型.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>22</ModelID>
+    <ModelName>评论问题回答的模型</ModelName>
+    <Description />
+    <TableName>ZL_Pub_WTHD</TableName>
+    <ItemIcon>glyphicon glyphicon-align-center</ItemIcon>
+    <SysModel>0</SysModel>
+    <ItemName>评论</ItemName>
+    <ModelType>互动模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/互动模型/评论问题回答的模型.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>55</ModelID>
+    <ModelName>评论项目付款申请的模型</ModelName>
+    <Description />
+    <TableName>ZL_Pub_xmfksq</TableName>
+    <ItemIcon>GuestBook.gif</ItemIcon>
+    <SysModel>0</SysModel>
+    <ItemName>评论</ItemName>
+    <ModelType>互动模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/互动模型/评论项目付款申请的模型.model</FileUrl>
+    <CreateTime>2015/10/21 11:17:37</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>18</ModelID>
+    <ModelName>问券在线调查的模型</ModelName>
+    <Description />
+    <TableName>ZL_Pub_ZXDC</TableName>
+    <ItemIcon>glyphicon glyphicon-file</ItemIcon>
+    <SysModel>0</SysModel>
+    <ItemName>问券</ItemName>
+    <ModelType>互动模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/互动模型/问券在线调查的模型.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>4</ModelID>
+    <ModelName>下载模型</ModelName>
+    <Description>基于文件发布与资源共享的功能，并可进行下载收费等二次开发。</Description>
+    <TableName>ZL_C_soft</TableName>
+    <ItemIcon>glyphicon glyphicon-save</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>软件</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/下载模型.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>56</ModelID>
+    <ModelName>付款模型</ModelName>
+    <Description />
+    <TableName>ZL_C_fkmx</TableName>
+    <ItemIcon>fa fa-money</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>付款</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/付款模型.model</FileUrl>
+    <CreateTime>2015/10/21 11:30:01</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>44</ModelID>
+    <ModelName>作品图库</ModelName>
+    <Description />
+    <TableName>ZL_C_zpmx</TableName>
+    <ItemIcon>glyphicon glyphicon-edit</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>作品</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/作品图库.model</FileUrl>
+    <CreateTime>2015/10/17 10:56:24</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>19</ModelID>
+    <ModelName>信息模型</ModelName>
+    <Description />
+    <TableName>ZL_C_Info</TableName>
+    <ItemIcon>fa  fa-file-text-o</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>信息</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/信息模型.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>1</ModelID>
+    <ModelName>公告</ModelName>
+    <Description>发布简明信息</Description>
+    <TableName>ZL_C_Announce</TableName>
+    <ItemIcon>glyphicon glyphicon-list-alt</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>公告</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/公告.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>8</ModelID>
+    <ModelName>友情链接</ModelName>
+    <Description>通过与网民交换友情链接，提升网站PR值和友好的互访机制。</Description>
+    <TableName>ZL_C_FriendSite</TableName>
+    <ItemIcon>glyphicon glyphicon-hand-right</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>网站</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/友情链接.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>3</ModelID>
+    <ModelName>图库模型</ModelName>
+    <Description>可发布图文并茂的信息，并通过丰富的图片展示分享网络的乐趣。</Description>
+    <TableName>ZL_C_Photo</TableName>
+    <ItemIcon>fa fa-file-photo-o</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>图片</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/图库模型.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>25</ModelID>
+    <ModelName>文件工厂模型</ModelName>
+    <Description>用字段信息配合Word模板，生成新的Word文档.</Description>
+    <TableName>ZL_C_Factory</TableName>
+    <ItemIcon>glyphicon glyphicon-file</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>文件工厂</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/文件工厂模型.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>2</ModelID>
+    <ModelName>文章模型</ModelName>
+    <Description>用于装载常见的文章信息，如文章、新闻、资讯等。</Description>
+    <TableName>ZL_C_Article</TableName>
+    <ItemIcon>fa fa-file-word-o</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>文章</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/文章模型.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>50</ModelID>
+    <ModelName>方案项目模型</ModelName>
+    <Description />
+    <TableName>ZL_C_faxmmx</TableName>
+    <ItemIcon>glyphicon glyphicon-send</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>方案项目</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/方案项目模型.model</FileUrl>
+    <CreateTime>2015/10/19 17:16:09</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>51</ModelID>
+    <ModelName>施工图项目模型</ModelName>
+    <Description />
+    <TableName>ZL_C_sgtxmmx</TableName>
+    <ItemIcon>fa fa-map</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>施工图项目</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/施工图项目模型.model</FileUrl>
+    <CreateTime>2015/10/19 17:16:57</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>54</ModelID>
+    <ModelName>施工服务项目</ModelName>
+    <Description />
+    <TableName>ZL_C_sgfwxm</TableName>
+    <ItemIcon>fa fa-server</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>施工服务项目</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/施工服务项目.model</FileUrl>
+    <CreateTime>2015/10/19 17:51:09</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>53</ModelID>
+    <ModelName>暖通业项目</ModelName>
+    <Description />
+    <TableName>ZL_C_ntyxm</TableName>
+    <ItemIcon>glyphicon glyphicon-send</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>暖通项目</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/暖通业项目.model</FileUrl>
+    <CreateTime>2015/10/19 17:24:12</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>52</ModelID>
+    <ModelName>电气专业项目</ModelName>
+    <Description />
+    <TableName>ZL_C_dqzyxm</TableName>
+    <ItemIcon>glyphicon glyphicon-send</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>电气项目</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/电气专业项目.model</FileUrl>
+    <CreateTime>2015/10/19 17:22:36</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>49</ModelID>
+    <ModelName>竞标方案</ModelName>
+    <Description />
+    <TableName>ZL_C_jbfa</TableName>
+    <ItemIcon>glyphicon glyphicon-list-alt</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>竞标</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/竞标方案.model</FileUrl>
+    <CreateTime>2015/10/19 15:29:57</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>7</ModelID>
+    <ModelName>视频模型</ModelName>
+    <Description>基于FLV等类型的视频发布系统，高速视频抢占信息时代之商机。</Description>
+    <TableName>ZL_C_video</TableName>
+    <ItemIcon>glyphicon glyphicon-film</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>视频</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/视频模型.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>48</ModelID>
+    <ModelName>设计师</ModelName>
+    <Description />
+    <TableName>ZL_C_Designer</TableName>
+    <ItemIcon>glyphicon glyphicon-user</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>设计师</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/设计师.model</FileUrl>
+    <CreateTime>2015/10/17 10:24:08</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>57</ModelID>
+    <ModelName>设计院认证模型</ModelName>
+    <Description />
+    <TableName>ZL_C_sjyrz</TableName>
+    <ItemIcon>fa fa-newspaper-o</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>认证</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/设计院认证模型.model</FileUrl>
+    <CreateTime>2015/10/22 19:10:30</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>5</ModelID>
+    <ModelName>转向链接模型</ModelName>
+    <Description>访客点击此模型下信息，则跳入指定第三方链接，便于流量管理。</Description>
+    <TableName>ZL_C_RedirectLink</TableName>
+    <ItemIcon>glyphicon glyphicon-link</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>跳转</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/转向链接模型.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>47</ModelID>
+    <ModelName>项目交图</ModelName>
+    <Description />
+    <TableName>ZL_C_xmjt</TableName>
+    <ItemIcon>glyphicon glyphicon-picture</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>交图</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/项目交图.model</FileUrl>
+    <CreateTime>2015/10/15 17:25:51</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>45</ModelID>
+    <ModelName>项目模型</ModelName>
+    <Description />
+    <TableName>ZL_C_fbxm</TableName>
+    <ItemIcon>glyphicon glyphicon-send</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>项目</ItemName>
+    <ModelType>内容模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/内容模型/项目模型.model</FileUrl>
+    <CreateTime>2015/10/17 11:22:51</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>6</ModelID>
+    <ModelName>商品模型</ModelName>
+    <Description>建立起商品模型用于销售，开展网上电子业务。</Description>
+    <TableName>ZL_P_Shop</TableName>
+    <ItemIcon>glyphicon glyphicon-shopping-cart</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>商品</ItemName>
+    <ModelType>商品模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/商品模型/商品模型.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>20</ModelID>
+    <ModelName>店铺商品</ModelName>
+    <Description />
+    <TableName>ZL_S_shop</TableName>
+    <ItemIcon>glyphicon glyphicon-home</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>商品</ItemName>
+    <ModelType>店铺商品模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/店铺商品模型/店铺商品.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>24</ModelID>
+    <ModelName>店铺申请</ModelName>
+    <Description />
+    <TableName>ZL_Store_reg</TableName>
+    <ItemIcon>glyphicon glyphicon-shopping-cart</ItemIcon>
+    <SysModel>1</SysModel>
+    <ItemName>店铺</ItemName>
+    <ModelType>店铺申请模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/店铺申请模型/店铺申请.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>12</ModelID>
+    <ModelName>个人简历</ModelName>
+    <Description>提供给个人用户录入</Description>
+    <TableName>ZL_U_jl</TableName>
+    <ItemIcon />
+    <SysModel>0</SysModel>
+    <ItemName>信息</ItemName>
+    <ModelType>用户模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/用户模型/个人简历.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>10</ModelID>
+    <ModelName>企业信息</ModelName>
+    <Description />
+    <TableName>ZL_U_comp</TableName>
+    <ItemIcon>glyphicon glyphicon-euro</ItemIcon>
+    <SysModel>0</SysModel>
+    <ItemName>信息</ItemName>
+    <ModelType>用户模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/用户模型/企业信息.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>11</ModelID>
+    <ModelName>招聘信息</ModelName>
+    <Description>提供给企业用户发布招聘信息</Description>
+    <TableName>ZL_U_ZP</TableName>
+    <ItemIcon />
+    <SysModel>0</SysModel>
+    <ItemName>信息</ItemName>
+    <ModelType>用户模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/用户模型/招聘信息.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>9</ModelID>
+    <ModelName>默认申请样式</ModelName>
+    <Description>默认申请样式</Description>
+    <TableName>ZL_Reg_Page</TableName>
+    <ItemIcon />
+    <SysModel>0</SysModel>
+    <ItemName />
+    <ModelType>黄页模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/黄页模型/默认申请样式.model</FileUrl>
+    <CreateTime>2015/9/12 8:55:29</CreateTime>
+  </Table1>
+  <Table1>
+    <ModelID>58</ModelID>
+    <ModelName>评论项目评价的模型</ModelName>
+    <Description />
+    <TableName>ZL_Pub_xmpj</TableName>
+    <ItemIcon>GuestBook.gif</ItemIcon>
+    <SysModel>False</SysModel>
+    <ItemName>评论</ItemName>
+    <ModelType>互动模型</ModelType>
+    <FileUrl>/Template/Ke/配置库/模型/互动模型/评论项目评价的模型.model</FileUrl>
+    <CreateTime>2015/11/6 10:54:31</CreateTime>
+  </Table1>
+</NewDataSet>

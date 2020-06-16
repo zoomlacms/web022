@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>44</ModelID>
+    <ModelName>作品图库</ModelName>
+    <Description />
+    <TableName>ZL_C_zpmx</TableName>
+    <ItemName>作品</ItemName>
+    <ItemUnit>件</ItemUnit>
+    <ItemIcon>glyphicon glyphicon-edit</ItemIcon>
+    <ModelType>1</ModelType>
+    <ContentModule>内容页/默认作品模型内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>true</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail>0</Thumbnail>
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

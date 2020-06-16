@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>865</LabelID>
+    <LabelName>项目应标调用标签</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>互动标签</LabelCate>
+    <LabelDesc>ZL_Pub_xmyb分页标签</LabelDesc>
+    <LabelParam />
+    <LabelTable>ZL_Pub_xmyb left join ZL_Pub on ZL_Pub_xmyb.Pubupid=ZL_Pub.Pubid</LabelTable>
+    <LabelField>ZL_Pub_xmyb.*,ZL_Pub.*</LabelField>
+    <LabelWhere>ZL_Pub_xmyb.Pubupid=7 And ZL_Pub_xmyb.PubContentid={$GetRequest(ItemID)$} And ZL_Pub_xmyb.Pubstart=1</LabelWhere>
+    <LabelOrder>ZL_Pub_xmyb.ID DESC</LabelOrder>
+    <LabelContent>{Repeate}
+用户名:{Field="PubUserName"/}&lt;br /&gt;
+竞标说明:{Field="PubContent"/}&lt;br /&gt;
+用户IP:{Field="PubIP"/}&lt;br /&gt;
+竞标时间:{Field="PubAddTime"/}&lt;br /&gt;{/Repeate}&lt;br /&gt;
+{ZL.Page/}</LabelContent>
+    <LabelCount>10</LabelCount>
+    <LabelAddUser>1</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo />
+    <addroot />
+    <setroot />
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>962</LabelID>
+    <LabelName>获取指定项目评价总数</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>项目</LabelCate>
+    <LabelDesc />
+    <LabelParam>GID,,1,项目ID|SID,,1,竞标ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Pub_xmpj</LabelTable>
+    <LabelField>COUNT(*) As Num</LabelField>
+    <LabelWhere>PubContentid='@GID' And szjb='@SID' And PubStart=1 And PubUserID&gt;0 And PubUserID='{ZL:GetuserID()/}'</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="Num"/}</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

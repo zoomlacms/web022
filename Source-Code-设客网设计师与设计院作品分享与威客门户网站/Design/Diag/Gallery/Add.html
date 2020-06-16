@@ -1,0 +1,34 @@
+﻿<div class="header">
+    <label class="title">添加幻灯片</label>
+</div>
+<div class="category-view">
+    <div class="outer-container" style="height: 100%;">
+        <div class="inner-container">
+            <div class="sections">
+                <div class="section-wrapper live-comps">
+                    <div class="section-header">
+                        <div class="title-line">
+                            <div class="title">风格选择</div>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="domItem listItem" style="height:230px;">
+                           <img style="height:200px;" src="/Design/Diag/Gallery/res.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var model = {
+        dataMod: {
+            items: [
+                { name: "标题1", href: "#", img: "http://www.zoomla.cn/uploadfiles/phone5.png", orderid: 1, css: "active" },
+                { name: "标题2", href: "#", img: "http://www.zoomla.cn/uploadfiles/phone6.png", orderid: 2 },
+                { name: "标题3", href: "#", img: "http://www.zoomla.cn/uploadfiles/phone9.png", orderid: 3 }]
+        },
+        config: { type: "gallery", compid: "", css: "candrag", style: 'position:absolute;top:30%;left:40%;' }
+    };
+</script>

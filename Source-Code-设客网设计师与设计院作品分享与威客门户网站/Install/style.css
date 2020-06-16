@@ -1,0 +1,41 @@
+﻿@charset "utf-8";
+/* Zoomla!逐浪CMS2安装程式 */
+body{font-size: 12px; background:#1C6297; color:#94C7EC;}
+li{list-style-type:none;}
+a{text-decoration:none;color:#94C7EC;}
+
+.instop{ margin:auto; width:90%; clear:both;}
+.instop{ margin:auto; width:980px; clear:both;}
+.biao{ margin:auto; width:860px; clear:both;}
+.instop{margin-top:5em;}
+.instop ul{padding-top:1.2em;}
+.instop li{float:left;padding-left:0.5em;font-size:1.4em;font-family:"Microsoft Yahei", SimSun, Tahoma, Helvetica, Arial, sans-serif;}
+.instop a:hover{color:#fff;text-decoration:none;}
+.inslogo{float:left; }
+
+.insbox{color:#94C7EC;}
+.insbox h1{font-size:18px; padding-top:3em; text-align:center; color:#FFF;}
+.insbox abbr{ display:block;text-align:center; color:#fff; text-align:center; padding-top:10px;}
+.insbox_txt{ font-weight:normal;padding-left:50px; padding-top:20px; line-height:20px; color:#94C7EC;}
+.insbox textarea{ display:block;margin:auto; width:95%; height:160px;margin-top:5px;background:#5990B9; color:#444; border:1px solid #9A9A9A; padding:10px; font-size:12px;}
+.lbot{text-align:center;/*right; padding-right:20px; padding-top:15px;*/}
+.lbot span{padding-right:10px; font-weight:normal;}
+.install { width:860px; margin:auto; background:url(images/installbf.jpg) center no-repeat; height:65px;}
+
+.biao{height:11px;}/*安装进度表*/
+.biao span{ display:block;width:24px; height:11px; background:url(images/biao.gif) no-repeat;}
+
+.lstup{font-size:14px; padding-top:10px;}
+.lstup p{padding-left:60px;}
+.lstup span{ padding-left:40px; }
+.lstrong{font-weight:bold; color:#FFF;}
+.lbot2{ text-align:center; clear:both;}
+
+#bottom{text-align:center; color:#94C7EC; line-height:20px; margin-top:20px; background:none;}
+.ins_table{ margin:auto;height:240px;margin-top:10px;}/*第二步安装环境检测表格定义*/
+.ins_date{ margin:auto; width:620px; height:150px; margin-top:10px;}/*第三步数据库连接配置*/
+.ins_biao{ margin:auto; width:620px; margin-bottom:3em;}/*第四步创建数据库存储过程表格定义*/
+.insp{ padding-left:5px;padding-right:5px; line-height:18px;}/*缩进*/
+#newDatabase{display:none;background:#6C90EA; color:#fff; border:1px solid #B2C6F2;}
+#BtnCreateDateBase{color:black;}
+/*#checkedshi{height:240px; *+height:240px;clear:both;}*/

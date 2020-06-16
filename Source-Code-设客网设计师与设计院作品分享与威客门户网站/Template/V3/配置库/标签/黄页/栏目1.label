@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>639</LabelID>
+    <LabelName>栏目1</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>黄页</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable>bk_ypjx</LabelTable>
+    <LabelField>BM,DH,MC</LabelField>
+    <LabelWhere></LabelWhere>
+    <LabelOrder>BM ASC</LabelOrder>
+    <LabelContent> 
+ {Field="BM"/}
+  {Field="DH"/}
+  {Field="MC"/}
+ </LabelContent>
+    <LabelCount>10</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>1</DataSourceType>
+    <ConnectString />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,90 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>项目列表_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<link href="{$CssDir/}fix.css" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+</head>
+<body>
+{ZL.Label id="设计院头部"/}
+<div class="container">
+<div class="pep_main"> 
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 pep_main_l"> 
+
+<div class="pep_main_l2">
+<h1>我的项目进度<a href="/Class_5/NodeNews.aspx">+查看全部</a></h1> 
+{ZL.Label id="输出我的项目进度_会员首页_分页" TitleNum="50" ShowNum="20" NodeID="13" /}
+</div>
+</div> 
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pep_main_r" id="master_right1"> 
+{ZL.Label id="获取当前登录信息" /}
+<div class="user_process">
+<h3>服务流程</h3>
+<ul class="list-unstyled">
+<li><i class="fa fa-check-circle"></i> 发布项目<span></span></li>
+<li><i class="fa fa-check-circle"></i> 设计标准<span></span></li>
+<li><i class="fa fa-check-circle"></i> 担保授信<span></span></li>
+<li><i class="fa fa-check-circle"></i> 定标委托<span></span></li>
+<li><i class="fa fa-check-circle"></i> 结案交付</li>
+</ul>
+</div>
+
+</div>
+<div class="clearfix"></div>  
+</div>
+</div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script>
+var IO=document.getElementById('design_nav'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+	".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+ if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//]]>
+//兼容wp8
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+var msViewportStyle = document.createElement("style");
+msViewportStyle.appendChild(
+document.createTextNode(
+  "@-ms-viewport{width:auto!important}"
+)
+);
+document.getElementsByTagName("head")[0].
+appendChild(msViewportStyle);
+}
+$().ready(function(e) {
+    $(".jbpay0").remove();
+});
+$(".pro_status").each(function(index, element) {
+    if($(this).data("ying")>0)
+	{
+		if($(this).data("zhong")>0)
+		{
+			if($(this).data("pay")>0)
+				$(this).html("(已应标)");
+			else
+				$(this).html("(已中标)");
+		}
+		else
+			$(this).html("(已应标)");
+	}
+	else
+		$(this).html("(未应标)");
+});
+</script>

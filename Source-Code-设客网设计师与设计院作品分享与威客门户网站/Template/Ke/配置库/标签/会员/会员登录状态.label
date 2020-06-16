@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>954</LabelID>
+    <LabelName>会员登录状态</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>会员</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;li&gt;&lt;a href="/User/Default.aspx"&gt;{ZL:GetuserName()/}&lt;/a&gt;&lt;/li&gt;
+&lt;li style="position:relative;" class="usermy" onMouseOver="javascript:$(this).find('.mypeo_comp_top').show();" onMouseOut="javascript:$(this).find('.mypeo_comp_top').hide();"&gt;
+&lt;a href="/User/Default.aspx"&gt;我的设客 &lt;i class="fa fa-chevron-down"&gt;&lt;/i&gt;&lt;/a&gt;
+{ZL.Label id="头部获取当前登录信息" /}
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="/User/Logout.aspx"&gt;退出系统&lt;/a&gt;&lt;/li&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>用户登录判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>1</IsOpen>
+    <FalseContent>&lt;li&gt;&lt;a href="/User/Login.aspx"&gt;会员中心&lt;/a&gt;&lt;/li&gt;</FalseContent>
+    <DataSourceType />
+    <ConnectString />
+  </Table>
+</NewDataSet>

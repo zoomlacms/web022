@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>50</ModelID>
+    <ModelName>方案项目模型</ModelName>
+    <Description />
+    <TableName>ZL_C_faxmmx</TableName>
+    <ItemName>方案项目</ItemName>
+    <ItemUnit>个</ItemUnit>
+    <ItemIcon>glyphicon glyphicon-send</ItemIcon>
+    <ModelType>1</ModelType>
+    <ContentModule>内容页/默认方案项目模型内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>true</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail>0</Thumbnail>
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

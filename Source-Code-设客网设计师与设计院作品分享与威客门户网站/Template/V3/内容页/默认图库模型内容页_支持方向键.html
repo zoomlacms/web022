@@ -1,0 +1,321 @@
+﻿{ZL.Source id="图库模型数据源标签"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="图库模型数据源标签" FD="Title" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="图库模型数据源标签" FD="Tagkey" page="0"/}">
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<style>
+#Menu{SField sid="图库模型数据源标签" FD="NodeID" page="0"/} a { background:#e7e7e7; max-width:inherit;}
+</style>
+</head>
+<body id="header" style="padding-top:50px;">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="container">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/">{$SiteName/}</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav">
+<li><a href="/">首页</a></li>
+{ZL.Label id="蓝色经典_顶部节点列表" ParentID="0" ShowNum="7" /}
+</ul>
+<form class="navbar-form navbar-left" role="search" method="get" action="/Search/SearchList.aspx" target="_blank">
+<div class="form-group">
+<input type="text" class="form-control" name="keyword" placeholder="全站检索">
+</div>
+<button type="submit" class="btn btn-default">搜索</button>
+</form>
+<ul class="nav navbar-nav navbar-right">
+<li class="nav_user"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>登录 <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="/User/" target="_blank">用户登录</a></li>
+<li><a href="/User/Register.aspx" target="_blank">用户注册</a></li>
+<li><a href="/User/Info/UserInfo.aspx" target="_blank">注册信息</a></li>
+<li><a href="/User/Logout.aspx" target="_blank">安全退出</a></li>
+</ul>
+</li>
+</ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+  
+<div class="container mySites">
+<ol class="breadcrumb">
+<li><a href="/">首页</a></li>
+{ZL.Label id="输出多级节点导航_V3" NodeID="{SField sid="图库模型数据源标签" FD="NodeID" page="0"/}" /}
+<li class="active">{SField sid="图库模型数据源标签" FD="Title" page="0"/} </li>
+</ol>
+</div>
+<div class="container"> 
+<!--弹出层开始-->
+<!--播放到第一张图的提示-->
+<div class="modal fade" id="firsttop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="myModalLabel">图片播放完了</h4>
+</div>
+<div class="modal-body">您可以还需要....</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+{ZL.Label id="上一个图库" NodeID="{SField sid="图库模型数据源标签" FD="NodeID" page="0"/}" /}
+</div>
+</div>
+</div>
+</div>
+<!--播放到最后一张图的提示-->
+<div class="modal fade" id="endtop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="myModalLabel">图片播放完了</h4>
+</div>
+<div class="modal-body">您可以还需要....</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+{ZL.Label id="下一个图库" NodeID="{SField sid="图库模型数据源标签" FD="NodeID" page="0"/}" /}
+</div>
+</div>
+</div>
+</div>
+<!--弹出层结束--> 
+<!--图片特效内容开始-->
+<div class="piccontext">
+<h2>{SField sid="图库模型数据源标签" FD="Title" page="0"/}</h2>
+<div class="source">
+<div class="source_left"> Zoomla!逐浪CMS旗下一特网<span>2014/8/7 17:17:00</span> </div>
+<div class="source_right">
+<div class="support"> 支持<img src="{$CssDir/}images/jiantou1.jpg" />键翻阅图片 </div>
+<a href="javascript:;" class="list">列表查看</a> </div>
+<div class="source_right1"> <a href="javascript:;" class="gaoqing">高清查看</a> </div>
+</div>
+<!--大图展示-->
+<div class="picshow">
+<div class="picshowtop">
+<a href="/"><img id="pic1" curindex="0" /></a>
+<a id="preArrow" href="javascript:void(0)" class="contextDiv" title="上一张"><span id="preArrow_A"></span></a>
+<a id="nextArrow" href="javascript:void(0)" class="contextDiv" title="下一张"><span id="nextArrow_A"></span></a>
+</div>
+<div class="picshowtxt">
+<div class="picshowtxt_left"><span>1</span>/<i>12</i></div>
+<div class="picshowtxt_right"></div>
+</div>
+<div class="picshowlist"> 
+<div class="picshowlist_mid">
+<div class="picmidmid row" id="picmidmid"><ul class="list-unstyled"></ul></div>
+</div>
+</div>
+</div>
+<!--列表展示-->
+<div class="piclistshow row" id="piclistshow"><ul class="list-unstyled padding10"></ul></div>
+<div id="content_synopsis">
+{SField sid="图库模型数据源标签" FD="Content" page="0"/}
+</div>
+<div class="padding10">
+{ZL.Label id="点击复制网址代码"/}
+</div>
+<div id="about">
+<span>相关文章</span>
+<ul>
+{ZL.Label id="相关文章列表输出" ShowNum="10" TitleNum="35" KeyWord="{SField sid="图库模型数据源标签" FD="Tagkey" page="0"/}" /}
+</ul>
+</div>
+<div class="iframe_comm">
+<iframe src="/Comments/CommentFor.aspx?ID={SField sid="图库模型数据源标签" FD="GeneralID"/}" width="100%" align="middle" height="100%" frameborder="0" scrolling="no"></iframe>
+</div>
+</div>
+</div>
+{ZL.Label id="响应式全站底部"/}
+</body>
+</html>
+<script>
+var siteurl="{$UploadDir/}";
+var firstpho="";
+var photos='{SField sid="图库模型数据源标签" FD="PhotoUrl"/}';
+var pho=photos.split("$");
+var arrUrlName=new Array();
+var arrUrl=new Array();
+var str="";
+var str1="";
+for(i=0;i<pho.length;i++)
+{
+	
+	arrUrlName[i]=pho[i].split("|")[0];
+	if(pho[i].split("|")[1].indexOf("http://")==-1)
+	{
+		arrUrl[i]=siteurl+pho[i].split("|")[1];
+	}
+	else
+	{
+		arrUrl[i]=pho[i].split("|")[1];
+	}
+	str1+="<li class=\"col-lg-3 col-md-3 col-sm-3 col-xs-4 padding5\"><div class=\"picimg\"><img src=\""+arrUrl[i]+"\" alt=\""+arrUrlName[i]+"\" /></div><div class=\"pictxt\"><h3>"+arrUrlName[i]+"<span>("+(parseInt(i)+1)+"/"+pho.length+")</span></h3></div></li>";
+	str+="<li class=\"col-lg-1 col-md-2 col-sm-2 col-xs-3\"><a href=\"javascript:void(0);\"><img src=\""+arrUrl[i]+"\" alt=\""+arrUrlName[i]+"\" bigimg=\""+arrUrl[i]+"\" text=\""+arrUrlName[i]+"\" /></a></li>";
+}
+$("#pic1").attr("src",arrUrl[0]);
+$("#pic1").attr("alt",arrUrlName[0]);
+$("#piclistshow ul").html(str1);
+$("#picmidmid ul").html(str);
+$(".picshowtxt_left i").html(pho.length);
+$().ready(function(e) {
+   $(function() {
+	$(".piclistshow li").hover(function() {
+		$(this).css("background", "#FAFAFA")
+	},
+	function() {
+		$(this).css("background", "white")
+	});
+	$(".piclistshow li").last().css("border-bottom", "none");
+	$(".piclistshow li").each(function() {
+		var curindex = $(this).index(".piclistshow li") + 1;
+		if (curindex % 4 == 0) {
+			
+		}
+	});
+	$(document).keydown(function(event) {
+		var key = event.keyCode;
+		var firstdisplay = $("#firsttop").css("display");
+		var enddisplay = $("#endtop").css("display");
+		if (firstdisplay == "none" && enddisplay == "none") {
+			if (key == 37) {
+				preclick()
+			} else {
+				if (key == 39) {
+					nextclick()
+				}
+			}
+		} else {
+			if (key == 27) {
+				$("#firsttop").css("display", "none");
+				$("#bodymodal").css("display", "none");
+				$("#endtop").css("display", "none")
+			}
+		}
+	});
+
+	var firstpic = $(".picmidmid ul li").first().find("img");
+	var firstsrc = firstpic.attr("bigimg");
+	var firsttxt = firstpic.attr("text");
+	$("#pic1").attr("src", firstsrc);
+	firstpic.addClass("selectpic");
+	$(".picshowtxt_right").text(firsttxt);
+	$("#preArrow").hover(function() {
+		$("#preArrow_A").css("display", "block")
+	},
+	function() {
+		$("#preArrow_A").css("display", "none")
+	});
+	$("#nextArrow").hover(function() {
+		$("#nextArrow_A").css("display", "block")
+	},
+	function() {
+		$("#nextArrow_A").css("display", "none")
+	});
+	var getli = $(".picmidmid ul li");
+	function nextclick() {
+		var currrentindex = parseFloat($("#pic1").attr("curindex"));
+		var length = getli.length;
+		if (currrentindex != (length - 1)) {
+			var curli = getli.eq(currrentindex);
+			
+			var curnextli = getli.eq(currrentindex + 1);
+			var curnextsrc = curnextli.find("img").attr("bigimg");
+			var curnexttxt = curnextli.find("img").attr("text");
+			curli.find("img").removeClass("selectpic");
+			curnextli.find("img").addClass("selectpic");
+			$("#pic1").attr("src", curnextsrc);
+			$("#pic1").attr("curindex", currrentindex + 1);
+			$(".picshowtxt_right").text(curnexttxt);
+			$(".picshowtxt_left span").text(currrentindex + 2)
+		} else {
+			$("#endtop").modal("show");
+		}
+	}
+	$("#nextArrow_B").click(function() {
+		nextclick()
+	});
+	$("#nextArrow").click(function() {
+		nextclick()
+	});
+	function preclick() {
+		var currrentindex = parseFloat($("#pic1").attr("curindex"));
+		if (currrentindex != 0) {
+			var curli = getli.eq(currrentindex);
+			var length = getli.length;
+			var curnextli = getli.eq(currrentindex - 1);
+			var curnextsrc = curnextli.find("img").attr("bigimg");
+			var curnexttxt = curnextli.find("img").attr("text");
+			curli.find("img").removeClass("selectpic");
+			curnextli.find("img").addClass("selectpic");
+			$("#pic1").attr("src", curnextsrc);
+			$(".picshowtxt_right").text(curnexttxt);
+			$("#pic1").attr("curindex", currrentindex - 1);
+			$(".picshowtxt_left span").text(currrentindex)
+		} else {
+			$("#firsttop").modal("show");
+		}
+	}
+	$("#preArrow_B").click(function() {
+		preclick()
+	});
+	$("#preArrow").click(function() {
+		preclick()
+	});
+	getli.click(function() {
+		var currentliindex = $(this).index(".picmidmid ul li");
+		$(".picmidmid ul li img[class='selectpic']").removeClass("selectpic");
+		var currentli = getli.eq(currentliindex);
+		currentli.find("img").addClass("selectpic");
+		var bigimgsrc = currentli.find("img").attr("bigimg");
+		var curnexttxt = currentli.find("img").attr("text");
+		$("#pic1").attr("src", bigimgsrc);
+		$("#pic1").attr("curindex", currentliindex);
+		$(".picshowtxt_right").text(curnexttxt);
+		$(".picshowtxt_left span").text(currentliindex + 1)
+	});
+	$(".piclistshow li").click(function() {
+		var curli = $(this).index(".piclistshow li");
+		showgaoqing();
+		$(".picmidmid ul li img[class='selectpic']").removeClass("selectpic");
+		var currentli = getli.eq(curli);
+		currentli.find("img").addClass("selectpic");
+		var bigimgsrc = currentli.find("img").attr("bigimg");
+		var curnexttxt = currentli.find("img").attr("text");
+		$("#pic1").attr("src", bigimgsrc);
+		$("#pic1").attr("curindex", curli);
+		$(".picshowtxt_right").text(curnexttxt);
+		$(".picshowtxt_left span").text(curli + 1);
+		$(".picmidmid li").css("display", "block");
+	});
+	$(".list").click(function() {
+		$(".picshow").css("display", "none");
+		$(".piclistshow").css("display", "block");
+		$(".source_right").css("display", "none");
+		$(".source_right1").css("display", "block")
+	});
+	$(".gaoqing").click(function() {
+		showgaoqing();
+	});
+	function showgaoqing() {
+		$(".picshow").css("display", "block");
+		$(".piclistshow").css("display", "none");
+		$(".source_right").css("display", "block");
+		$(".source_right1").css("display", "none")
+	}	
+});
+});
+</script>

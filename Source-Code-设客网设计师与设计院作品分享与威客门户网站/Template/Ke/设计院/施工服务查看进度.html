@@ -1,0 +1,141 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}{ZL.Source id="竞标方案数据源标签地址栏"/}{ZL.Source id="施工服务项目数据源标签地址栏"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="施工服务项目数据源标签地址栏" FD="Title" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+</head>
+<body> 
+{ZL.Label id="设计院头部"/}
+
+<div class="mypeo_banner">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<!-- Indicators -->
+<ol class="carousel-indicators">
+<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+</ol>
+
+<!-- Wrapper for slides -->
+<div class="carousel-inner" role="listbox">
+<div class="item mypeo_banner1 active">
+<div class="carousel-caption">
+<a href="#">立即发表项目<span class="fa fa-play-circle-o"></span></a>
+</div>
+</div>
+<div class="item mypeo_banner2">
+<div class="carousel-caption">
+<a href="#">立即发表项目<span class="fa fa-play-circle-o"></span></a>
+</div>
+</div>
+<div class="item mypeo_banner3">
+<div class="carousel-caption">
+<a href="#">立即发表项目<span class="fa fa-play-circle-o"></span></a>
+</div>
+</div>
+</div>
+
+<!-- Controls -->
+<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+<div class="container" style="position:relative;">
+{ZL.Label id="获取当前登录信息"/}
+</div>
+</div>
+<div class="container">
+<div id="item_cont">
+<div class="evalu_new">
+<h3><span class="pull-left">项目信息</span><a href="/Class_14/NodeElite.aspx?GID={$GetRequest(GID)$}&SID={$GetRequest(SID)$}" class="pull-right"><i class="fa fa-clock-o"></i> 催图</a><div class="clearfix"></div></h3>
+<div class="evalu_new_d">
+<h4>{SField sid="施工服务项目数据源标签地址栏" FD="Title" page="0"/}</h4>
+<p>{SField sid="施工服务项目数据源标签地址栏" FD="qtyq" page="0"/}</p>
+<a style="margin-left:35px;margin-top:15px;" href="/User/Content/EditProject.aspx?GeneralID={SField sid="施工服务项目数据源标签地址栏" FD="GeneralID" page="0"/}" class="btn btn-danger">资料补充</a>
+</div>
+</div>
+<div class="checked_speed">
+<h3><span>项目进度</span></h3>
+<div class="checked_speed_d">
+<table class="table table-bordered">
+<tr>
+<th>进度名称</th>
+<th>日期</th>
+<th>状态</th>
+</tr>
+<tbody id="table_pay"></tbody>
+</table>
+<div class="clearfix"></div>
+</div>
+</div>
+<div class="checked_loca">
+<ul class="list-unstyled checked_loca_t">
+<li>项目名称：{SField sid="施工服务项目数据源标签地址栏" FD="Title" page="0"/}</li>
+<li>项目地点：{SField sid="施工服务项目数据源标签地址栏" FD="xmdd" page="0"/}</li>
+<li>项目类型：{SField sid="施工服务项目数据源标签地址栏" FD="xmlx" page="0"/}</li>
+<li>主设计师：{SField sid="竞标方案数据源标签地址栏" FD="Inputer" page="0"/}</li>
+</ul>
+{ZL.Label id="输出指定项目指定设计师完成交图列表" GID="{$GetRequest(GID)$}" UserName="{SField sid="竞标方案数据源标签地址栏" FD="Inputer" page="0"/}" NodeID="39" /}
+
+<h3>项目进度：</h3>
+<ul class="list-unstyled checked_loca_d">
+{ZL.Label id="输出指定项目指定设计师作品交付列表" GID="{$GetRequest(GID)$}" UserName="{SField sid="竞标方案数据源标签地址栏" FD="Inputer" page="0"/}" NodeID="46" /}
+</ul>
+</div>
+<div id="item_cont1" hidden style="margin-top:20px;">
+<div class="alert alert-danger" role="alert">
+<h4>项目已完成付款！</h4>
+</div>
+</div>
+</div>
+</div>
+
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script>
+//if('{SField sid="竞标方案数据源标签地址栏" FD="Status" page="0"/}'=='99')
+//	$(".checked_pic").remove();
+//else
+//	$("#item_cont1").remove();
+
+$().ready(function(e) {
+    $(".fieldtype1").addClass("fa fa-photo");
+    $(".fieldtype2").addClass("fa fa-server");
+    $(".fieldtype3").addClass("fa fa-file-word-o");
+});
+
+var paystr='{SField sid="施工服务项目数据源标签地址栏" FD="fkxq" page="0"/}';
+var paynum='{ZL.Label id="输出指定项目实际付款次数" /}';
+var xmjd=(parseInt(paynum)+1);
+if(paystr&&paystr!="")
+{
+	var paylist = JSON.parse(paystr);
+	var str="";
+	for(var i=1;i<paylist.length+1;i++)
+	{
+		if(i<=paynum)
+			str+="<tr><td>第"+i+"次付款</td><td>"+paylist[i-1].paymoney+"%</td><td><i class=\"glyphicon glyphicon-ok-circle\"></i>已付款</td></tr>";
+		else if(i==xmjd)
+			str+="<tr><td>第"+i+"次付款</td><td>"+paylist[i-1].paymoney+"%</td><td><i class=\"glyphicon glyphicon-adjust\"></i>进行中</td></tr>"
+		else
+			str+="<tr><td>第"+i+"次付款</td><td>"+paylist[i-1].paymoney+"%</td><td><i class=\"fa fa-clock-o\"></i>未付款</td></tr>"
+	}
+	$("#table_pay").html(str);
+	if(paystr>=(paynum+1))
+	{
+		$("#txt_fkje").val(paylist[paynum].paymoney)
+	}
+}
+</script>

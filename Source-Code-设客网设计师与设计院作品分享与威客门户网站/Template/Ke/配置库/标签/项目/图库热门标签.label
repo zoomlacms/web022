@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>996</LabelID>
+    <LabelName>图库热门标签</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>项目</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div class="photos_labelbox"&gt;
+&lt;div class="photos_label"&gt;
+&lt;strong&gt;最新全部&lt;/strong&gt;
+&lt;div class="photos_label_t"&gt;热门标签&lt;/div&gt;
+&lt;div class="photos_labelcnt"&gt;
+&lt;a href="/Class_2/NodeElite.aspx?k={$GetUrlencode(家居)$}"&gt;家居&lt;/a&gt;
+&lt;a href="/Class_2/NodeElite.aspx?k={$GetUrlencode(博展)$}"&gt;博展&lt;/a&gt;
+&lt;a href="/Class_2/NodeElite.aspx?k={$GetUrlencode(创意设计)$}" class="color_red"&gt;创意设计&lt;/a&gt;
+&lt;a href="/Class_2/NodeElite.aspx?k={$GetUrlencode(卧室)$}"&gt;卧室&lt;/a&gt;
+&lt;a href="/Class_2/NodeElite.aspx?k={$GetUrlencode(手绘)$}"&gt;手绘&lt;/a&gt;
+&lt;a href="/Class_2/NodeElite.aspx?k={$GetUrlencode(典雅宁静)$}" class="color_red"&gt;典雅宁静&lt;/a&gt;
+&lt;a href="/Class_2/NodeElite.aspx?k={$GetUrlencode(温馨)$}"&gt;温馨&lt;/a&gt;
+&lt;a href="/Class_2/NodeElite.aspx?k={$GetUrlencode(气质宜居)$}"&gt;气质宜居&lt;/a&gt;
+&lt;a href="/Class_2/NodeElite.aspx?k={$GetUrlencode(别墅)$}"&gt;别墅&lt;/a&gt;
+&lt;a href="/Class_2/NodeElite.aspx?k={$GetUrlencode(北京鸟巢)$}"&gt;北京鸟巢&lt;/a&gt;
+&lt;a href="/Class_2/NodeElite.aspx?k={$GetUrlencode(世纪公园)$}" class="color_red"&gt;世纪公园&lt;/a&gt;
+&lt;a href="/Class_2/NodeElite.aspx?k={$GetUrlencode(故宫)$}"&gt;故宫&lt;/a&gt;
+&lt;a href="/Class_2/NodeElite.aspx?k={$GetUrlencode(体育馆)$}"&gt;体育馆&lt;/a&gt;
+&lt;a href="/Class_2/NodeElite.aspx?k={$GetUrlencode(艺术馆)$}"&gt;艺术馆&lt;/a&gt;
+&lt;a href="/Class_2/NodeElite.aspx?k={$GetUrlencode(展览厅)$}"&gt;展览厅&lt;/a&gt;
+&lt;a href="/Class_2/NodeElite.aspx?k={$GetUrlencode(多功能装饰)$}"&gt;多功能装饰&lt;/a&gt;
+&lt;/div&gt; 
+&lt;/div&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+  </Table>
+</NewDataSet>

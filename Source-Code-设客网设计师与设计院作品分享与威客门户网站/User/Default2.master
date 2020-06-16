@@ -1,0 +1,301 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="User_I_Default, App_Web_v34cabml" clientidmode="Static" %><!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link type="text/css" rel="stylesheet" href="/dist/css/bootstrap.min.css" />
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="/dist/css/font-awesome.min.css"/>
+<link type="text/css" rel="stylesheet" href="/App_Themes/User.css" />
+<link href="/Template/Ke/style/global.css?Version=20150909" rel="stylesheet"/>
+<script type="text/javascript" src="/JS/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/dist/js/bootstrap.min.js"></script> 
+<asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder></head>
+<body>
+<div class="pep_top">
+<div class="container">
+<ul class="list-unstyled">
+<li class="sitelogo"><a href="/"><img src="<%Call.Label("{$LogoUrl/}"); %>" alt="<%Call.Label("{$SiteName/}"); %>" /></a></li>
+<li><a href="/">首页</a></li>
+<li><a href="/Class_1/Default.aspx">找设计师</a></li>
+<li><a href="/Class_2/Default.aspx">作品图库</a></li>
+<li><a href="/index" class="borderno">设计论坛</a></li>
+<li class="pep_search">
+<form action="/Search/Searchlist.aspx" method="get" target="_blank">
+<input type="text" name="keyword" class="form-control text_200" /><button type="submit"><i class="fa fa-search"></i></button></li>
+<li class="pull-right dropdown"><i class="fa fa-bullhorn"></i> Hi <a href="/User/Info/UserInfo.aspx" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"><img src="<%Call.Label("{ZL.Label id=\"抽取当前会员的用户头像\" /}"); %>"><asp:Image ID="imgUserPic" style="display:none;" AlternateText="" onerror="this.src='/images/userface/noface.gif'" runat="server" /><span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+<li>个人资料</li>
+<li>我的项目</li>
+<li>退出</li>
+</ul>
+</form>
+</li>
+</ul>
+</div>
+</div> 
+<div class="pep_nav">
+<nav class="navbar navbar-default">
+<div class="container">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 sitename">
+<a href="/User/Default2.aspx"><asp:Label ID="uName" runat="server"></asp:Label>的工作台</a>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand visible-xs" href="#">快速导航</a>
+</div>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav">
+<li><a href="/User/Info/UserBase.aspx">资料管理</a></li>
+<li><a href="/User/PrintServer/Project/ProjectList.aspx">项目管理</a></li>
+<li><a href="/Class_12/Default.aspx">人才库</a></li>
+<li><a href="#">档案维护</a></li> 
+<li><a href="/User/Logout.aspx">退出登录</a></li> 
+</ul>
+</div>
+</div> 
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 pep_atten">
+<ul class="list-inline">
+<li><a href="#"><i class="fa fa-weibo"></i></a></li>
+<li><a href="#"><i class="fa fa-weixin"></i></a></li>
+<li><a href="#"><img src="/Template/Ke/style/images/design_nav1.png"></a></li>
+</ul> 
+</div>
+</div>
+</nav>
+<div class="clearfix"></div>
+</div>
+<form id="form1" runat="server">
+<div class="container pep_container">
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 user_right"><asp:ContentPlaceHolder ID="Content" runat="server"></asp:ContentPlaceHolder></div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pep_main_r"> 
+<div class="mypeo_comp_l">
+<h2>设计院信息</h2>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 mypeo_comp_l1">
+<img src="<%Call.Label("{ZL.Label id=\"抽取当前会员的用户头像\" /}"); %>">
+</div>
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 mypeo_comp_l2">
+<p>我们已经为您服务了412小时您共发布了0次项目</p>
+<span>您的积分为：0分</span>
+</div>
+<h3>北京创新建筑设计院</h3>
+<ul class="list-unstyled mypeo_compe">
+<li><i class="fa fa-mobile"></i> 手机： 2121212<a href="/User/Info/UserBase.aspx">修改</a></li>
+<li><i class="fa fa-envelope-o"></i> 邮箱：test@q.c<a href="/User/Info/UserBase.aspx">修改</a></li>
+</ul>
+<ul class="list-unstyled mypeo_compe1">
+<li>身份认证（已完成70%</li>
+<li><a href="/User/Message/Message.aspx">我的消息</a><span class="glyphicon glyphicon-envelope"></span></li>
+<li><a href="/User/Info/UserInfo.aspx">账号设置</a><span class="glyphicon glyphicon-envelope"></span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="myfav">  
+<ul class="nav nav-tabs" role="tablist">
+<li role="presentation" class="active"><a href="#favcnt" aria-controls="favcnt" role="tab" data-toggle="tab">合作过的设计师</a></li>
+<li role="presentation"><a href="#favpep" aria-controls="favpep" role="tab" data-toggle="tab">我关注的设计师</a></li>
+</ul>  
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="favcnt">
+<div id="home_roll"> 
+<div class="home_roll">
+<div class="rollBox">
+<div class="LeftBotton"><img id="d2" onmouseout="ISL_StopUp()" onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()" alt="" src="/Template/Ke/style/Images/left.png">
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 Cont" id="ISL_Cont">
+<div class="ScrCont text-center">
+<div id="List1">
+<%Call.Label("{ZL.Label id=\"输出推荐设计师列表_带头像职位\" ShowNum=\"8\" SynNum=\"50\" /}"); %>
+</div>
+<div id="List2"></div></div></div>
+<div class="RightBotton" onmouseout="ISL_StopDown()" onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()"><img class=" pull-right" id="d3" onmouseout="ISL_StopDown()" onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()" alt="" src="/Template/Ke/style/images/right.png"></div></div>
+<div class="clearfix"></div></div></div>
+</div>
+<div role="tabpanel" class="tab-pane" id="favpep">
+
+</div> 
+</div>
+</div>
+<asp:ContentPlaceHolder runat="server" ID="ScriptContent"></asp:ContentPlaceHolder>
+</form>
+<%Call.Label("{ZL.Label id=\"全站底部\" /}"); %>
+</body>
+</html>
+<script>
+    $().ready(function (e) {
+        var curban = $("#pageflag").attr("data-ban");
+        var curnav = $("#pageflag").attr("data-nav");
+        $("#u_" + curban).addClass("active");
+        $("#nav_" + curnav).addClass("active");
+        if (curnav == "edu") {
+            $(".u_left_menu").show();
+        } 
+        $(".user_leftd li a.u_left_head").click(function (e) {
+            if ($(this).parent().find(".user_l_ulin").css("display") == "none")
+                $(this).parent().find(".user_l_ulin").slideDown();
+            else
+                $(this).parent().find(".user_l_ulin").slideUp();
+            window.localStorage.User_Default_left = $(this).parent().attr("id"); 
+        })
+    });  
+    $("#mimenu_btn").click(function (e) {
+        if ($(".user_mimenu_left").width() > 0) {
+            $(".user_mimenu_left ul").fadeOut(100);
+            $(".user_mimenu_left").animate({ width: 0 }, 200);
+        }
+        else {
+            $(".user_mimenu_left").animate({ width: 150 }, 300);
+            $(".user_mimenu_left ul").fadeIn();
+        }
+    }); 
+    //会员搜索
+    $("#sub_btn").click(function (e) {
+        if ($("#key").val() == "")
+            alert("搜索关键字为空!");
+        else
+            window.location = "/User/SearchResult.aspx?key=" + escape($("#key").val());
+    });
+    //搜索回车事件
+    function IsEnter(obj) {
+        if (event.keyCode == 13) {
+            $("#sub_btn").click(); return false;
+        }
+    }
+    $(".u_left_control").click(function (e) {
+        if ($(".u_left_menu").width() > 0) { 
+            $(".u_left_menu").animate({ width: 0 }, 200);
+        }
+        else {
+            $(".u_left_menu").animate({ width: 200 }, 300); 
+        }
+    }) 
+
+    //左右滚动效果
+var Speed = 3; //速度(毫秒)
+var Space = 7; //每次移动(px)
+var PageWidth = 400; //翻页宽度
+var fill = 0; //整体移位
+var MoveLock = false;
+var MoveTimeObj;
+var Comp = 0;
+var AutoPlayObj = null;
+GetObj("List2").innerHTML = GetObj("List1").innerHTML;
+GetObj('ISL_Cont').scrollLeft = fill;
+GetObj("ISL_Cont").onmouseover = function(){clearInterval(AutoPlayObj);}
+GetObj("ISL_Cont").onmouseout = function(){AutoPlay();}
+AutoPlay();
+
+function GetObj(objName)
+{
+	if(document.getElementById)
+	return eval('document.getElementById("'+objName+'")')
+	else
+	return eval('document.all.'+objName)
+}
+function AutoPlay()
+{//自动滚动
+	clearInterval(AutoPlayObj);
+	AutoPlayObj = setInterval('ISL_GoDown();ISL_StopDown();',3000); //间隔时间
+}
+function ISL_GoUp()
+{ //上翻开始
+	if(MoveLock) return;
+	clearInterval(AutoPlayObj);
+	MoveLock = true;
+	MoveTimeObj = setInterval('ISL_ScrUp();',Speed);
+}
+function ISL_StopUp()
+{ //上翻停止
+	clearInterval(MoveTimeObj);
+	if(GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0)
+	{
+		Comp = fill - (GetObj('ISL_Cont').scrollLeft % PageWidth);
+		CompScr();
+	}
+	else
+		MoveLock = false;
+	AutoPlay();
+}
+function ISL_ScrUp()
+{ //上翻动作
+	if(GetObj('ISL_Cont').scrollLeft <= 0)
+	{
+		GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft + GetObj('List1').offsetWidth
+	}
+	GetObj('ISL_Cont').scrollLeft -= Space ;
+}
+function ISL_GoDown(){ //下翻
+	clearInterval(MoveTimeObj);
+	if(MoveLock) return;
+	clearInterval(AutoPlayObj);
+	MoveLock = true;
+	ISL_ScrDown();
+	MoveTimeObj = setInterval('ISL_ScrDown()',Speed);
+}
+function ISL_StopDown(){ //下翻停止
+	clearInterval(MoveTimeObj);
+	if(GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0 )
+	{
+		Comp = PageWidth - GetObj('ISL_Cont').scrollLeft % PageWidth + fill;
+		CompScr();
+	}
+	else
+	{
+		MoveLock = false;
+	}
+	AutoPlay();
+}
+function ISL_ScrDown()
+{ //下翻动作
+	if(GetObj('ISL_Cont').scrollLeft >= GetObj('List1').scrollWidth){GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft - GetObj('List1').scrollWidth;}
+	GetObj('ISL_Cont').scrollLeft += Space ;
+}
+function CompScr()
+{
+	var num;
+	if(Comp == 0){MoveLock = false;return;}
+	if(Comp < 0)
+	{ //上翻
+		if(Comp < -Space)
+		{
+			Comp += Space;
+			num = Space;
+		}
+		else
+		{
+			num = -Comp;
+			Comp = 0;
+		}
+		GetObj('ISL_Cont').scrollLeft -= num;
+		setTimeout('CompScr()',Speed);
+	}
+	else
+	{ //下翻
+		if(Comp > Space)
+		{
+			Comp -= Space;
+			num = Space;
+		}
+		else
+		{
+			num = Comp;
+			Comp = 0;
+		}
+		GetObj('ISL_Cont').scrollLeft += num;
+		setTimeout('CompScr()',Speed);
+	}
+}
+</script>

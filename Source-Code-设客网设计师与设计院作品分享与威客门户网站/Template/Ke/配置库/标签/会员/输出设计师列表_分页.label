@@ -1,0 +1,61 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>885</LabelID>
+    <LabelName>输出设计师列表_分页</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>会员</LabelCate>
+    <LabelDesc />
+    <LabelParam>TitleNum,30,1,标题长|ShowNum,30,1,显示数|Province,,1,省份|szlx,,1,擅长类型|szfg,,1,擅长风格|cjjw,,1,承接价位|UserName,,1,用户名</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_User left join {table1}.dbo.ZL_UserBase on {table1}.dbo.ZL_User.UserID={table1}.dbo.ZL_UserBase.UserID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_User.UserID,{table1}.dbo.ZL_User.UserName,{table1}.dbo.ZL_UserBase.UserFace,{table1}.dbo.ZL_UserBase.City,{table1}.dbo.ZL_UserBase.Province,{table1}.dbo.ZL_UserBase.szlx,{table1}.dbo.ZL_UserBase.szfg,{table1}.dbo.ZL_UserBase.cjjw</LabelField>
+    <LabelWhere>{table1}.dbo.ZL_User.GroupID=2 And Province like '%@Province%' And szlx like '%@szlx%' And szfg like '%@szfg%' And cjjw like '%@cjjw%' And UserName like '%@UserName%'</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_User.LastActiveTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;div class="found_teac"&gt;
+&lt;div class="row padding15"&gt;
+&lt;div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 padding0"&gt;
+&lt;div class="found_teac_r padding15"&gt;
+&lt;a href="/Class_1/NodeNews.aspx?UID={Field="UserID"/}" title="{Field="UserName"/}"&gt;&lt;img src="{Field="UserFace"/}" alt="{Field="UserName"/}" onerror="javascript:this.src='/UploadFiles/nopic.gif';"/&gt;&lt;/a&gt;
+&lt;h3&gt;{Field="UserName"/}设计师&lt;span&gt;认证&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;设计师等级：&lt;span&gt;一等&lt;/span&gt;&lt;br&gt;
+所在城市：{Field="Province"/}{Field="City"/}&lt;br&gt;
+五年工作经验&lt;br&gt;
+擅长类型：&lt;span&gt;{Field="szlx"/}&lt;/span&gt;&lt;br&gt;
+擅长风格：&lt;span&gt;{Field="szfg"/}&lt;/span&gt;&lt;br&gt;
+承接项目数：&lt;span&gt;{ZL.Label id="输出指定用户应表总数" UserID="{Field="UserID"/}" /}&lt;/span&gt; 案例：&lt;span&gt;{ZL.Label id="输出指定设计师作品总数" NodeID="2" UserName="{Field="UserName"/}" /}&lt;/span&gt;&lt;br&gt;
+报价：&lt;span&gt;{Field="cjjw"/}&lt;/span&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 padding0"&gt;
+&lt;div class="found_teac_l"&gt;
+&lt;div class="row padding10"&gt;
+&lt;ul class="list-unstyled"&gt;
+{ZL.Label id="输出指定设计师作品列表" TitleNum="@TitleNum" ShowNum="4" NodeID="2" UserName="{Field="UserName"/}" /}&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="text-right"&gt;
+&lt;a href="/Class_1/NodeNews.aspx?UID={Field="UserID"/}" class="btn btn-default"&gt;找TA设计&lt;/a&gt;
+&lt;button type="button" class="btn btn-success"&gt;加入人才库&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;{/Repeate}
+{ZL.Page id="大图标响应式列表分页v3"/}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

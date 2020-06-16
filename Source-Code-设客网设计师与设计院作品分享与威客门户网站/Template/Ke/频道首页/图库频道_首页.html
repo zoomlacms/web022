@@ -1,0 +1,144 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script src="{$CssDir/}js/my.js" type="text/javascript"></script>
+<style>
+.design_lgoin,.mypeo_comp_l{ top:100px;}
+</style>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+
+<div class="photos_banner">
+<div class="container" style="position:relative;">
+<h1>卓越设计从此开始~</h1>
+{ZL.Label id="获取当前登录信息" /}
+<div class="design_lgoin">
+<div class="design_lgoin_all">
+<h1>立即开启您的设计之旅</h1>
+<a href="/User/Login.aspx" class="btn btn-warning">立即登陆发布项目</a>
+</div>
+</div>
+</div>
+</div><!--photos_banner end-->
+<div class="container" style="position:relative;">
+</div>
+
+<div class="container" style="margin-top:20px;">
+<iframe src="/Class_2/NodeElite.aspx" id="frame_div" scrolling="no" frameborder="0" width="100%"></iframe>
+</div>
+
+{ZL.Label id="全站底部"/} 
+</body>
+</html>
+<style>
+#code_li { display:none;}
+</style>
+<script type="text/javascript" src="/JS/ICMS/ZL_Common.js"></script>
+<script src="/JS/ZL_ValidateCode.js"></script>
+<script src="/JS/Controls/B_User.js"></script>
+<script src="/JS/Controls/Control.js"></script>
+<script src="/JS/ZL_Regex.js"></script>
+<script>
+var IO=document.getElementById('design_nav'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+	".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+ if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//]]>
+//兼容wp8
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+var msViewportStyle = document.createElement("style");
+msViewportStyle.appendChild(
+document.createTextNode(
+  "@-ms-viewport{width:auto!important}"
+)
+);
+document.getElementsByTagName("head")[0].
+appendChild(msViewportStyle);
+}
+
+var buser = new B_User();
+buser.IsLogged(function(data,flag){
+	if(flag)
+	{
+		data=JSON.parse(data);
+		$(".design_lgoin").remove();
+	}
+});
+$(function () {
+	Control.EnableEnter();
+})
+function Login() {
+	var model = { name: $("#uname_t").val(), pwd: $("#passwd_t").val(), key: $("#VCode_hid").val(), code: $("#VCode").val() };
+	buser.Login(model, function (data) {
+		if (data == -1) { alert("用户名或密码错误"); }
+		else if (data == -10) {
+			alert("用户名或密码错误");
+			EnableCode();
+		}
+		else if (data == -2) { alert("验证码错误"); EnableCode()}
+		else {
+			window.location.href="/User/";
+		}
+	});
+}
+function EnableCode() {
+	if ($("#code_li").is(":hidden")) {
+		$("#code_li").show();
+		$("#VCode_img").click();
+		$("#VCode").ValidateCode();
+	}
+}
+$().ready(function(e) {
+    $('#node{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}').addClass("active");
+});
+
+var t='{$GetUrldecode({$GetRequest(t)$})$}';
+var s='{$GetUrldecode({$GetRequest(s)$})$}';
+$("#found_realc1 li a").each(function(index, element) {
+    if($(this).html()==t)
+	{
+		$(this).parent().siblings("li").removeClass("active");
+		$(this).parent().addClass("active");
+	}
+});
+$("#found_realc2 li a").each(function(index, element) {
+    if($(this).html()==s)
+	{
+		$(this).parent().siblings("li").removeClass("active");
+		$(this).parent().addClass("active");
+	}
+});
+$().ready(function(e) {
+    $("#topname").html("作品库");
+	$("#design_nav2").addClass("active");
+});
+function CheckReg()
+{
+	if(ZL_Regex.isMobilePhone($("#Mobile").val()))
+		window.location.href="/User/Register.aspx?Mobile="+$("#Mobile").val();
+	else
+		alert("请输入正确的手机号码！");
+}
+function SetHeight(h)
+{
+	$("#frame_div").height(h);
+}
+</script>

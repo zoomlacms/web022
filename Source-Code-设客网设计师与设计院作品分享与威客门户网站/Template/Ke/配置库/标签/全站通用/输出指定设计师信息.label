@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>907</LabelID>
+    <LabelName>输出指定设计师信息</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>全站通用</LabelCate>
+    <LabelDesc />
+    <LabelParam>UserName,,1,用户名</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_Designer on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_Designer.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.Inputer,{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_CommonModel.Title,{table1}.dbo.ZL_C_Designer.szdq,{table1}.dbo.ZL_C_Designer.szfg,{table1}.dbo.ZL_C_Designer.szlx</LabelField>
+    <LabelWhere>ModelID=48 And Status=99 And Inputer='@UserName'</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>&lt;div class="evalu_tea_ct"&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}"&gt;{Field="Title"/}设计师&lt;/a&gt;&lt;span&gt;认证&lt;/span&gt;&lt;span&gt;一等&lt;/span&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span&gt;所在城市：{ZL:Replace({Field="szdq"/},|,)/}&lt;/span&gt;&lt;span&gt;五年工作经验&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;擅长类型：{Field="szlx"/}&lt;/span&gt;&lt;span&gt;擅长风格：{Field="szfg"/}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;承接项目数：{ZL.Label id="获取指定设计师承接项目总数" UserName="{Field="Inputer"/}" /}&lt;/span&gt;&lt;span&gt;案例：{ZL.Label id="输出指定用户发布作品总数" NodeID="2" UserName="{Field="Inputer"/}" /}&lt;/span&gt;&lt;/p&gt;</LabelContent>
+    <LabelCount>1</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

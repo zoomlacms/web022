@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>24</ModelID>
+    <ModelName>店铺申请</ModelName>
+    <Description />
+    <TableName>ZL_Store_reg</TableName>
+    <ItemName>店铺</ItemName>
+    <ItemUnit>个</ItemUnit>
+    <ItemIcon>Default.gif</ItemIcon>
+    <ModelType>6</ModelType>
+    <ContentModule>内容页/默认店铺申请内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>false</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail />
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

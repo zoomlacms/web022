@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>874</LabelID>
+    <LabelName>输出指定用户中标项目_分页</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>项目</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,1,1,节点ID|TitleNum,30,1,标题长|SysNum,100,1,简介长|ShowNum,30,1,显示数</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel</LabelTable>
+    <LabelField>GeneralID,NodeID,Title</LabelField>
+    <LabelWhere>(NodeID=13 or FirstNodeID=13) And Status=99 And Inputer='{ZL:GetuserName()/}' And GeneralID in (select szxm from ZL_CommonModel left join ZL_C_jbfa on ItemID=ID where Status&gt;=0)</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>&lt;div class="item_list_c"&gt;
+&lt;ul class="list-unstyled"&gt;
+{Repeate}
+&lt;li&gt;
+&lt;h3&gt;&lt;a href="/Class_{Field="NodeID"/}/NodeNews.aspx?GID={Field="GeneralID"/}"&gt;{ZL:CutText({Field="Title"/},@TitleNum,)/}&lt;/a&gt;&lt;span class="pull-right"&gt;{ZL.Label id="获取指定项目应标人数" GID="{Field="GeneralID"/}" /}人应标&lt;/span&gt;&lt;/h3&gt;
+&lt;/li&gt;{/Repeate}
+&lt;/ul&gt;
+&lt;/div&gt;
+{ZL.Page id="大图标响应式列表分页v3"/}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,43 @@
+﻿<div class="header">
+    <label class="title">添加菜单导航</label>
+</div>
+<div class="category-view">
+    <div class="custom-scroll">
+        <div class="outer-container" style="height:100%;">
+            <div class="custom-scroll-handle" style="height: 42.1693px; top: 0px;"></div>
+            <div class="inner-container">
+                <div class="sections">
+                    <div class="section-wrapper live-comps">
+                        <div class="section-header">
+                            <div class="title-line">
+                                <div class="title">菜单风格</div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="domItem listItem">
+                                <nav class="navbar navbar-default">
+                                    <div class="navbar-header">
+                                        <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-th"></span></a>
+                                        <ul class="nav navbar-nav" style="margin:0px;padding-top:5px;">
+                                            <li class="active" style="display:inline-block;"><a href="#">菜单1<span class="sr-only">(current)</span></a></li>
+                                            <li style="display:inline-block;"><a href="#">菜单2</a></li>
+                                            <li style="display:inline-block;"><a href="#">菜单3</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var model = {
+        dataMod: {
+            items: [{ name: "菜单1", href: "#", css: "active", orderid: 1 }, { name: "菜单2", href: "#", orderid: 2 }, { name: "菜单3", href: "#", orderid: 3}]
+        },
+        config: { type: "menu", compid: "", css: "candrag", style: 'position:absolute;top:30%;left:40%;' }
+    };
+</script>

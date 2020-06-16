@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>928</LabelID>
+    <LabelName>根据设计师ID输出设计的详细信息</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>图库专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>GID,0,1,内容ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_Designer on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_Designer.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_CommonModel.Title,{table1}.dbo.ZL_C_Designer.cjjw,{table1}.dbo.ZL_C_Designer.pic,{table1}.dbo.ZL_C_Designer.synopsis,{table1}.dbo.ZL_C_Designer.szdq,{table1}.dbo.ZL_C_Designer.szfg,{table1}.dbo.ZL_C_Designer.szlx</LabelField>
+    <LabelWhere>(NodeID=1 or FirstNodeID=1) And ModelID=48 And Status=99 And GeneralID='@GID'</LabelWhere>
+    <LabelOrder />
+    <LabelContent>&lt;img src="{ZL:GetPicUrl({Field="pic"/})/}" class="img-responsive center-block" onerror="this.src='/Images/userface/noface.gif'" alt="{Field="Title"/}"&gt;
+&lt;h1 class="text-center"&gt;{Field="Title"/}&lt;/h1&gt;
+&lt;p&gt;所在地区：&lt;span&gt;{Field="szdq"/}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;擅长风格：&lt;span&gt;{Field="szfg"/}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;简介：{Field="synopsis"/}&lt;/p&gt;
+&lt;p&gt;擅长类型：&lt;span&gt;{Field="szlx"/}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;承接价位：&lt;span&gt;{Field="cjjw"/}&lt;/span&gt;&lt;/p&gt;</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

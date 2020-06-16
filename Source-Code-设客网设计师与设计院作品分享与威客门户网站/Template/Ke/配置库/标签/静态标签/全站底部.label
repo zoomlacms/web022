@@ -1,0 +1,49 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>841</LabelID>
+    <LabelName>全站底部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div class="kefu"&gt;
+&lt;ul class="list-unstyled"&gt;
+&lt;li&gt;&lt;a href="#"&gt;&lt;span&gt;在线客服&lt;/span&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;&lt;/a&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;&lt;span&gt;在线客服&lt;/span&gt;&lt;i class="fa fa-headphones"&gt;&lt;/i&gt;&lt;/a&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;&lt;span&gt;在线客服&lt;/span&gt;&lt;i class="fa fa-microphone"&gt;&lt;/i&gt;&lt;/a&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;&lt;span&gt;在线客服&lt;/span&gt;&lt;i class="fa fa-qq"&gt;&lt;/i&gt;&lt;/a&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;&lt;span&gt;在线客服&lt;/span&gt;&lt;i class="fa fa-user"&gt;&lt;/i&gt;&lt;/a&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="footer"&gt;
+&lt;div class="design_bottom"&gt;
+&lt;a href="{ZL:GetInfoUrl(11)/}"&gt;公司简介&lt;/a&gt;
+&lt;a href="{ZL:GetInfoUrl(14)/}"&gt;招贤纳士&lt;/a&gt;
+&lt;a href="{ZL:GetInfoUrl(15)/}"&gt;广告服务&lt;/a&gt;
+&lt;a href="{ZL:GetInfoUrl(12)/}"&gt;联系我们&lt;/a&gt;
+&lt;a href="{ZL:GetInfoUrl(13)/}"&gt;版权声明&lt;/a&gt;
+&lt;a href="{ZL:GetInfoUrl(16)/}"&gt;法律顾问&lt;/a&gt;
+&lt;a href="{ZL:GetInfoUrl(17)/}"&gt;合作伙伴&lt;/a&gt;
+&lt;a href="/index" target="_blank"&gt;论坛反馈&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="design_copy"&gt;{$Copyright/}&lt;/div&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+  </Table>
+</NewDataSet>

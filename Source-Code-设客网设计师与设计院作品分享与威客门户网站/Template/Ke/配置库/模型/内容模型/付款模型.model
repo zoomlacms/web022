@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>56</ModelID>
+    <ModelName>付款模型</ModelName>
+    <Description />
+    <TableName>ZL_C_fkmx</TableName>
+    <ItemName>付款</ItemName>
+    <ItemUnit>个</ItemUnit>
+    <ItemIcon>fa fa-money</ItemIcon>
+    <ModelType>1</ModelType>
+    <ContentModule>内容页/默认付款模型内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>false</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail>0</Thumbnail>
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

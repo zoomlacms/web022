@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>938</LabelID>
+    <LabelName>输出指定项目实际付款次数</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>项目</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_fkmx on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_fkmx.ID</LabelTable>
+    <LabelField>Count(*) As Num</LabelField>
+    <LabelWhere>ModelID=56 And Status=99 And szxm='{$GetRequest(GID)$}' And szjb='{$GetRequest(SID)$}' And Inputer='{ZL:GetuserName()/}'</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="Num"/}</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

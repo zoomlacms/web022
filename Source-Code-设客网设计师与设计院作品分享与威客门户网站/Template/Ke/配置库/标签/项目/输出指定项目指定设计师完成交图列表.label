@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>941</LabelID>
+    <LabelName>输出指定项目指定设计师完成交图列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>项目</LabelCate>
+    <LabelDesc />
+    <LabelParam>GID,,1,项目ID|UserName,,1,设计师名|NodeID,39,1,节点ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_xmjt on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_xmjt.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.CreateTime,{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_CommonModel.Title,{table1}.dbo.ZL_C_xmjt.wjlx</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID) And Status=99 And ModelID=47 And Inputer='@UserName'  And {table1}.dbo.ZL_C_xmjt.szxm='@GID'</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>&lt;h3&gt;项目交图：&lt;/h3&gt;
+&lt;ul class="list-unstyled checked_loca_d"&gt;
+{Repeate}
+&lt;li&gt;&lt;h4&gt;{Field="Title"/}&lt;span&gt;{ZL:FormatDate({Field="CreateTime"/},yyyy年MM月dd日)/}&lt;/span&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}?GID={$GetRequest(GID)$}&amp;SID={$GetRequest(SID)$}" class="btn btn-danger btn-sm pull-right" title="{Field="Title"/}"&gt;查看详情&lt;/a&gt;&lt;/h4&gt;&lt;/li&gt;{/Repeate}
+&lt;/ul&gt;</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

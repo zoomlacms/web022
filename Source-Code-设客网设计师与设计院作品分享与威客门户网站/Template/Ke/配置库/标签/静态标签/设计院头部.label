@@ -1,0 +1,87 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>908</LabelID>
+    <LabelName>设计院头部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div class="pep_top"&gt;
+&lt;div class="container"&gt;
+&lt;ul class="list-unstyled"&gt;
+&lt;li class="sitelogo"&gt;&lt;a href="/"&gt;&lt;img src="{$LogoUrl/}" alt="{$SiteName/}" /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/User/"&gt;首页&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetNodeLinkUrl(1)/}"&gt;找设计师&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetNodeLinkUrl(2)/}"&gt;作品图库&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/Index" class="borderno" target="_blank"&gt;设计论坛&lt;/a&gt;&lt;/li&gt;
+&lt;li class="pep_search"&gt;
+&lt;form action="/Search/Searchlist.aspx" method="get" target="_blank"&gt;
+&lt;input type="text" name="keyword" class="form-control text_200" /&gt;&lt;button type="submit"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/form&gt;
+&lt;/li&gt;
+&lt;li class="pull-right dropdown" onMouseOver="javascript:$(this).addClass('open');" onMouseOut="javascript:$(this).removeClass('open');"&gt;
+&lt;i class="fa fa-bullhorn"&gt;&lt;/i&gt; Hi &lt;a href="/User/Default.aspx"&gt;我的设客&lt;/a&gt;
+&lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="min-width:inherit; margin-top:-5px;"&gt;
+&lt;li&gt;&lt;a href="/User/Info/UserInfo.aspx"&gt;个人资料&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/User/Content/MyProject.aspx?NodeID=14"&gt;我的项目&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/User/Logout.aspx"&gt;退出系统&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="pep_nav"&gt;
+&lt;nav class="navbar navbar-default"&gt;
+&lt;div class="container"&gt;
+&lt;div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 sitename"&gt;
+&lt;a href="/User/Default2.aspx"&gt;&lt;asp:Label ID="uName" runat="server" hidden&gt;&lt;/asp:Label&gt;&lt;i class="fa fa-leaf fa-2x"&gt;&lt;/i&gt;企业工作台&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"&gt; 
+&lt;div class="navbar-header"&gt;
+&lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"&gt;
+&lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;a class="navbar-brand visible-xs" href="#"&gt;快速导航&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"&gt;
+&lt;ul class="nav navbar-nav"&gt;
+&lt;li&gt;&lt;a href="/User/Info/UserInfo.aspx"&gt;资料管理&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/User/Content/MyProject.aspx?NodeID=14"&gt;项目管理&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/Class_12/Default.aspx"&gt;人才库&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/Class_4/NodePage.aspx"&gt;财务记录&lt;/a&gt;&lt;/li&gt; 
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt; 
+&lt;div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 pep_atten"&gt;
+&lt;ul class="list-inline"&gt;
+&lt;li onmouseover="javascript:$(this).find('img').show();" onmouseout="javascript:$(this).find('img').hide();" class="relative"&gt;&lt;a href="javascript:;"&gt;&lt;i class="fa fa-weibo"&gt;&lt;/i&gt;&lt;/a&gt;&lt;img src="{$CssDir/}images/weibo.jpg" style="display: none;" alt="微博二维码"&gt;&lt;/li&gt;
+&lt;li onmouseover="javascript:$(this).find('img').show();" onmouseout="javascript:$(this).find('img').hide();" class="relative"&gt;&lt;a href="javascript:;"&gt;&lt;i class="fa fa-weixin"&gt;&lt;/i&gt;&lt;/a&gt;&lt;img src="{$CssDir/}images/weixin.jpg" style="display: none;" alt="微信二维码"&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;&lt;img src="/Template/Ke/style/images/design_nav1.png"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt; 
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/nav&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+  </Table>
+</NewDataSet>

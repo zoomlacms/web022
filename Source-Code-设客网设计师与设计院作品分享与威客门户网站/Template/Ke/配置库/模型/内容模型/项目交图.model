@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>47</ModelID>
+    <ModelName>项目交图</ModelName>
+    <Description />
+    <TableName>ZL_C_xmjt</TableName>
+    <ItemName>交图</ItemName>
+    <ItemUnit>篇</ItemUnit>
+    <ItemIcon>glyphicon glyphicon-picture</ItemIcon>
+    <ModelType>1</ModelType>
+    <ContentModule>内容页/默认项目交图内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>false</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail>0</Thumbnail>
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

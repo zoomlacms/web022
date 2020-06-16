@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>1015</LabelID>
+    <LabelName>输出项目资金托管状态</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>项目</LabelCate>
+    <LabelDesc />
+    <LabelParam>GID,,1,项目ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_jbfa on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_jbfa.ID</LabelTable>
+    <LabelField>COUNT(*) As Num</LabelField>
+    <LabelWhere>ModelID=49 And Status&gt;0 And ISNUMERIC(szxm)&gt;0 And szxm='@GID' And (select top 1 Ordermessage from ZL_Orderinfo where ISNUMERIC(Ordermessage)&gt;0 And Paymentstatus=1 And Ordermessage='@GID')='@GID'</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="Num"/}</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

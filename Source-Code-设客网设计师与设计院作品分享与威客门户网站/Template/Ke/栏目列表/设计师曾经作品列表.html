@@ -1,0 +1,17 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>设计师作品列表_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="设计师数据源标签" FD="Tagkey" page="0"/}">
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<style>
+.design_piclist { padding-left:15px; padding-right:15px;}
+</style>
+</head>
+<body>
+{ZL.Label id="输出指定用户曾经作品列表_分页" GID="{$GetRequest(GID)$}" TitleNum="26" ShowNum="12" ClassName="col-lg-3 col-md-3 col-sm-3 col-xs-6 padding5" NodeID="2" /}
+</body>
+</html>

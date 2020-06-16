@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>942</LabelID>
+    <LabelName>施工服务项目数据源标签地址栏</LabelName>
+    <LabelType>3</LabelType>
+    <LabelCate>数据源标签</LabelCate>
+    <LabelDesc>施工服务项目数据源标签</LabelDesc>
+    <LabelParam />
+    <LabelTable>ZL_CommonModel left join ZL_C_sgfwxm on ZL_CommonModel.ItemID=ZL_C_sgfwxm.ID</LabelTable>
+    <LabelField>ZL_CommonModel.*,ZL_C_sgfwxm.*</LabelField>
+    <LabelWhere>ZL_CommonModel.GeneralID='{$GetRequest(GID)$}'</LabelWhere>
+    <LabelOrder />
+    <LabelContent />
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

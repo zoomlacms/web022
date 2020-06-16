@@ -1,0 +1,44 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>851</LabelID>
+    <LabelName>输出设计师列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>列表专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>SynNum,100,1,简介长度|ShowNum,8,1,显示个数|ClassName,0,1,标签名|NodeID,1,1,节点ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_Designer on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_Designer.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_CommonModel.NodeID,{table1}.dbo.ZL_CommonModel.Title,{table1}.dbo.ZL_C_Designer.pic,{table1}.dbo.ZL_C_Designer.synopsis</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID) And Status=99</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li class="@ClassName"&gt;
+&lt;div class="design_she_c"&gt;
+&lt;div class="design_she_ct"&gt;
+&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" title="{Field="Title"/}"&gt;&lt;img src="{ZL:GetPicUrl({Field="pic"/})/}" alt="{Field="Title"/}" onerror="javascript:this.src='/UploadFiles/nopic.gif';" /&gt;&lt;/a&gt;
+&lt;h3&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" title="{Field="Title"/}"&gt;{Field="Title"/}&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;{ZL:CutText({Field="synopsis"/},@SynNum,...)/}&lt;/p&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="design_she_cb"&gt;
+&lt;a href="/User/Content/AddToFav.aspx?itemid={Field="GeneralID"/}&amp;Url=/Item/{Field="GeneralID"/}.aspx&amp;title={Field="Title"/}&amp;type=1"&gt;&lt;i class="fa fa-plus"&gt;&lt;/i&gt;关注&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

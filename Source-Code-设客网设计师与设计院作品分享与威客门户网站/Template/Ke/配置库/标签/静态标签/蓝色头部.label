@@ -1,0 +1,143 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>151</LabelID>
+    <LabelName>蓝色头部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>  &lt;link href="{$CssDir/}skin_0.css" rel="stylesheet" type="text/css" id="skinCss" /&gt;
+&lt;script src="{$CssDir/}js/changeskin.js" language="javascript"  type="text/javascript"&gt;&lt;/script&gt;
+&lt;div id="morelist" style="border:1px solid #3366CC;list-style:none;width:950px; height:150px;display:none;margin:auto;"&gt;
+&lt;div class="rollBox"&gt;
+&lt;a onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()" onmouseout="ISL_StopDown()"  class="img1 LeftBotton" /&gt;&lt;/a&gt;
+     &lt;div class="Cont" id="ISL_Cont"&gt;
+      &lt;div class="ScrCont"&gt;
+       &lt;div id="List1"&gt;
+&lt;A class="pl selected"  id="skin_0" onClick="golbal('0')" title="默认模板"&gt;&lt;IMG height=72 src="{$CssDir/}images/skin_icon0.jpg" width=96&gt; &lt;/A&gt;
+&lt;A class="pl" id="skin_1" onClick="golbal('1')" title="放飞爱情"&gt;&lt;IMG height=72 src="{$CssDir/}images/skin_icon1.jpg" width=96&gt;&lt;/A&gt;
+&lt;A class="pl" id="skin_2" onClick="golbal('2')" title="加菲猫"&gt;&lt;IMG height=72 src="{$CssDir/}images/skin_icon2.jpg" width=96&gt;&lt;/A&gt;
+&lt;A class="pl" id="skin_3" onClick="golbal('3')" title="小象国"&gt;&lt;IMG height=72 src="{$CssDir/}images/skin_icon3.jpg" width=96&gt;&lt;/A&gt;
+&lt;A class="pl" id="skin_4" onClick="golbal('4')" title="花好月圆"&gt;&lt;IMG height=72 src="{$CssDir/}images/skin_icon4.jpg" width=96&gt;&lt;/A&gt;
+&lt;A class="pl" id="skin_5" onClick="golbal('5')" title="葡萄"&gt;&lt;IMG height=72 src="{$CssDir/}images/skin_icon5.jpg" width=96&gt;&lt;/A&gt;
+&lt;A class="pl" id="skin_6" onClick="golbal('6')" title="欢度国庆"&gt;&lt;IMG height=72 src="{$CssDir/}images/skin_icon6.jpg" width=96&gt;&lt;/A&gt;
+&lt;A class="pl" id="skin_7" onClick="golbal('7')" title="忧伤"&gt;&lt;IMG height=72 src="{$CssDir/}images/skin_icon7.jpg" width=96&gt;&lt;/A&gt;
+&lt;A class="pl" id="skin_8" onClick="golbal('8')" title="水墨山水"&gt;&lt;IMG height=72 src="{$CssDir/}images/skin_icon8.jpg" width=96&gt;&lt;/A&gt;
+	&lt;!-- 图片列表 end --&gt;
+   &lt;/div&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;
+&lt;a onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()" onmouseout="ISL_StopUp()"  class="img2 RightBotton"  /&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+ &lt;div id="formb"&gt;
+  &lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;div id="skins"&gt;&lt;/div&gt; 
+&lt;input type="button" id="definite" value="" class="definite" onClick="setCookie('Skinname','2','232');toggle('morelist','iskin')"&gt;&lt;/td&gt;&lt;td&gt;
+&lt;input type="button"   value="" class="skinreset" onClick="delCookie()"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+function golbal(num)
+{document.getElementById("skins").innerHTML='&lt;input type=button  class=definite onClick=setCookie("Skinname","'+num+'","232");toggle("morelist","iskin")&gt;';
+document.getElementById("definite").style.display="none";
+}
+ &lt;/script&gt;
+&lt;!-- 网站顶部 --&gt;
+ &lt;div id="WebTop"&gt;
+&lt;div id="logo"&gt;&lt;a href="/" target="_blank"&gt;  &lt;img src="{$LogoUrl/}" border="0" /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div id="Top_R"&gt;
+&lt;div id="TopNavBar"&gt;
+&lt;ul class="TopN_l"&gt;
+&lt;li class="skin"&gt;&lt;a href="javascript:toggle('morelist','iskin')"  ref="noBlank" id="iskin"&gt;换肤&lt;/a&gt;&lt;/li&gt;
+&lt;li class="set_home"&gt;&lt;a  onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('{$SiteURL/}');" href="#"&gt;设为首页&lt;/a&gt;&lt;/li&gt;
+&lt;li class="havior"&gt;&lt;a href="javascript:window.external.addFavorite('{$SiteURL/}','{$SiteName/}');"&gt;加入收藏&lt;/a&gt;&lt;/li&gt;
+&lt;li class="non"&gt;|&lt;/li&gt;
+&lt;li class="non"&gt;&lt;a href="/user/"&gt;登录&lt;/a&gt;&lt;/li&gt;
+&lt;li class="non"&gt;&lt;a href="/user/Register.aspx"&gt;注册&lt;/a&gt;&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;ul class="TopN_r"&gt;
+&lt;li&gt; {ZL:Big5()/}&lt;/li&gt; 
+&lt;li&gt;&lt;span id="btnNoBlank" class="curr"&gt;原窗口打开&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span id="btnNewBlank"&gt;新窗口打开&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span id="setOk" style="display:none;"&gt;设置成功!&lt;/span&gt;&lt;/li&gt; &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id="nav"&gt;
+&lt;ul&gt;
+&lt;li id="Menu0"&gt;&lt;a href="/" target="_blank"&gt;首页&lt;/a&gt;&lt;/li&gt;
+{ZL.Label id="蓝色经典_顶部节点列表" ParentID="0" ShowNum="8" /}
+&lt;/ul&gt;
+&lt;/div&gt;&lt;!--导航结束--&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;script language="JavaScript" type="text/JavaScript"&gt;
+&lt;!--
+function toggle(targetid,objN){
+   
+      var target=document.getElementById(targetid);
+   var iskin=document.getElementById(objN)
+
+            if (target.style.display=="block"){
+                target.style.display="none";
+    iskin.innerText="换肤";
+    
+
+            } else {
+                target.style.display="block";
+    iskin.innerText='换肤';
+            }
+   
+}
+--&gt;&lt;/script&gt;&lt;script&gt;
+function setCookie(c_name,value,expiredays)
+{
+var exdate=new Date()
+exdate.setDate(exdate.getDate()+expiredays)
+document.cookie=c_name+ "=" +escape(value)+
+((expiredays==null) ? "" : ";expires="+exdate.toGMTString());
+alert("保存成功")
+}
+
+function getCookie(c_name)
+ {
+if (document.cookie.length&gt;0)
+  { 
+   c_start=document.cookie.indexOf(c_name + "=")
+  
+  if (c_start!=-1)
+    { 
+     c_start=c_start + c_name.length+1; 
+    c_end=document.cookie.indexOf(";",c_start);
+    if (c_end==-1) c_end=document.cookie.length;
+   document.getElementById("skinCss").href="{$CssDir/}skin_"+document.cookie.substring(c_start,c_end)+".css";
+
+  }
+   }
+return ""
+}
+function delCookie(){
+document.getElementById("skin_0").click();
+document.getElementById("definite").click();	
+	}
+
+&lt;/script&gt;
+
+&lt;span style="display:none"&gt;&lt;img src="/images/logo.gif" onload="getCookie('Skinname')"&gt;&lt;/span&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

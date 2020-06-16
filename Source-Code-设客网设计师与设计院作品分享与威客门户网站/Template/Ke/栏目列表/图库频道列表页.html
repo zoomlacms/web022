@@ -1,0 +1,80 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<style>
+#pageDiv { padding-bottom:20px;}
+</style>
+</head>
+<body>
+<div class="found_real"> 
+<ul class="list-inline found_realr" id="found_realc1">
+<li>类型：</li>
+<li id="node"><a href="/Class_2/NodeElite.aspx?s={$GetRequest(s)$}&k={$GetRequest(k)$}">不限</a></li>
+<li id="node27"><a href="/Class_2/NodeElite.aspx?NodeID=27&s={$GetRequest(s)$}&k={$GetRequest(k)$}">住宅</a></li>
+<li id="node28"><a href="/Class_2/NodeElite.aspx?NodeID=28&s={$GetRequest(s)$}&k={$GetRequest(k)$}">酒店</a></li>
+<li id="node29"><a href="/Class_2/NodeElite.aspx?NodeID=29&s={$GetRequest(s)$}&k={$GetRequest(k)$}">办公楼</a></li>
+<li id="node30"><a href="/Class_2/NodeElite.aspx?NodeID=30&s={$GetRequest(s)$}&k={$GetRequest(k)$}">别墅</a></li>
+<li id="node31"><a href="/Class_2/NodeElite.aspx?NodeID=31&s={$GetRequest(s)$}&k={$GetRequest(k)$}">厂房</a></li>
+<li id="node32"><a href="/Class_2/NodeElite.aspx?NodeID=32&s={$GetRequest(s)$}&k={$GetRequest(k)$}">商业</a></li>
+<li id="node33"><a href="/Class_2/NodeElite.aspx?NodeID=33&s={$GetRequest(s)$}&k={$GetRequest(k)$}">医院</a></li>
+<li id="node34"><a href="/Class_2/NodeElite.aspx?NodeID=34&s={$GetRequest(s)$}&k={$GetRequest(k)$}">学校</a></li>
+<li id="node35"><a href="/Class_2/NodeElite.aspx?NodeID=35&s={$GetRequest(s)$}&k={$GetRequest(k)$}">其它</a></li>
+</ul>
+<ul class="list-inline found_realc" id="found_realc2">
+<li>风格：</li>
+<li class="active"><a href='{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?s=&k={$GetRequest(k)$}'>不限</a></li>
+<li><a href='/Class_2/NodeElite.aspx?NodeID={$GetRequest(NodeID)$}&s={$GetUrlencode(现代)$}&k={$GetRequest(k)$}'>现代</a></li>
+<li><a href='/Class_2/NodeElite.aspx?NodeID={$GetRequest(NodeID)$}&s={$GetUrlencode(仿古)$}&k={$GetRequest(k)$}'>仿古</a></li>
+<li><a href='/Class_2/NodeElite.aspx?NodeID={$GetRequest(NodeID)$}&s={$GetUrlencode(中式)$}&k={$GetRequest(k)$}'>中式</a></li>
+<li><a href='/Class_2/NodeElite.aspx?NodeID={$GetRequest(NodeID)$}&s={$GetUrlencode(欧式)$}&k={$GetRequest(k)$}'>欧式</a></li>
+<li><a href='/Class_2/NodeElite.aspx?NodeID={$GetRequest(NodeID)$}&s={$GetUrlencode(北美)$}&k={$GetRequest(k)$}'>北美</a></li>
+<li><a href='/Class_2/NodeElite.aspx?NodeID={$GetRequest(NodeID)$}&s={$GetUrlencode(地中海)$}&k={$GetRequest(k)$}'>地中海</a></li>
+<li><a href='/Class_2/NodeElite.aspx?NodeID={$GetRequest(NodeID)$}&s={$GetUrlencode(徽派)$}&k={$GetRequest(k)$}'>徽派</a></li>
+<li><a href='/Class_2/NodeElite.aspx?NodeID={$GetRequest(NodeID)$}&s={$GetUrlencode(其它)$}&k={$GetRequest(k)$}'>其它</a></li>
+</ul>  
+</div>
+<div class="found_hot">
+<ul class="list-unstyled">
+<li class="active"><a href="/Class_2/NodeElite.aspx?NodeID={$GetRequest(NodeID)$}&s={$GetRequest(s)$}&k={$GetRequest(k)$}">热门排序</a></li>
+<li><a href="/Class_27/NodePage.aspx?NodeID={$GetRequest(NodeID)$}&s={$GetRequest(s)$}&k={$GetRequest(k)$}">关注度</a></li>
+<li><a href="/Class_27/NodeHot.aspx?NodeID={$GetRequest(NodeID)$}&s={$GetRequest(s)$}&k={$GetRequest(k)$}">设计费用</a></li>
+<li><a href="/Class_28/NodePage.aspx??NodeID={$GetRequest(NodeID)$}&s={$GetRequest(s)$}&k={$GetRequest(k)$}">项目造价</a></li>
+</ul>
+<form class="navbar-form navbar-left" role="search" method="get" action="/Class_2/NodeElite.aspx">
+<input type="hidden" name="NodeID" value="{$GetRequest(NodeID)$}" />
+<input type="hidden" name="s" value="{$GetUrldecode({$GetRequest(s)$})$}" />
+<div class="form-group">
+<input name="k" type="text" class="form-control" placeholder="在结果中搜索" value="{$GetUrldecode({$GetRequest(k)$})$}" >
+</div>
+<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+</form>
+<div class="clearfix"></div>
+</div>
+{ZL.Label id="输出指定节点的作品列表_分页" NodeID="{$GetRequest(NodeID)$}" TitleNum="26" ShowNum="34" Style="{$GetUrldecode({$GetRequest(s)$})$}" Title="{$GetUrldecode({$GetRequest(k)$})$}" /}
+</body>
+</html>
+<script>
+$().ready(function(e) {
+	parent.SetHeight(document.body.offsetHeight)
+});
+var t='{$GetUrldecode({$GetRequest(NodeID)$})$}';
+var s='{$GetUrldecode({$GetRequest(s)$})$}';
+$("#found_realc1 li").removeClass("active");
+$("#node"+t).addClass("active");
+$("#found_realc2 li a").each(function(index, element) {
+    if($(this).html()==s)
+	{
+		$(this).parent().siblings("li").removeClass("active");
+		$(this).parent().addClass("active");
+	}
+});
+
+</script>

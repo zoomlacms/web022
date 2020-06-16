@@ -1,0 +1,96 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>883</LabelID>
+    <LabelName>全站头部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div class="design_top"&gt;
+&lt;div class="container"&gt;
+&lt;div class="design_top_l"&gt;
+&lt;ul class="list-unstyled"&gt;
+&lt;li onMouseOver="javascript:$(this).find('img').show();" onMouseOut="javascript:$(this).find('img').hide();"&gt;&lt;a href="javascript:;"&gt;&lt;i class="fa fa-qrcode"&gt;&lt;/i&gt;官方微信&lt;/a&gt;&lt;img src="{$CssDir/}images/weixin.jpg" style="display:none;" alt="微信二维码" /&gt;&lt;/li&gt;
+&lt;li hidden&gt;&lt;a href="#"&gt;&lt;i class="fa fa-mobile"&gt;&lt;/i&gt;客户端下载&lt;/a&gt;&lt;/li&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="design_top_r"&gt;
+&lt;ul class="list-unstyled"&gt;
+{ZL.Label id="会员登录状态"/}
+&lt;li&gt;&lt;a href="#"&gt;机构服务&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="tel:40005800238"&gt;官方客服热线：4000-5800-238&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;!--design_top end--&gt;
+&lt;div class="container design_login"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 design_login_l"&gt;
+&lt;a href="/"&gt;&lt;img src="{$CssDir/}images/logo.png" alt="{$SiteName/}" /&gt;&lt;/a&gt;
+&lt;a href="{ZL:GetNodeLinkUrl(26)/}" id="topname"&gt;设计师列表团队&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 design_login_m"&gt;
+&lt;form method="get" action="/Search/SearchList.aspx" target="_blank"&gt;
+&lt;div class="input-group"&gt;
+&lt;input type="text" class="form-control" name="KeyWord" placeholder="请输入关键字..."&gt;
+&lt;span class="input-group-btn"&gt;
+&lt;button class="btn btn-default" type="button"&gt;搜索&lt;/button&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="position:relative;"&gt;
+&lt;nav class="navbar navbar-default" id="design_nav"&gt;
+&lt;div class="container"&gt;
+&lt;!-- Brand and toggle get grouped for better mobile display --&gt;
+&lt;div class="navbar-header"&gt;
+&lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"&gt;
+&lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;span class="icon-bar"&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;a class="navbar-brand visible-xs" href="/"&gt;{$SiteName/}&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- Collect the nav links, forms, and other content for toggling --&gt;
+&lt;div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"&gt;
+&lt;ul class="nav navbar-nav"&gt;
+&lt;li&gt;&lt;a href="/"&gt;首页&lt;/a&gt;&lt;/li&gt;
+&lt;li id="design_nav1"&gt;&lt;a href="{ZL:GetNodeLinkUrl(1)/}"&gt;找设计师&lt;/a&gt;&lt;/li&gt;
+&lt;li id="design_nav2"&gt;&lt;a href="{ZL:GetNodeLinkUrl(2)/}"&gt;作品图库&lt;/a&gt;&lt;/li&gt;
+&lt;li id="design_navuser"&gt;&lt;a href="/User/"&gt;个人中心&lt;/a&gt;&lt;/li&gt;
+&lt;li id="design_navindex"&gt;&lt;a href="/Index" target="_blank"&gt;设计论坛&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="nav navbar-nav navbar-center"&gt;
+&lt;/ul&gt;
+&lt;ul class="nav navbar-nav navbar-right navbar_ul"&gt;
+&lt;li class="navbar_liw relative" onmouseover="javascript:$(this).find('img').show();" onmouseout="javascript:$(this).find('img').hide();"&gt;&lt;a href="#"&gt;&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-circle fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-weibo fa-stack-1x fa-inverse"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;&lt;img src="{$CssDir/}images/weixin.jpg" style="display: none;" alt="微信二维码"&gt;&lt;/li&gt;
+&lt;li class="navbar_liw relative" onmouseover="javascript:$(this).find('img').show();" onmouseout="javascript:$(this).find('img').hide();"&gt;&lt;a href="#"&gt;&lt;span class="fa-stack fa-lg"&gt;&lt;i class="fa fa-circle fa-stack-2x"&gt;&lt;/i&gt;&lt;i class="fa fa-weixin fa-stack-1x fa-inverse"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;&lt;img src="{$CssDir/}images/weixin.jpg" style="display: none;" alt="微信二维码"&gt;&lt;/li&gt;
+&lt;li class="navbar_lim"&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;!-- /.navbar-collapse --&gt;
+&lt;/div&gt;&lt;!-- /.container-fluid --&gt;
+&lt;/nav&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>52</ModelID>
+    <ModelName>电气专业项目</ModelName>
+    <Description />
+    <TableName>ZL_C_dqzyxm</TableName>
+    <ItemName>电气项目</ItemName>
+    <ItemUnit>个</ItemUnit>
+    <ItemIcon>glyphicon glyphicon-send</ItemIcon>
+    <ModelType>1</ModelType>
+    <ContentModule>内容页/默认电气专业项目内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>true</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail>0</Thumbnail>
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

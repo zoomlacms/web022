@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>下载行程</title>
+</head>
+
+<body>
+<!--startprint-->
+<table width="760" border="1" align="center" cellpadding="0" cellspacing="1" bordercolor="#000000" style="font-size:14px; line-height:22px;">
+<tr>
+<td>
+<table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#000000">
+  <tr>
+    <td align="center"><p align="center" style="font-size:22px; line-height:22px;"><strong>测试</strong></p>
+          <p align="center" style="font-size:16px; line-height:22px;"><strong>旅行社：江西环宇旅行社</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>联系人：<input type="text" value="龙樾" style="border:none;font-size:16px; width:100px;" /></strong><strong>电话：<input type="text" value="18907003737" style="border:none;font-size:16px; width:200px;" /></strong></p></td>
+  </tr>
+</table>
+<table width="100%" border="1" align="center" cellpadding="5" cellspacing="0" bordercolor="#000000">
+  <tr>
+    <td width="34%">线路编号：<span>L20151009184919</span></td>
+    <td width="33%">行程天数：<span>1</span></td>
+  <td width="33%">出发地：</td>
+  </tr>
+  <tr>
+  <td colspan="3">
+  主要景点：<span>asda</span>  </td>
+  </tr>
+</table>
+<table width="100%" border="1" align="center" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+<td colspan="2">产品价格：</td>
+</tr>
+ 
+</table> 
+<table width="100%" border="1" align="center" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+<td colspan="2" align="center"><strong>【行程安排】</strong></td>
+</tr>
+	
+	
+<tr>
+    <td width="12%" align="center"><strong>第1天</strong></td> 
+    <td width="88%">asdas</td>
+</tr>
+ 
+</table>  
+<table width="100%" border="1" align="center" cellpadding="5" cellspacing="0" bordercolor="#000000">
+<tr>
+<td align="center"><strong>【服务标准】</strong></td>
+</tr>
+<tr>
+<td>asdasd </td>
+</tr>
+<tr>
+<td align="center"><strong>【<strong>自费说明与购物安排</strong>】</strong></td>
+</tr>
+<tr>
+<td>asdasd </td>
+</tr
+><tr>
+<td align="center"><strong>【<strong>注意事项</strong>】</strong></td>
+</tr>
+<tr>
+<td>asdsadasd </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>   
+ <!--endprint-->    
+</body>
+</html>

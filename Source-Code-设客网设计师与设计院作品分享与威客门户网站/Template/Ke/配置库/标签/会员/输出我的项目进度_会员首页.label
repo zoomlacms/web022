@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>861</LabelID>
+    <LabelName>输出我的项目进度_会员首页</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>会员</LabelCate>
+    <LabelDesc />
+    <LabelParam>TitleNum,50,1,标题长度|ShowNum,6,1,显示个数|NodeID,0,1,节点ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel</LabelTable>
+    <LabelField>GeneralID,NodeID,Title</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID) and Status=99 and Inputer='{ZL:GetuserName()/}'</LabelWhere>
+    <LabelOrder>CreateTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" title="{Field="Title"/}" target="_blank"&gt;{ZL:CutText({Field="Title"/},@TitleNum,)/}&lt;/a&gt;&lt;/td&gt;
+&lt;td style="width:180px;"&gt;&lt;strong&gt;{ZL.Label id="获取指定项目应标人数" GID="{Field="GeneralID"/}" /}人应标&lt;/strong&gt;&lt;span class="pro_status" data-ying="{ZL.Label id="获取指定项目应标人数" GID="{Field="GeneralID"/}" /}" data-zhong="{ZL.Label id="获取指定项目实际中标人数" GID="{Field="GeneralID"/}" /}" data-pay="{ZL.Label id="输出指定项目实际付款总次数" GID="{Field="GeneralID"/}" /}"&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td style="width:200px;"&gt;
+&lt;a href="/Class_{Field="NodeID"/}/NodeNews.aspx?GID={Field="GeneralID"/}" target="_blank"&gt;点击查看 &lt;i class="fa fa-envelope-o"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a href="/Class_13/NodeNews.aspx?GID={Field="GeneralID"/}" data-toggle="tooltip" data-placement="top" title="请先托管资金后设计师开始工作" class="jbpay{ZL.Label id="输出项目资金托管状态" GID="{Field="GeneralID"/}" /}"&gt;托管资金 &lt;i class="fa fa-money"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

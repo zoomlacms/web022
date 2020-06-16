@@ -1,0 +1,244 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}{ZL.Source id="竞标方案数据源标签地址栏"/}{ZL.Source id="方案项目模型数据源标签地址栏"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>项目评价_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script type="text/javascript" src="/JS/ICMS/ZL_Common.js"></script>
+<script src="/JS/ZL_ValidateCode.js"></script>
+<script src="/JS/Controls/B_User.js"></script>
+<script src="/JS/Controls/Control.js"></script>
+<style>
+.evalu_new .pull-right { color:#1bba91; }
+</style>
+<script>
+var buser = new B_User();
+buser.IsLogged(function(data,flag){
+	if(flag)
+	{
+		data=JSON.parse(data);
+		if(data.UserName!='{ZL.Label id="获取指定文章发布人" GID="{$GetRequest(GID)$}" /}')
+		{
+			alert("无法评论不属于本人的项目！");
+			window.location.href="/User/";
+		}
+		else if('{ZL.Label id="获取指定项目评价总数" GID="{$GetRequest(GID)$}" SID="{$GetRequest(SID)$}" /}'>0)
+		{
+			alert("项目已评论！");
+			window.location.href="/User/";
+		}
+	}
+	else
+	{
+		window.location.href="/User/Login.aspx";
+	}
+});
+</script>
+</head>
+<body> 
+{ZL.Label id="设计院头部"/}
+
+<div class="mypeo_banner">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<!-- Indicators -->
+<ol class="carousel-indicators">
+<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+</ol>
+
+<!-- Wrapper for slides -->
+<div class="carousel-inner" role="listbox">
+<div class="item mypeo_banner1 active">
+<div class="carousel-caption">
+<a href="#">立即发表项目<span class="fa fa-play-circle-o"></span></a>
+</div>
+</div>
+<div class="item mypeo_banner2">
+<div class="carousel-caption">
+<a href="#">立即发表项目<span class="fa fa-play-circle-o"></span></a>
+</div>
+</div>
+<div class="item mypeo_banner3">
+<div class="carousel-caption">
+<a href="#">立即发表项目<span class="fa fa-play-circle-o"></span></a>
+</div>
+</div>
+</div>
+
+<!-- Controls -->
+<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+<div class="container" style="position:relative;">
+{ZL.Label id="获取当前登录信息"/}
+</div>
+</div>
+<div class="container">
+<div id="item_cont">
+<div class="evalu_new">
+<h3><span class="pull-left">项目名称：{ZL.Label id="获取指定内容标题" /}</span><span class="pull-right"><i class="fa fa-comments"></i> 评价</span><div class="clearfix"></div></h3>
+</div>
+<form name="form9" method="post" action="/PubAction.aspx">
+<input type="hidden" name="PubTitle" id="PubTitle" value="用户{ZL:GetuserName()/}对{$GetRequest(GID)$}号项目的评价" />
+<input type="hidden" name="PubID" id="PubID" value="9" />
+<input type="hidden" name="PubContentid" id="PubContentid" value="{$GetRequest(GID)$}">
+<input type="hidden" name="PubInputer" id="PubInputer" value="{ZL.Label id="获取指定文章发布人" GID="{$GetRequest(SID)$}" /}">
+<input type="hidden" name="szjb" id="szjb" value="{$GetRequest(SID)$}">
+<input type="hidden" name="sjsyx" id="sjsyx" value="">
+<div class="pro_ping">
+<div class="pro_ping_t">
+<label class="radio-inline" style="color:#ff8902;"><input type="radio" name="pjlx" id="pjlx" value="3" checked> <i class="fa fa-thumbs-up"></i> 好评</label>
+<label class="radio-inline" style="color:#79aa19;"><input type="radio" name="pjlx" id="pjlx" value="2"> <i class="fa fa-hand-peace-o"></i> 中评</label>
+<label class="radio-inline" style="color:#c5c5c5;"><input type="radio" name="pjlx" id="pjlx" value="1"> <i class="fa fa-thumbs-down"></i> 差评</label>
+</div>
+<h3>具体评价一下服务商在此需求中的表象，查看评价须知</h3>
+<div class="pro_ping_f">
+服务态度：
+<span id="star_div">
+<i class="staricon active fa fa-star" data-val="1"></i>
+<i class="staricon active fa fa-star" data-val="2"></i>
+<i class="staricon active fa fa-star" data-val="3"></i>
+<i class="staricon active fa fa-star" data-val="4"></i>
+<i class="staricon active fa fa-star" data-val="5"></i>
+</span>
+<input type="hidden" id="star_hid" value="5" name="fwtd" />
+</div>
+<div class="pro_ping_f">
+完成速度：
+<span id="star_div1">
+<i class="staricon active fa fa-star" data-val="1"></i>
+<i class="staricon active fa fa-star" data-val="2"></i>
+<i class="staricon active fa fa-star" data-val="3"></i>
+<i class="staricon active fa fa-star" data-val="4"></i>
+<i class="staricon active fa fa-star" data-val="5"></i>
+</span>
+<input type="hidden" id="star_hid1" value="5" name="wcsd" />
+</div>
+<div class="pro_ping_f">
+完成质量：
+<span id="star_div2">
+<i class="staricon active fa fa-star" data-val="1"></i>
+<i class="staricon active fa fa-star" data-val="2"></i>
+<i class="staricon active fa fa-star" data-val="3"></i>
+<i class="staricon active fa fa-star" data-val="4"></i>
+<i class="staricon active fa fa-star" data-val="5"></i>
+</span>
+<input type="hidden" id="star_hid2" value="5" name="wczl" />
+</div>
+<h3>描述下您对服务商的印象</h3>
+<h4>请选择以下标签添加</h4>
+<div class="pro_ping_bt">
+
+</div>
+<div class="pro_ping_b">
+<span>服务周到</span><span>性价比高</span><span>质量很高</span><span>速度快</span><span>沟通畅快</span><span>敬业</span><span>细致耐心</span><span>态度好</span><span>专业</span>
+<div class="clearfix"></div>
+<div class="input-group" style="max-width:200px; margin-top:10px;">
+<input type="text" class="form-control" placeholder="输入自定义" id="label_txt">
+<span class="input-group-btn">
+<button class="btn btn-default" type="button" onClick="AddLabel()">添加</button>
+</span>
+</div><!-- /input-group -->
+</div>
+<h3>具体描述下服务商在此需求中的表象</h3>
+<div class="pro_ping_x">
+<textarea class="form-control" rows="4" name="PubContent" id="PubContent"></textarea>
+</div>
+<div class="text-center" style="margin-top:20px;">
+<button type="submit" class="btn btn-warning">提交评价</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+{ZL.Label id="输出指定项目竞标完成状态" SID="138" GID="137" /}
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script>
+//if('{SField sid="竞标方案数据源标签地址栏" FD="Status" page="0"/}'=='99')
+//	$(".checked_pic").remove();
+//else
+//	$("#item_cont1").remove();
+
+$().ready(function(e) {
+    $(".fieldtype1").addClass("fa fa-photo");
+    $(".fieldtype2").addClass("fa fa-server");
+    $(".fieldtype3").addClass("fa fa-file-word-o");
+});
+
+StarInit("star_div","star_hid");
+StarInit("star_div1","star_hid1");
+StarInit("star_div2","star_hid2");
+
+function StarInit(divid,inpid) {
+	$("#"+divid+" .staricon").hover(function () {
+		//fa-star-o空心,
+		$(this).addClass("active");
+		$(this).prevAll(".staricon").addClass("active");
+	}, function () {
+		StarByVal($("#"+inpid).val());
+	}).click(function () {
+		$("#"+inpid).val($(this).data("val"));
+		StarByVal($(this).data("val"));
+	});
+	//移出div块,除非已click,否则清除值
+	$("#"+divid).mouseleave(function () {
+		var val = $("#"+inpid).val();
+		StarByVal(val);
+	});
+	//根据val点亮或熄灭评星
+	function StarByVal(val) {
+		if (val == "" || val == 0 || val == "0") { $("#"+divid+" .staricon").removeClass("active"); }
+		else
+		{
+			var ref = $("#"+divid+" .staricon[data-val=" + val + "]");
+			ref.addClass("active");
+			ref.prevAll().addClass("active");
+			ref.nextAll().removeClass("active");
+		}
+	}
+}
+$(".pro_ping_b>span").click(function(){
+	var str=$(".pro_ping_bt").html();
+	if($(this).hasClass("active"))
+	{
+		$(this).removeClass("active");
+		str=str.replace($(this).html()+",","");
+	}
+	else
+	{
+		$(this).addClass("active");
+		var str=$(".pro_ping_bt").html();
+		str+=$(this).html()+",";
+	}
+	$(".pro_ping_bt").html(str);
+	$("#sjsyx").val(str);
+})
+function AddLabel()
+{
+	if($("#label_txt").val()&&$("#label_txt").val()!="")
+	{
+		var str=$(".pro_ping_bt").html();
+		if(str.indexOf($("#label_txt").val()+",")>0)
+			str=str.replace($("#label_txt").val()+",","");
+		else
+			str+=$("#label_txt").val()+",";
+		$(".pro_ping_bt").html(str);
+		$("#sjsyx").val(str);
+	}
+}
+
+</script>

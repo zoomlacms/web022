@@ -1,0 +1,147 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <FieldID>2530</FieldID>
+    <IsView>true</IsView>
+    <ModelID>58</ModelID>
+    <FieldName>pjlx</FieldName>
+    <FieldAlias>评价类型</FieldAlias>
+    <FieldTips />
+    <Description>好评、中评、差评</Description>
+    <IsNotNull>false</IsNotNull>
+    <IsSearchForm>false</IsSearchForm>
+    <FieldType>TextType</FieldType>
+    <Content>TitleSize=300,IsPassword=text,DefaultValue=,SelVideo=False,SelIcon=False</Content>
+    <OrderID>1</OrderID>
+    <ShowList>true</ShowList>
+    <ShowWidth>0</ShowWidth>
+    <IsShow>true</IsShow>
+    <IsDownField>0</IsDownField>
+    <DownServerID>0</DownServerID>
+    <RestoreField>0</RestoreField>
+    <IsCopy>0</IsCopy>
+    <Islotsize>false</Islotsize>
+    <Sys_type>false</Sys_type>
+    <IsChain>false</IsChain>
+  </Table>
+  <Table>
+    <FieldID>2531</FieldID>
+    <IsView>True</IsView>
+    <ModelID>58</ModelID>
+    <FieldName>fwtd</FieldName>
+    <FieldAlias>服务态度</FieldAlias>
+    <FieldTips />
+    <Description />
+    <IsNotNull>False</IsNotNull>
+    <IsSearchForm>False</IsSearchForm>
+    <FieldType>TextType</FieldType>
+    <Content>TitleSize=300,IsPassword=text,DefaultValue=,SelVideo=False,SelIcon=False</Content>
+    <OrderID>2</OrderID>
+    <ShowList>True</ShowList>
+    <ShowWidth>0</ShowWidth>
+    <IsShow>True</IsShow>
+    <IsDownField>0</IsDownField>
+    <DownServerID>0</DownServerID>
+    <RestoreField>0</RestoreField>
+    <IsCopy>0</IsCopy>
+    <Islotsize>False</Islotsize>
+    <Sys_type>False</Sys_type>
+    <IsChain>False</IsChain>
+  </Table>
+  <Table>
+    <FieldID>2532</FieldID>
+    <IsView>True</IsView>
+    <ModelID>58</ModelID>
+    <FieldName>wcsd</FieldName>
+    <FieldAlias>完成速度</FieldAlias>
+    <FieldTips />
+    <Description />
+    <IsNotNull>False</IsNotNull>
+    <IsSearchForm>False</IsSearchForm>
+    <FieldType>TextType</FieldType>
+    <Content>TitleSize=300,IsPassword=text,DefaultValue=,SelVideo=False,SelIcon=False</Content>
+    <OrderID>3</OrderID>
+    <ShowList>True</ShowList>
+    <ShowWidth>0</ShowWidth>
+    <IsShow>True</IsShow>
+    <IsDownField>0</IsDownField>
+    <DownServerID>0</DownServerID>
+    <RestoreField>0</RestoreField>
+    <IsCopy>0</IsCopy>
+    <Islotsize>False</Islotsize>
+    <Sys_type>False</Sys_type>
+    <IsChain>False</IsChain>
+  </Table>
+  <Table>
+    <FieldID>2533</FieldID>
+    <IsView>True</IsView>
+    <ModelID>58</ModelID>
+    <FieldName>wczl</FieldName>
+    <FieldAlias>完成质量</FieldAlias>
+    <FieldTips />
+    <Description />
+    <IsNotNull>False</IsNotNull>
+    <IsSearchForm>False</IsSearchForm>
+    <FieldType>TextType</FieldType>
+    <Content>TitleSize=300,IsPassword=text,DefaultValue=,SelVideo=False,SelIcon=False</Content>
+    <OrderID>4</OrderID>
+    <ShowList>True</ShowList>
+    <ShowWidth>0</ShowWidth>
+    <IsShow>True</IsShow>
+    <IsDownField>0</IsDownField>
+    <DownServerID>0</DownServerID>
+    <RestoreField>0</RestoreField>
+    <IsCopy>0</IsCopy>
+    <Islotsize>False</Islotsize>
+    <Sys_type>False</Sys_type>
+    <IsChain>False</IsChain>
+  </Table>
+  <Table>
+    <FieldID>2534</FieldID>
+    <IsView>True</IsView>
+    <ModelID>58</ModelID>
+    <FieldName>sjsyx</FieldName>
+    <FieldAlias>设计师印象</FieldAlias>
+    <FieldTips />
+    <Description />
+    <IsNotNull>False</IsNotNull>
+    <IsSearchForm>False</IsSearchForm>
+    <FieldType>TextType</FieldType>
+    <Content>TitleSize=300,IsPassword=text,DefaultValue=,SelVideo=False,SelIcon=False</Content>
+    <OrderID>5</OrderID>
+    <ShowList>True</ShowList>
+    <ShowWidth>0</ShowWidth>
+    <IsShow>True</IsShow>
+    <IsDownField>0</IsDownField>
+    <DownServerID>0</DownServerID>
+    <RestoreField>0</RestoreField>
+    <IsCopy>0</IsCopy>
+    <Islotsize>False</Islotsize>
+    <Sys_type>False</Sys_type>
+    <IsChain>False</IsChain>
+  </Table>
+  <Table>
+    <FieldID>2535</FieldID>
+    <IsView>True</IsView>
+    <ModelID>58</ModelID>
+    <FieldName>szjb</FieldName>
+    <FieldAlias>所属竞标</FieldAlias>
+    <FieldTips />
+    <Description />
+    <IsNotNull>False</IsNotNull>
+    <IsSearchForm>False</IsSearchForm>
+    <FieldType>TextType</FieldType>
+    <Content>TitleSize=300,IsPassword=text,DefaultValue=,SelVideo=False,SelIcon=False</Content>
+    <OrderID>6</OrderID>
+    <ShowList>True</ShowList>
+    <ShowWidth>0</ShowWidth>
+    <IsShow>True</IsShow>
+    <IsDownField>0</IsDownField>
+    <DownServerID>0</DownServerID>
+    <RestoreField>0</RestoreField>
+    <IsCopy>0</IsCopy>
+    <Islotsize>False</Islotsize>
+    <Sys_type>False</Sys_type>
+    <IsChain>False</IsChain>
+  </Table>
+</NewDataSet>

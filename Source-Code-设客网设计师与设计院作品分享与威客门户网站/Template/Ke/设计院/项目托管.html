@@ -1,0 +1,71 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>资金托管_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<link href="{$CssDir/}fix.css" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+</head>
+<body>
+{ZL.Label id="设计院头部"/}
+<div class="container">
+<div class="row"> 
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 padding10" style="margin-top:20px;"> 
+<div class="tuoguan">
+<form id="form1" name="form1" method="post" action="/Cart/FastOrder.aspx">
+<input type="hidden" value="1" id="Pronum" name="Pronum" />
+<input type="hidden" id="Attribute" name="Attribute" />
+<input type="hidden" value="商品名称" id="Proname" name="Proname"/>
+<input type="hidden" value="1" id="ProClass" name="ProClass" />
+<input type="hidden" value="{$GetRequest(GID)$}" id="Proinfo" name="Proinfo" />
+<input type="hidden" value="{ZL.Label id="输出指定项目价格" GID="{$GetRequest(GID)$}" /}" id="Price" name="Price" />
+<h1><span></span>资金托管后能大大增加设计师的应标意愿。</h1>
+<button type="submit" class="btn btn-success">立即托管资金</button>
+<a href="javascript:alert('该项目已推送给符合要求的设计师，请耐心等待设计师应标。回到个人中心可查看最新项目进度。');window.location.href='/User/Content/MyProject.aspx?NodeID={ZL.Label id="获取指定内容节点ID" /}';" class="btn btn-warning">确认中标后再托管资金</a>
+</form>
+</div>
+</div> 
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding10" id="master_right1">
+{ZL.Label id="获取当前登录信息" /}
+</div>
+<div class="clearfix"></div>  
+</div>
+</div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script>
+
+
+var IO=document.getElementById('design_nav'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+	".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+ if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//]]>
+//兼容wp8
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+var msViewportStyle = document.createElement("style");
+msViewportStyle.appendChild(
+document.createTextNode(
+  "@-ms-viewport{width:auto!important}"
+)
+);
+document.getElementsByTagName("head")[0].
+appendChild(msViewportStyle);
+}
+
+</script>

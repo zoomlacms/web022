@@ -1,0 +1,33 @@
+﻿/*默认为me 增加other*/
+*{font-family:'Microsoft YaHei';}
+ul{padding-left:0px;}
+ul li{list-style-type:none;}
+.glyphicon{cursor:pointer;}
+.glyphicon:hover{color:#57A5CA;}
+.opbtn{cursor:pointer;}
+.opbtn:hover{color:#428bca;}
+/*好友列表*/
+#edui1_bottombar{display:none;}
+.list_group{padding:5px;padding-top:8px;border-bottom:1px solid #ddd;cursor:pointer;}
+.list_item_body{display:none;}
+.list_item{cursor:pointer;background:whitesmoke;border-top:1px solid #e3e3e3;padding:5px;}
+.member_nick{overflow:hidden;}
+.member_face{width:30px;height:30px;float:left;margin-right:10px;}
+.remindgray{font-size:12px;color:gray;}
+/*聊天框*/
+.chat_container{width:430px;background:#a8b6b9;}
+.chat_header{color:#fff;font-weight:bold;width:100%;height:30px;line-height:30px;background:linear-gradient(#555,#222);border-radius:4px;text-align:center;}
+.chat_body{overflow-y:auto;}
+.chat_body img{max-height:80px;max-width:80px;}
+.chat_nick{text-align:right;font-size:12px;color:#333;font-weight:normal;line-height:20px;}
+.other_nick{text-align:left;font-size:12px;color:#333;font-weight:normal;line-height:20px;}
+.chat_content{background:linear-gradient(#fff,#e1e1e1);text-align:left;max-width:50%;display:inline-block;
+box-shadow:1px 1px 5px #000;line-height:1.4em;padding:10px 15px;word-break:break-all;border-radius:5px;color:#333;font-weight:normal;
+font-size:1em;}
+.othercontent{background:linear-gradient(#cf9,#9c3);}
+.mychat{text-align:right;padding:5px;}
+.otherchat{text-align:left;padding:5px;}
+.userface{height:40px;width:40px;}
+.myface{float:right;margin-left:5px;}
+.otherface{float:left;margin-right:5px;}
+.badge{background-color:rgba(230, 16, 16, 0.57);}

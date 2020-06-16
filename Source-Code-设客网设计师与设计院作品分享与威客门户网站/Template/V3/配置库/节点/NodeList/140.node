@@ -1,0 +1,49 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <NodeID>140</NodeID>
+    <NodeName>微门户</NodeName>
+    <NodeType>2</NodeType>
+    <NodeDir>wei</NodeDir>
+    <Tips>用于微门户展示（如移动访问、WebApp、微信接入展示）等。</Tips>
+    <ParentID>0</ParentID>
+    <OrderID>25</OrderID>
+    <Child>0</Child>
+    <Depth>1</Depth>
+    <OpenType>false</OpenType>
+    <PurviewType>true</PurviewType>
+    <CommentType>1</CommentType>
+    <HitsOfHot>0</HitsOfHot>
+    <IndexTemplate>微门户.html</IndexTemplate>
+    <ListTemplateFile>微门户.html</ListTemplateFile>
+    <ContentModel />
+    <ItemOpenType>false</ItemOpenType>
+    <ContentHtmlRule>0</ContentHtmlRule>
+    <ListPageHtmlEx>3</ListPageHtmlEx>
+    <ContentFileEx>0</ContentFileEx>
+    <HtmlPosition>0</HtmlPosition>
+    <NodeListType>0</NodeListType>
+    <ConsumePoint>0</ConsumePoint>
+    <ConsumeType>0</ConsumeType>
+    <ConsumeTime>0</ConsumeTime>
+    <ConsumeCount>0</ConsumeCount>
+    <Shares>0</Shares>
+    <Custom />
+    <SafeGuard>1</SafeGuard>
+    <ItemOpenTypeTrue />
+    <OpenTypeTrue>0</OpenTypeTrue>
+    <NodeBySite>0</NodeBySite>
+    <Contribute>0</Contribute>
+    <SiteContentAudit>0</SiteContentAudit>
+    <AddPoint>0</AddPoint>
+    <AddMoney>0.0000</AddMoney>
+    <ClickTimeout>0</ClickTimeout>
+    <Purview />
+    <AddUserExp>0</AddUserExp>
+    <DeducUserExp>0</DeducUserExp>
+    <ListPageEx>0</ListPageEx>
+    <LastinfoPageEx>0</LastinfoPageEx>
+    <HotinfoPageEx>0</HotinfoPageEx>
+    <ProposePageEx>0</ProposePageEx>
+  </Table>
+</NewDataSet>

@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>53</ModelID>
+    <ModelName>暖通业项目</ModelName>
+    <Description />
+    <TableName>ZL_C_ntyxm</TableName>
+    <ItemName>暖通项目</ItemName>
+    <ItemUnit>个</ItemUnit>
+    <ItemIcon>glyphicon glyphicon-send</ItemIcon>
+    <ModelType>1</ModelType>
+    <ContentModule>内容页/默认暖通业项目内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>true</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail>0</Thumbnail>
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

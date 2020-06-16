@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AddToFav.aspx.cs" Inherits="ZoomLa.WebSite.User.Content.AddToFav" EnableViewStateMac="false" ValidateRequest="false" %>

@@ -1,0 +1,50 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <NodeID>1</NodeID>
+    <NodeName>资讯中心</NodeName>
+    <NodeType>1</NodeType>
+    <NodeDir>news</NodeDir>
+    <ParentID>0</ParentID>
+    <OrderID>2</OrderID>
+    <Child>7</Child>
+    <Depth>1</Depth>
+    <OpenType>false</OpenType>
+    <PurviewType>false</PurviewType>
+    <CommentType>1</CommentType>
+    <HitsOfHot>0</HitsOfHot>
+    <IndexTemplate>频道首页/资讯频道首页.html</IndexTemplate>
+    <ListTemplateFile>蓝色经典_首页.html</ListTemplateFile>
+    <LastinfoTemplate>栏目列表/打印页面.html</LastinfoTemplate>
+    <HotinfoTemplate>栏目列表/加载跟多帖子列表.html</HotinfoTemplate>
+    <ContentModel>2,5</ContentModel>
+    <ItemOpenType>false</ItemOpenType>
+    <ContentHtmlRule>2</ContentHtmlRule>
+    <ListPageHtmlEx>3</ListPageHtmlEx>
+    <ContentFileEx>3</ContentFileEx>
+    <HtmlPosition>1</HtmlPosition>
+    <NodeListType>1</NodeListType>
+    <ConsumePoint>5</ConsumePoint>
+    <ConsumeType>4</ConsumeType>
+    <ConsumeTime>1</ConsumeTime>
+    <ConsumeCount>4</ConsumeCount>
+    <Shares>0</Shares>
+    <Custom />
+    <SafeGuard>0</SafeGuard>
+    <ItemOpenTypeTrue>_blank</ItemOpenTypeTrue>
+    <OpenTypeTrue>_blank</OpenTypeTrue>
+    <NodeBySite>0</NodeBySite>
+    <Contribute>0</Contribute>
+    <SiteContentAudit>0</SiteContentAudit>
+    <AddPoint>0</AddPoint>
+    <AddMoney>0.0000</AddMoney>
+    <ClickTimeout>1</ClickTimeout>
+    <Purview>&lt;View&gt;allUser&lt;/View&gt;&lt;ViewGroup&gt;-1,1,2&lt;/ViewGroup&gt;&lt;ViewSunGroup&gt;-1,1,2&lt;/ViewSunGroup&gt;&lt;input&gt;-1,1,2&lt;/input&gt;&lt;forum&gt;1,2&lt;/forum&gt;</Purview>
+    <AddUserExp>0</AddUserExp>
+    <DeducUserExp>0</DeducUserExp>
+    <ListPageEx>0</ListPageEx>
+    <LastinfoPageEx>0</LastinfoPageEx>
+    <HotinfoPageEx>0</HotinfoPageEx>
+    <ProposePageEx>0</ProposePageEx>
+  </Table>
+</NewDataSet>

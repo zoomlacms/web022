@@ -1,0 +1,47 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>1005</LabelID>
+    <LabelName>输出当前设计院流水记录</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>全站通用</LabelCate>
+    <LabelDesc />
+    <LabelParam>ShowNum,20,1,显示数|ProjectName,,1,项目名称</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_fkmx on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_fkmx.ID</LabelTable>
+    <LabelField>GeneralID,Inputer,CreateTime,Money,szsjs,szxm</LabelField>
+    <LabelWhere>ModelID=56 And Status=99 And ISNUMERIC(szsjs)&gt;0 And Inputer='{ZL:GetuserName()/}'</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>&lt;table class="table table-bordered"&gt;
+&lt;tr&gt;
+&lt;th&gt;流水ID&lt;/th&gt;
+&lt;th&gt;设计师&lt;/th&gt;
+&lt;th&gt;项目名称&lt;/th&gt;
+&lt;th&gt;金额&lt;/th&gt;
+&lt;th&gt;时间&lt;/th&gt;
+&lt;/tr&gt;
+{Repeate}
+&lt;tr&gt;
+&lt;td&gt;{Field="GeneralID"/}&lt;/td&gt;
+&lt;td&gt;{ZL.Label id="获取指定设计师名" GID="{Field="szsjs"/}" /}&lt;/td&gt;
+&lt;td&gt;{ZL.Label id="获取指定项目名称" GID="{Field="szxm"/}" /}&lt;/td&gt;
+&lt;td&gt;{ZL:GetMoney({Field="Money"/},2,1)/}&lt;/td&gt;
+&lt;td&gt;{ZL:FormatDate({Field="CreateTime"/},yyyy-MM-dd HH:mm)/}&lt;/td&gt;
+&lt;/tr&gt;{/Repeate}
+&lt;/table&gt;
+{ZL.Page id="大图标响应式列表分页v3"/}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

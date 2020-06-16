@@ -1,0 +1,50 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>949</LabelID>
+    <LabelName>输出合作过设计师_分页</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>全站通用</LabelCate>
+    <LabelDesc />
+    <LabelParam>ShowNum,30,1,显示数|NodeID,1,1,节点ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_Designer on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_Designer.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_CommonModel.Inputer,{table1}.dbo.ZL_CommonModel.NodeID,{table1}.dbo.ZL_CommonModel.Title,{table1}.dbo.ZL_C_Designer.cjjw,{table1}.dbo.ZL_C_Designer.gzjy,{table1}.dbo.ZL_C_Designer.pic,{table1}.dbo.ZL_C_Designer.szdq,{table1}.dbo.ZL_C_Designer.szfg,{table1}.dbo.ZL_C_Designer.szlx</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID) And Status=99 And ModelID=48  And Inputer in (select Inputer from ZL_CommonModel left join ZL_C_jbfa on ItemID=ID where (NodeID=37 or FirstNodeID=37) And ModelID=49 And ISNUMERIC(szxm)&gt;0 And szxm in (select GeneralID from ZL_CommonModel where (NodeID=13 or FirstNodeID=13) And Status=99 And Inputer='{ZL:GetuserName()/}') And Status&gt;0)</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;div class="evalu_tea"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 evalu_tea_r"&gt;
+&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" title="{Field="Title"/}"&gt;&lt;img src="{ZL:GetPicUrl({Field="pic"/})/}" alt="{Field="Title"/}" onerror="javascript:this.src='/Images/userface/noface.gif';" /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 evalu_tea_c"&gt;
+&lt;div class="evalu_tea_ct"&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}"&gt;{Field="Title"/}设计师&lt;/a&gt;&lt;span&gt;认证&lt;/span&gt;&lt;span&gt;一等&lt;/span&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span&gt;所在城市：{Field="szdq"/}&lt;/span&gt;&lt;span&gt;{Field="gzjy"/}年工作经验&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;擅长类型：{Field="szlx"/}&lt;/span&gt;&lt;span&gt;擅长风格：{Field="szfg"/}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;承接项目数：22&lt;/span&gt;&lt;span&gt;案例：9&lt;/span&gt;&lt;/p&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-4 col-md-3 col-sm-3 col-xs-12 evalu_tea_l"&gt;
+&lt;p&gt;报价：{Field="cjjw"/}&lt;/p&gt;
+&lt;a href="/Common/Chat/Chat.aspx?uid={ZL.Label id="根据会员名抽取用户ID" Uname="{Field="Inputer"/}" /}" class="btn btn-warning" target="_blank"&gt;发送项目需求&lt;/a&gt;
+&lt;a href="/Common/Chat/Chat.aspx?uid={ZL.Label id="根据会员名抽取用户ID" Uname="{Field="Inputer"/}" /}" class="btn btn-danger"&gt;&lt;i class="fa fa-legal"&gt;&lt;/i&gt; 找TA设计&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;{/Repeate}
+{ZL.Page id="大图标响应式列表分页v3"/}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

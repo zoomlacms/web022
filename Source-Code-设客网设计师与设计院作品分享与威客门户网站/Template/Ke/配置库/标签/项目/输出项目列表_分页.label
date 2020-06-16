@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>882</LabelID>
+    <LabelName>输出项目列表_分页</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>项目</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,1,1,节点ID|TitleNum,30,1,标题长|ShowNum,30,1,显示数|SysNum,500,1,简介长</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel</LabelTable>
+    <LabelField>GeneralID,Title</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FIrstNodeID=@NodeID) And Status=99</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;div class="project_biao_r"&gt;
+&lt;h4&gt;{ZL:CutText({Field="Title"/},@TitleNum,)/}&lt;span&gt;{ZL.Label id="获取指定项目应标人数" GID="{Field="GeneralID"/}" /}人应标&lt;a class="btn btn-default" href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" role="button"&gt;我要应标&lt;/a&gt;&lt;/span&gt;&lt;/h4&gt;
+&lt;span class="btn btn-default btn-sm"&gt;资金已托管&lt;/span&gt;
+&lt;span class="btn btn-default btn-sm"&gt;共{ZL.Label id="获取指定项目应标人数" GID="{Field="GeneralID"/}" /}人应标&lt;/span&gt;
+&lt;span class="btn btn-default btn-sm"&gt;国企招标&lt;/span&gt;
+&lt;span class="btn btn-default btn-sm"&gt;月度结现&lt;/span&gt;
+&lt;/div&gt;{/Repeate}
+{ZL.Page id="大图标响应式列表分页v3"/}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

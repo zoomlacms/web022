@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>1008</LabelID>
+    <LabelName>输出指定项目保证金</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>项目</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable>{table1}.dbo.ZL_CommonModel</LabelTable>
+    <LabelField>CASE WHEN ZL_CommonModel.ModelID = '50' THEN (select case when xybzj = '是' then bzjje else '0' end from ZL_C_faxmmx where ID=ItemID)
+when ZL_CommonModel.ModelID='51' then (select case when xybzj = '是' then bzjje else '0' end from ZL_C_sgtxmmx where ID=ItemID)
+when ZL_CommonModel.ModelID='54' then (select case when xybzj = '是' then bzjje else '0' end from ZL_C_sgfwxm where ID=ItemID)
+ELSE '' END As AllMoney</LabelField>
+    <LabelWhere>GeneralID='{$GetRequest(GID)$}'</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="AllMoney"/}</LabelContent>
+    <LabelCount>1</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

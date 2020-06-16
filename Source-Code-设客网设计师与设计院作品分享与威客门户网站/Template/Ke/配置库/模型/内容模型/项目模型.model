@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>45</ModelID>
+    <ModelName>项目模型</ModelName>
+    <Description />
+    <TableName>ZL_C_fbxm</TableName>
+    <ItemName>项目</ItemName>
+    <ItemUnit>个</ItemUnit>
+    <ItemIcon>glyphicon glyphicon-send</ItemIcon>
+    <ModelType>1</ModelType>
+    <ContentModule>内容页/默认发布项目内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>true</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail>0</Thumbnail>
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

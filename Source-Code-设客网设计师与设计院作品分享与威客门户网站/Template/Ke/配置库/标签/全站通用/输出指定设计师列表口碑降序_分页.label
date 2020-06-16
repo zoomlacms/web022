@@ -1,0 +1,64 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>977</LabelID>
+    <LabelName>输出指定设计师列表口碑降序_分页</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>全站通用</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,1,1,节点ID|ShowNum,30,1,显示数|TitleNum,30,1,标题长|szdq,,1,所在地区|szlx,,1,擅长类型|szfg,,1,擅长风格|Title,,1,关键字|cjjw,,1,承接价位</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Designer_View</LabelTable>
+    <LabelField>GeneralID,Inputer,NodeID,Title,cjjw,pic,szdq,szfg,szlx,WorksNum,BidNum</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID) And Status=99 And ModelID=48 And szdq like '%@szdq%' And szlx like '%@szlx%' And szfg like '%@szfg%' And cjjw like '%@cjjw%' And Title like '%@Title%'</LabelWhere>
+    <LabelOrder>Score DESC</LabelOrder>
+    <LabelContent>&lt;div class="row"&gt;
+{Repeate}
+&lt;div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 design_list_cc"&gt;
+&lt;div class="design_list_c"&gt;
+&lt;div class="media"&gt;
+&lt;div class="media-left media-middle"&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" title="{Field="Title"/}"&gt;&lt;img src="{ZL.Label id="根据会员名抽取用户头像" Uname="{Field="Inputer"/}" /}" alt="{Field="Title"/}" onerror="javascript:this.src='/Images/userface/noface.gif';" /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class="media-body"&gt;
+&lt;h4 class="media-heading"&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" title="{Field="Title"/}"&gt;{ZL.Label id="输出指定ID节点名" NodeID="{Field="NodeID"/}" /}：{Field="Title"/}&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;设计师等级：&lt;span&gt;一等&lt;/span&gt;&lt;br&gt;
+所在城市：&lt;span&gt;{Field="szdq"/}&lt;/span&gt;&lt;br&gt;
+擅长类型：&lt;span&gt;{Field="szlx"/}&lt;/span&gt;&lt;br&gt;
+擅长风格：&lt;span&gt;{Field="szfg"/}&lt;/span&gt;&lt;br&gt;
+承接项目数：&lt;span&gt;{Field="BidNum"/}&lt;/span&gt;  案例：&lt;span&gt;{Field="WorksNum"/}&lt;/span&gt;&lt;br&gt;
+承接价位：&lt;span&gt;{Field="cjjw"/}&lt;/span&gt;&lt;br&gt;
+&lt;/p&gt;
+&lt;a class="btn btn-warning btn-sm" href="/User/Message/MessageSend.aspx?userid={ZL.Label id="根据会员名抽取用户ID" Uname="{Field="Inputer"/}" /}" target="_blank"&gt;找TA设计&lt;/a&gt;
+&lt;a class="btn btn-success btn-sm" href="/User/Content/AddToFav.aspx?itemid={Field="GeneralID"/}&amp;Url={ZL:GetInfoUrl({Field="GeneralID"/})/}&amp;type=1"&gt;加入人才库&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="relative" style="display:none;"&gt;
+&lt;div class="found_teac_l"&gt;
+&lt;span&gt;&lt;/span&gt;
+&lt;div class="found_teac_lc"&gt;
+&lt;div class="row padding10"&gt;
+&lt;ul class="list-unstyled"&gt;
+{ZL.Label id="输出指定设计师作品列表" TitleNum="@TitleNum" ShowNum="4" NodeID="2" UserName="{Field="Inputer"/}" GID="{Field="GeneralID"/}" /}
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;{/Repeate}
+&lt;/div&gt;
+{ZL.Page id="大图标响应式列表分页v3"/}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

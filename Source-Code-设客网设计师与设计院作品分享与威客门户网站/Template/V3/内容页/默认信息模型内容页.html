@@ -1,0 +1,143 @@
+﻿{ZL.Source id="信息模型数据源标签"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="信息模型数据源标签" FD="Title" page="0"/}</title> 
+<meta name="Keywords" content="{SField sid="信息模型数据源标签" FD="Tagkey" page="0"/}">
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<link href="{$CssDir/}fix.css" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script src="/js/jquery.lazyload.js" type="text/javascript"></script>
+<SCRIPT src="/js/ajax.js"></SCRIPT>
+<style>
+#Menu{ZL.Label id="抽取父节点ID" NodeID="{SField sid="信息模型数据源标签" FD="NodeID" page="0"/}" /} a span:hover{ text-decoration:underline;}
+#Menu{ZL.Label id="抽取父节点ID" NodeID="{SField sid="信息模型数据源标签" FD="NodeID" page="0"/}" /} a span{background:url({$CssDir/}Images/top_nav.gif) no-repeat 0px -42px; font-weight:bold; color:#fff; text-decoration:none;width:77px; height:38px; display:block;}
+</style>
+</head>
+<body id="header" >
+<div id="home_all"> 
+{ZL.Label id="蓝色头部"/} 
+<div id="topbanner"><img src="{$CssDir/}Images/bannertop2.jpg" /></div><!-- 通栏广告位 --> 
+<div id="mysite">
+<p>您的位置：<a href="/">{$SiteName/}</a>>>{ZL.Label id="抽取父节点ID名与链接" NodeID="{SField sid="信息模型数据源标签" FD="NodeID" page="0"/}" /}>><a href="{ZL:GetNodeUrl({SField sid="信息模型数据源标签" FD="NodeID" page="0"/})/}">{ZL.Label id="输出指定ID节点名" NodeID="{SField sid="信息模型数据源标签" FD="NodeID" page="0"/}" /}</a>>>{SField sid="信息模型数据源标签" FD="Title" page="0"/}</p>
+</div>
+
+<!--主体开始 -->
+<div id="main"> 
+<div id="main_l">
+<div class="xx_tit">
+<h1>{SField sid="信息模型数据源标签" FD="Title" page="0"/}</h1>
+<abbr>  <span id="CreateTime">发布时间：{ZL:FormatDate({SField sid="信息模型数据源标签" FD="CreateTime" page="0"/},yyyy-MM-dd)/}</span> <span id="Hits">浏览次数：<SCRIPT language=javascript src="/Common/GetHits.aspx?id={SField sid="信息模型数据源标签" FD="GeneralID" page="0"/}"></SCRIPT></span>
+<span>
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<span class="bds_more">分享到：</span>
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6550456" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+</span>
+</abbr> 
+<div class="clear"></div>
+<strong >所属地区：{SField sid="信息模型数据源标签" FD="addr" page="0"/}</strong>
+<p class="org">  <a href="javascript:AddFavorite(window.location.href,window.document.title);">收藏该信息>></a>
+     <span id="Incept"><A href="javascript:void(0);" onClick="javascript:window.open('/user/Message/MessageSend.aspx?UserID=1','newwin','height=600,width=600,top=200,left=200;')">发送站内短消息>></A></span> 
+</p>
+</div>
+<div class="xx_info">
+<div class="xx_t"><span>详细信息</span></div>
+<div class="xx_con">{SField sid="信息模型数据源标签" FD="Content" page="0"/}</div>
+<div>
+<ul><li>联 系 人：{SField sid="信息模型数据源标签" FD="lxr" page="0"/}</li>
+<li>联系电话：{SField sid="信息模型数据源标签" FD="tel" page="0"/}</li>
+</ul>
+</div>
+<div class="red">友情提醒：让您提前汇款或者不见面交易的都是骗子！ </div>
+</div>
+<div class="mood">
+<div class="mood_top" style="height:30px; line-height:30px; border-bottom:1px solid  #9CF; margin-bottom:10px;">共用<b>{ZL.Label id="投票数"/}</b>人投票</div>
+<form name="form4" method="post" action="/PubAction.aspx">
+  <input name="PubTitle" type="hidden" id="PubTitle" size="50" value="投票"> 
+      <input type="hidden" name="PubID" id="PubID" value="4"> 
+      <input type="hidden"  type="hidden" name="PubContentid" id="PubContentid" value="{$GetRequest(ItemID)$}"> 
+   <input name="PubContent"  type="hidden" cols="50" rows="10" id="PubContent" value="投票">
+   <ul>
+   <li>{ZL.Label id="投票数" mood="1" /}<br/><span id="b1"><span id="bb1"></span></span><br/><img src="{$CssDir/}Images/b1.gif" /><br/>欠扁<br/><input type="radio" name="Mood"  onClick="mood(1)" value="1"></li>
+    <li> {ZL.Label id="投票数" mood="2" /}<br/><span id="b2"><span id="bb2"></span></span><br/><img src="{$CssDir/}Images/b2.gif" /><br/>超赞<br/><input type="radio" name="Mood" onClick="mood(2)" value="2"></li>
+   <li>{ZL.Label id="投票数" mood="3" /}<br/> <span id="b3"><span id="bb3"></span></span><br/><img src="{$CssDir/}Images/b3.gif" /><br/>支持<br/><input type="radio" name="Mood"  onClick="mood(3)" value="3"></li>
+   <li>{ZL.Label id="投票数" mood="4" /}<br/> <span id="b4"><span id="bb4"></span></span><br/><img src="{$CssDir/}Images/b4.gif" /><br/>难过<br/><input type="radio" name="Mood" onClick="mood(4)" value="4"></li>
+   <li> {ZL.Label id="投票数" mood="5" /}<br/><span id="b5"><span id="bb5"></span></span><br/><img src="{$CssDir/}Images/b5.gif" /><br/>搞笑<br/><input type="radio" name="Mood" onClick="mood(5)" value="5"></li>
+   <li> {ZL.Label id="投票数" mood="6" /}<br/><span id="b6"><span id="bb6"></span></span><br/><img src="{$CssDir/}Images/b6.gif" /><br/>扯淡<br/><input type="radio" name="Mood"  onClick="mood(6)" value="6"></li>
+   <li>{ZL.Label id="投票数" mood="7" /}<br/><span id="b7"><span id="bb7"></span></span> <br/><img src="{$CssDir/}Images/b7.gif" /><br/>不解<br/><input type="radio" name="Mood" onClick="mood(7)" value="7"></li>
+   <li>{ZL.Label id="投票数" mood="8" /}<br/> <span id="b8"><span id="bb8"></span></span><br/><img src="{$CssDir/}Images/b8.gif" /><br/>头晕<br/><input type="radio" name="Mood" onClick="mood(8)" value="8"></li>
+    </ul>
+    <div class="clear"></div>
+      <div style="display:none"> <input type="submit" name="button1" id="button1" value="提交"> </div>
+
+ </form>
+<div>
+</div><!--右 -->
+</div></div><!--左 -->
+
+<div id="main_r">
+<div class="mainR_li">
+<div class="mainR_t"><span><a href="{ZL:GetNodeUrl(78)/}">更多>></a></span><b>排行 </b></div>
+<ul id="mainR_ph">
+{ZL.Label id="输出指定节点标题_按点击" NodeID="1" TitleNum="30" ShowNum="8" /}
+</ul>
+</div><!--循环块之一结束 --> 
+<div id="elitR_ban" class="mt10"><a href="#" target="_blank" title=""><img src="{$CssDir/}Images/ad1.jpg"></a></div>
+
+<div id="botM_dh"> 
+<span>快速导航</span>
+<ul>
+<li><a href="/manage/Panoramic/PanoramicShow.aspx?id=1" target="_blank">三维全景</a></li>
+<li><a href="/try/" target="_blank">在线试戴</a></li>
+<li><a href="/3d/" target="_blank">3D商街</a></li>
+<li><a href="/Questions/Default.aspx?id=1" target="_blank">智能组卷</a></li>
+<li><a href="/guestbook/" target="_blank">在线留言</a></li>
+<li><a href="/User/UserZone/Cut/" target="_blank">网页剪刀</a></li>
+<li><a href="/user/UserZone/Default.aspx" target="_blank">SNS社区</a></li>
+<li><a href="/Edit" target="_blank">在线助写</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(106)/}" target="_blank">网站地图</a></li>
+<li><a href="{ZL:GetInfoUrl(21)/}" target="_blank">联系我们</a></li>
+</ul>
+</div><!--循环块之一结束 -->
+<div class="mainR_li">
+<div class="mainR_t"><span><a href="{ZL:GetNodeUrl(1)/}">更多>></a></span><b>最新信息</b></div>
+<ul class="mr_li">
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="1" TitleNum="30" ShowNum="8" /} 
+</ul>
+</div> 
+</div>
+</div>
+<!--主体结束 -->
+<div style="clear:both;"></div>
+{ZL.Label id="蓝色底部"/}<div class="clear"></div>
+</div>
+<SCRIPT src="/js/openType.js" type=text/javascript></SCRIPT> 
+<script>
+function mood(id){
+ form4.submit();
+ }
+ 
+var uid='';
+{ if(uid=='')
+	{
+		document.getElementById("Incept").innerHTML="<A href='javascript:void(0);' onClick='javascript:window.open(\"/user/Login.aspx?returnUrl=/user/Message/MessageSend.aspx?UserID=1\",\"newwin\",\"height=600,width=600,top=200,left=200;\")'>发送站内短消息>></A>";
+		}
+	}
+</script>
+</body>
+</html>

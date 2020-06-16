@@ -1,0 +1,226 @@
+{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+<div class="design_banner">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<!-- Indicators -->
+<ol class="carousel-indicators">
+<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+</ol>
+<!-- Wrapper for slides -->
+<div class="carousel-inner" role="listbox">
+<div class="item design_banner1 active"></div>
+<div class="item design_banner2"></div>
+<div class="item design_banner3"></div>
+</div>
+<!-- Controls -->
+<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+<div class="container" style="position:relative;">
+{ZL.Label id="获取当前登录信息" /}
+<div class="design_lgoin">
+<div id="design_lgoin1">
+<div class="design_lgoin_t">登录<span class="pull-right"><a href="/User/Register.aspx">注册</a></span></div>
+<div class="design_lgoin_c">
+<ul class="list-unstyled">
+<li><i class="fa fa-mobile" style="font-size:30px;top:3px;"></i><input type="text" class="form-control" id="uname_t" placeholder="请输入用户名" data-enter="0" /></li>
+<li><i class="fa fa-lock" style="font-size:30px;top:3px;"></i><input type="password" class="form-control" id="passwd_t" placeholder="请输入密码" data-enter="1" /></li>
+<li id="code_li">
+<i class="fa fa-qrcode"></i>
+<div class="input-group">
+<input type="text" id="VCode" placeholder="验证码" maxlength="6" class="form-control text_x code" data-enter="2" />
+<span class="input-group-addon"><img id="VCode_img" style="height:20px;" alt="验证码" title="点击刷新验证码" class="code" /></span>
+</div>
+<input type="hidden" id="VCode_hid" name="VCode_hid" />
+</li>
+<li><label style="color:#fff;"><input type="checkbox"> 记住密码</label> <a class="pull-right" href="/User/GetPassword.aspx">忘记密码?</a></li>
+<li><button type="button" class="btn btn-danger btn-block" onclick="Login()" id="logo_btn" data-enter="3"><i class="fa fa-user"></i> 立即登录</button></li>
+<li class="design_lgoin_cs">
+<span>第三方登录：</span>
+<i class="fa fa-qq"></i>
+<i class="fa fa-weibo"></i>
+</li>
+</ul>
+</div> 
+</div>
+</div>
+</div>
+</div><!--design_banner end-->
+
+
+<div class="design_find">
+<h2 class="text-center">寻找好项目</h2>
+<div id="demo" class="qimo8">
+<div class="qimo">
+<div id="demo1">
+<ul class="list-unstyled">
+{ZL.Label id="输出项目列表_带作者简介时间" NodeID="2" ShowNum="30" TitleNum="24" SynNum="120" /}
+</ul>
+</div>
+<div id="demo2"></div>
+</div>
+</div>
+</div>
+<div class="container design_she">
+<h2>他们也在这<a href="{ZL:GetNodeLinkUrl(1)/}" class="pull-right">More+</a></h2>
+<div class="row">
+<ul class="list-unstyled">
+{ZL.Label id="输出设计师列表" SynNum="60" ShowNum="8" ClassName="col-lg-3 col-md-3 col-sm-3 col-xs-12" /}
+</ul>
+</div>
+</div><!--design_she end-->
+<div class="container design_pro">
+<h2>作品案例<a class="pull-right" href="{ZL:GetNodeLinkUrl(2)/}">More+</a></h2>
+<div class="row">
+<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 design_pro_l">
+<div id="carousel-example-generic1" class="carousel slide" data-ride="carousel"  data-interval="false">
+<!-- Indicators -->
+<ol class="carousel-indicators">
+<li data-target="#carousel-example-generic1" data-slide-to="0" class="active"></li>
+<li data-target="#carousel-example-generic1" data-slide-to="1"></li>
+<li data-target="#carousel-example-generic1" data-slide-to="2"></li>
+<li data-target="#carousel-example-generic1" data-slide-to="3"></li>
+<li data-target="#carousel-example-generic1" data-slide-to="4"></li>
+<li data-target="#carousel-example-generic1" data-slide-to="5"></li>
+</ol>
+
+<!-- Wrapper for slides -->
+<div class="carousel-inner" role="listbox">
+{ZL.Label id="输出推荐作品列表_带滚动" NodeID="2" TitleNum="50" ShowNum="6" SynNum="80" /}
+</div>
+
+<!-- Controls -->
+<a class="left carousel-control" href="#carousel-example-generic1" role="button" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#carousel-example-generic1" role="button" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+</div>
+<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 design_pro_r">
+<div class="row">
+<ul class="list-unstyled">
+{ZL.Label id="输出非推荐作品列表" NodeID="2" TitleNum="24" ShowNum="4" /}
+</ul>
+</div>
+</div>
+</div>
+</div><!--design_pro end-->
+
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<style>
+.qimo8{ overflow:hidden;}
+.qimo8 .qimo { width:8000%;}
+.qimo8 .qimo ul { float:left; overflow:hidden; zoom:1; }
+.qimo8 .qimo ul li{float:left; margin-left:20px; width:390px;}
+#code_li { display:none;}
+</style>
+<script type="text/javascript" src="/JS/ICMS/ZL_Common.js"></script>
+<script src="/JS/ZL_ValidateCode.js"></script>
+<script src="/JS/Controls/B_User.js"></script>
+<script src="/JS/Controls/Control.js"></script>
+<script>
+var IO=document.getElementById('design_nav'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+	".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+ if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//]]>
+//兼容wp8
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+var msViewportStyle = document.createElement("style");
+msViewportStyle.appendChild(
+document.createTextNode(
+  "@-ms-viewport{width:auto!important}"
+)
+);
+document.getElementsByTagName("head")[0].
+appendChild(msViewportStyle);
+}
+
+var buser = new B_User();
+buser.IsLogged(function(data,flag){
+	if(flag)
+	{
+		window.location.href="/User/";
+		data=JSON.parse(data);
+		$(".design_lgoin").remove();
+	}
+});
+$(function () {
+	Control.EnableEnter();
+})
+function Login() {
+	var model = { name: $("#uname_t").val(), pwd: $("#passwd_t").val(), key: $("#VCode_hid").val(), code: $("#VCode").val() };
+	buser.Login(model, function (data) {
+		if (data == -1) { alert("用户名或密码错误"); }
+		else if (data == -10) {
+			alert("用户名或密码错误");
+			EnableCode();
+		}
+		else if (data == -2) { alert("验证码错误"); EnableCode()}
+		else {
+			window.location.href="/User/";
+		}
+	});
+}
+function EnableCode() {
+	if ($("#code_li").is(":hidden")) {
+		$("#code_li").show();
+		$("#VCode_img").click();
+		$("#VCode").ValidateCode();
+	}
+}
+$().ready(function(e) {
+    $("#carousel-example-generic1 .item").eq(0).addClass("active");
+});
+
+var demo = document.getElementById("demo");
+var demo1 = document.getElementById("demo1");
+var demo2 = document.getElementById("demo2");
+demo2.innerHTML=document.getElementById("demo1").innerHTML;
+function Marquee(){
+if(demo.scrollLeft-demo2.offsetWidth>=0){
+ demo.scrollLeft-=demo1.offsetWidth;
+}
+else{
+ demo.scrollLeft++;
+}
+}
+var myvar=setInterval(Marquee,30);
+demo.onmouseout=function (){myvar=setInterval(Marquee,30);}
+demo.onmouseover=function(){clearInterval(myvar);}
+</script>

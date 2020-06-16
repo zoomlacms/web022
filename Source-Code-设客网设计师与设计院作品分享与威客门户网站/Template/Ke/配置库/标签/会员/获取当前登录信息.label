@@ -1,0 +1,49 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>876</LabelID>
+    <LabelName>获取当前登录信息</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>会员</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable>{table1}.dbo.ZL_User left join {table1}.dbo.ZL_UserBase on {table1}.dbo.ZL_User.UserID={table1}.dbo.ZL_UserBase.UserID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_User.Email,{table1}.dbo.ZL_UserBase.Mobile,{table1}.dbo.ZL_User.UserExp,{table1}.dbo.ZL_User.UserID,{table1}.dbo.ZL_User.UserName,{table1}.dbo.ZL_UserBase.UserFace,cast(floor(datediff(minute,RegTime,GETDATE()) / 1440)*24+floor((datediff(minute,RegTime,GETDATE()) % 1440)/60) as varchar)+'小时' AS ActiveTime</LabelField>
+    <LabelWhere>{table1}.dbo.ZL_User.UserID='{ZL:GetuserID()/}'</LabelWhere>
+    <LabelOrder />
+    <LabelContent>&lt;div class="mypeo_comp_l"&gt;
+&lt;h2&gt;{ZL.Label id="输出指定用户会员组名" UserID="{Field="UserID"/}" /}信息&lt;/h2&gt;
+&lt;div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 mypeo_comp_l1"&gt;
+&lt;img src="{Field="UserFace"/}" alt="{Field="UserName"/}" onerror="javascript:this.src='/Images/userface/noface.gif';" /&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 mypeo_comp_l2"&gt;
+&lt;p&gt;我们已经为您服务了{Field="ActiveTime"/}您共发布了0次项目&lt;/p&gt;
+&lt;span&gt;您的积分为：{Field="UserExp"/}分&lt;/span&gt;
+&lt;/div&gt;
+&lt;h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12"&gt;{Field="UserName"/}&lt;/h3&gt;
+&lt;ul class="list-unstyled mypeo_compe"&gt;
+&lt;li&gt;&lt;i class="fa fa-mobile"&gt;&lt;/i&gt; 手机：{Field="Mobile"/}&lt;a href="/User/ChangeMP.aspx"&gt;修改&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;i class="fa fa-envelope"&gt;&lt;/i&gt; 邮箱：{Field="Email"/}&lt;a href="/User/ChangeEmail.aspx"&gt;修改&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="list-unstyled mypeo_compe1"&gt;
+&lt;li&gt;&lt;a href="/User/Info/UserBase.aspx"&gt;身份认证（已完成70%）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href="/User/Message/Message.aspx"&gt;&lt;span class="glyphicon glyphicon-envelope"&gt;&lt;/span&gt;我的消息&lt;/a&gt;    &lt;a href="/User/Info/UserInfo.aspx"&gt;&lt;span class="fa fa-user"&gt;&lt;/span&gt;账号设置&lt;/a&gt;    &lt;a href="/user/Logout.aspx"&gt;&lt;span class="fa fa-sign-out"&gt;&lt;/span&gt;退出登录&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount>1</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>20</ModelID>
+    <ModelName>店铺商品</ModelName>
+    <Description />
+    <TableName>ZL_S_shop</TableName>
+    <ItemName>商品</ItemName>
+    <ItemUnit>件</ItemUnit>
+    <ItemIcon>glyphicon glyphicon-home</ItemIcon>
+    <ModelType>5</ModelType>
+    <ContentModule>内容页/默认店铺商品内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>false</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail>0</Thumbnail>
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

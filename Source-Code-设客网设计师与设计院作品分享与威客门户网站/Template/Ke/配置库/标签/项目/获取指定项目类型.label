@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>930</LabelID>
+    <LabelName>获取指定项目类型</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>项目</LabelCate>
+    <LabelDesc />
+    <LabelParam>GeneralID,,1,项目ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel</LabelTable>
+    <LabelField>CASE WHEN ZL_CommonModel.ModelID = '50' THEN (select xmlx from ZL_C_faxmmx where ID=ItemID)
+when ZL_CommonModel.ModelID='51' then (select xmlx from ZL_C_sgtxmmx where ID=ItemID)
+when ZL_CommonModel.ModelID='54' then (select xmlx from ZL_C_sgfwxm where ID=ItemID)
+ELSE '' END As xmlx</LabelField>
+    <LabelWhere>GeneralID='@GeneralID'</LabelWhere>
+    <LabelOrder>CreateTime DESC</LabelOrder>
+    <LabelContent>{ZL:Replace({Field="xmlx"/},|, )/}</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

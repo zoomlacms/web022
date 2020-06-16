@@ -1,0 +1,53 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>705</LabelID>
+    <LabelName>贴吧获取当前用户信息</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>贴吧专用</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable>{table1}.dbo.ZL_User left join {table1}.dbo.ZL_UserBase on {table1}.dbo.ZL_User.UserID={table1}.dbo.ZL_UserBase.UserID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_User.Email,{table1}.dbo.ZL_User.GuestScore,{table1}.dbo.ZL_UserBase.Mobile,{table1}.dbo.ZL_UserBase.UserFace</LabelField>
+    <LabelWhere>ZL_User.UserID='{ZL:GetuserID()/}'</LabelWhere>
+    <LabelOrder />
+    <LabelContent>&lt;div class="bar_user"&gt;
+&lt;div class="bar_user_t"&gt;我在贴吧&lt;/div&gt;
+&lt;div class="bar_user_c"&gt;
+&lt;div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 bar_user_cl"&gt;&lt;a href="/User/" target="_blank"&gt;&lt;img src="{Field="UserFace"/}" onerror="javascript:this.src='/Images/userface/noface.gif';" alt="{ZL:GetuserName()/}" /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 bar_user_cr"&gt;
+&lt;div class="bar_user_crt"&gt;{ZL:GetuserName()/}&lt;/div&gt;
+&lt;div class="bar_user_crb"&gt;您的积分&lt;span&gt;{Field="GuestScore"/}&lt;/span&gt;&lt;/div&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="bar_userinfo"&gt;
+&lt;ul class="list-unstyled"&gt;
+   &lt;li&gt;&lt;i class="fa fa-mobile"&gt;&lt;/i&gt;{Field="Mobile"/}&lt;a href="/User/Info/UserBase.aspx"&gt;[修改]&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;i class="fa fa-envelope-o"&gt;&lt;/i&gt;{Field="Email"/}&lt;a href="/User/Info/UserBase.aspx"&gt;[修改]&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="bar_usermsg"&gt;
+&lt;ul class="list-unstyled"&gt;
+	&lt;li&gt;身份认证（已完成70%）&lt;/li&gt;	
+   &lt;li&gt;&lt;a href="/User/ChangeEmail.aspx"&gt;我的消息 &lt;i class="fa fa-envelope-o"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href="/User/Info/UserBase.aspx"&gt;账号设置 &lt;i class="fa fa-user"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;!--bar_user end--&gt;</LabelContent>
+    <LabelCount>10</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>用户登录判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>1</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

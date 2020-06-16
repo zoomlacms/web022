@@ -1,0 +1,300 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+<div class="desige_banner1">
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 desige_type">
+<ul class="list-unstyled">
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-12"><a href="{ZL:GetNodeLinkUrl(11)/}"><i class="fa fa-user"></i>规划师</a></li>
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-12"><a href="{ZL:GetNodeLinkUrl(19)/}"><i class="fa fa-user"></i>建筑师</a></li>
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-12"><a href="{ZL:GetNodeLinkUrl(20)/}"><i class="fa fa-user"></i>景观师</a></li>
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-12"><a href="{ZL:GetNodeLinkUrl(21)/}"><i class="fa fa-user"></i>结构师</a></li>
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-12"><a href="{ZL:GetNodeLinkUrl(22)/}"><i class="fa fa-user"></i>暖通师</a></li>
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-12"><a href="{ZL:GetNodeLinkUrl(23)/}"><i class="fa fa-user"></i>电气师</a></li>
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-12"><a href="{ZL:GetNodeLinkUrl(24)/}"><i class="fa fa-user"></i>给排水师</a></li>
+<li class="col-lg-3 col-md-3 col-sm-4 col-xs-4"><a href="{ZL:GetNodeLinkUrl(47)/}"><i class="fa fa-user"></i>其他</a></li>
+</ul>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+{ZL.Label id="获取当前登录信息" /}
+<div class="design_lgoin" style="position:relative; top:auto; margin-top:70px;"> 
+<div class="design_lgoin_all">
+<h1>立即开启您的设计之旅</h1>
+<a href="/User/Login.aspx" class="btn btn-warning">立即登陆发布项目</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><!--desige_banner1 end-->
+
+<div class="container" id="a">
+<div class="found_tit">
+<ul class="nav nav-pills">
+<li class="active"><a href="{ZL:GetNodeLinkUrl(1)/}">设计师</a></li>
+</ul>
+</div>
+
+<div class="found_real">
+<ul class="list-inline found_realr" id="found_realr1">
+<li>所在城市：</li>
+<li class="active"><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p=&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a"><span>不限</span></a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(北京)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">北京</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(上海)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">上海</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(天津)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">天津</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(重庆)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">重庆</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(河北省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">河北省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(江苏省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">江苏省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(安徽省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">安徽省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(福建省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">福建省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(甘肃省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">甘肃省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(广东省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">广东省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(广西省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">广西省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(贵州省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">贵州省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(海南省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">海南省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(河南省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">河南省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(黑龙江)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">黑龙江</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(湖北省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">湖北省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(湖南省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">湖南省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(吉林省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">吉林省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(江西省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">江西省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(辽宁省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">辽宁省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(内蒙古)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">内蒙古</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(宁夏)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">宁夏</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(青海省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">青海省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(山东省)$&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}}#a">山东省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(山西省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">山西省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(陕西省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">陕西省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(四川省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">四川省</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(西藏)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">西藏</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(新疆)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">新疆</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetUrlencode(浙江省)$}&s={$GetRequest(S)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">浙江省</a></li>
+</ul>
+<ul class="list-inline found_realc" id="found_realr2">
+<li>擅长类型：</li>
+<li class="active"><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s=&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">不限</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetUrlencode(住宅)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">住宅</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetUrlencode(商业)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">商业</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetUrlencode(医院)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">医院</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetUrlencode(学校)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">学校</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetUrlencode(工厂)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">工厂</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetUrlencode(写字楼)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">写字楼</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetUrlencode(人防地下室)$}&f={$GetRequest(f)$}&c={$GetRequest(c)$}#a">人防地下室</a></li>
+</ul>
+<ul class="list-inline found_realc" id="found_realr3">
+<li>擅长风格：</li>
+<li class="active"><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetRequest(s)$}&f=&c={$GetRequest(c)$}#a"><span>不限</span></a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetUrlencode(现代)$}&c={$GetRequest(c)$}#a">现代</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetUrlencode(仿古)$}&c={$GetRequest(c)$}#a">仿古</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetUrlencode(中式)$}&c={$GetRequest(c)$}#a">中式</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetUrlencode(欧式)$}&c={$GetRequest(c)$}#a">欧式</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetUrlencode(北美)$}&c={$GetRequest(c)$}#a">北美</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetUrlencode(地中海)$}&c={$GetRequest(c)$}#a">地中海</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetUrlencode(徽派)$}&c={$GetRequest(c)$}#a">徽派</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetUrlencode(其他)$}&c={$GetRequest(c)$}#a">其他</a></li>
+</ul>
+<ul class="list-inline found_reall" id="found_realr4">
+<li>承接价位：</li>
+<li class="active"><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetRequest(f)$}&c=#a"><span>不限</span></a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetRequest(f)$}&c={$GetUrlencode(1元/M²以下)$}#a">1元/M²以下</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetRequest(f)$}&c={$GetUrlencode(1-3元/M²)$}#a">1-3元/M²</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetRequest(f)$}&c={$GetUrlencode(2-3元/M²)$}#a">2-3元/M²</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetRequest(f)$}&c={$GetUrlencode(3-5元/M²)$}#a">3-5元/M²</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetRequest(f)$}&c={$GetUrlencode(4-5元/M²)$}#a">4-5元/M²</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetRequest(f)$}&c={$GetUrlencode(5-7元/M²)$}#a">5-7元/M²</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetRequest(f)$}&c={$GetUrlencode(9-10元/M²)$}#a">9-10元/M²</a></li>
+<li><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}?p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetRequest(f)$}&c={$GetUrlencode(10元/M²以上)$}#a">10元/M²以上</a></li>
+</ul>
+</div>
+
+<div class="found_hot">
+<ul class="list-unstyled">
+<li class="active"><a href="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}">热门排序</a></li>
+<li><a href="/Class_20/NodePage.aspx?NodeID={SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}&p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetRequest(f)$}&c={$GetRequest(f)$}#a">口碑值</a></li>
+<li><a href="/Class_20/NodeHot.aspx?NodeID={SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}&p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetRequest(f)$}&c={$GetRequest(f)$}#a">作品数</a></li>
+<li><a href="/Class_21/NodePage.aspx?NodeID={SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}&p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetRequest(f)$}&c={$GetRequest(f)$}#a">签单数</a></li>
+<li><a href="/Class_21/NodeHot.aspx?NodeID={SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}&p={$GetRequest(p)$}&s={$GetRequest(s)$}&f={$GetRequest(f)$}&c={$GetRequest(f)$}#a">价格</a></li>
+</ul>
+<form class="navbar-form navbar-left" role="search" method="get" action="{ZL:GetNodeLinkUrl({SField sid="节点栏目信息数据源" FD="NodeID" page="0"/})/}">
+<input type="hidden" name="t" value="{$GetUrldecode({$GetRequest(p)$})$}" />
+<input type="hidden" name="s" value="{$GetUrldecode({$GetRequest(s)$})$}" />
+<input type="hidden" name="t" value="{$GetUrldecode({$GetRequest(f)$})$}" />
+<input type="hidden" name="s" value="{$GetUrldecode({$GetRequest(c)$})$}" />
+<div class="form-group">
+<input name="k" type="text" class="form-control" placeholder="在结果中搜索" value="{$GetUrldecode({$GetRequest(k)$})$}" >
+</div>
+<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+</form>
+<div class="clearfix"></div>
+</div>
+
+<div class="design_list">
+{ZL.Label id="输出指定设计师列表_分页" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" ShowNum="18" TitleNum="30" szdq="{$GetUrldecode({$GetRequest(p)$})$}" szlx="{$GetUrldecode({$GetRequest(s)$})$}" szfg="{$GetUrldecode({$GetRequest(f)$})$}" cjjw="{$GetUrldecode({$GetRequest(c)$})$}" Title="{$GetUrldecode({$GetRequest(k)$})$}" /}
+</div>
+</div>
+
+
+
+<div class="container found_acom">
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+<li role="presentation" class="active"><a href="#home1" aria-controls="home" role="tab" data-toggle="tab">推荐设计师</a></li>
+<li class="pull-right"><a class="found_acom_r" href="#"><span class="fa fa-users"></span>立即入驻>></a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="home1">
+<div class="row">
+<ul class="list-unstyled">
+{ZL.Label id="输出推荐设计师列表" NodeID="1" ShowNum="4" TitleNum="30" /}
+</ul>
+</div>
+
+</div>
+<div role="tabpanel" class="tab-pane" id="profile1">
+<div class="row">
+<ul class="list-unstyled">
+{ZL.Label id="输出推荐设计团队列表" NodeID="26" ShowNum="4" TitleNum="30" /}
+</ul>
+</div>
+</div>
+</div>
+</div><!--found_acom end-->
+</div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<style>
+#code_li { display:none;}
+.mypeo_comp_l { position:relative; top:auto; margin-top:70px;}
+</style>
+<script type="text/javascript" src="/JS/ICMS/ZL_Common.js"></script>
+<script src="/JS/ZL_ValidateCode.js"></script>
+<script src="/JS/Controls/B_User.js"></script>
+<script src="/JS/Controls/Control.js"></script>
+<script src="/JS/ZL_Regex.js"></script>
+<script>
+var IO=document.getElementById('design_nav'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+	".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+ if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//]]>
+//兼容wp8
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+var msViewportStyle = document.createElement("style");
+msViewportStyle.appendChild(
+document.createTextNode(
+  "@-ms-viewport{width:auto!important}"
+)
+);
+document.getElementsByTagName("head")[0].
+appendChild(msViewportStyle);
+}
+
+var buser = new B_User();
+buser.IsLogged(function(data,flag){
+	if(flag)
+	{
+		data=JSON.parse(data);
+		$(".design_lgoin").remove();
+	}
+});
+$(function () {
+	Control.EnableEnter();
+})
+function Login() {
+	var model = { name: $("#uname_t").val(), pwd: $("#passwd_t").val(), key: $("#VCode_hid").val(), code: $("#VCode").val() };
+	buser.Login(model, function (data) {
+		if (data == -1) { alert("用户名或密码错误"); }
+		else if (data == -10) {
+			alert("用户名或密码错误");
+			EnableCode();
+		}
+		else if (data == -2) { alert("验证码错误"); EnableCode()}
+		else {
+			window.location.href="/User/";
+		}
+	});
+}
+function EnableCode() {
+	if ($("#code_li").is(":hidden")) {
+		$("#code_li").show();
+		$("#VCode_img").click();
+		$("#VCode").ValidateCode();
+	}
+}
+var p='{$GetUrldecode({$GetRequest(p)$})$}';
+var s='{$GetUrldecode({$GetRequest(s)$})$}';
+var f='{$GetUrldecode({$GetRequest(f)$})$}';
+var c='{$GetUrldecode({$GetRequest(c)$})$}';
+$("#found_realr1 li a").each(function(index, element) {
+    if($(this).html()==p)
+	{
+		$(this).parent().siblings("li").removeClass("active");
+		$(this).parent().addClass("active");
+	}
+});
+$("#found_realr2 li a").each(function(index, element) {
+    if($(this).html()==s)
+	{
+		$(this).parent().siblings("li").removeClass("active");
+		$(this).parent().addClass("active");
+	}
+});
+$("#found_realr3 li a").each(function(index, element) {
+    if($(this).html()==f)
+	{
+		$(this).parent().siblings("li").removeClass("active");
+		$(this).parent().addClass("active");
+	}
+});
+$("#found_realr4 li a").each(function(index, element) {
+    if($(this).html()==c)
+	{
+		$(this).parent().siblings("li").removeClass("active");
+		$(this).parent().addClass("active");
+	}
+});
+function CheckReg()
+{
+	if(ZL_Regex.isMobilePhone($("#Mobile").val()))
+		window.location.href="/User/Register.aspx?Mobile="+$("#Mobile").val();
+	else
+		alert("请输入正确的手机号码！");
+}
+$(".design_list_cc").mouseover(function(){
+	$(this).find(".relative").show()
+}).mouseout(function(){
+	$(this).find(".relative").hide()
+});
+$().ready(function(e) {
+    $("#topname").html("设计师");
+	$("#design_nav1").addClass("active");
+	if('{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}'=='26')
+	{
+		$("#found_tit26").addClass("active");
+		$("#found_tit26").siblings("li").removeClass("active");
+	}
+});
+</script>

@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>19</ModelID>
+    <ModelName>信息模型</ModelName>
+    <Description />
+    <TableName>ZL_C_Info</TableName>
+    <ItemName>信息</ItemName>
+    <ItemUnit>条</ItemUnit>
+    <ItemIcon>glyphicon glyphicon-align-justify</ItemIcon>
+    <ModelType>1</ModelType>
+    <ContentModule>内容页/默认信息模型内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>false</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail>0</Thumbnail>
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

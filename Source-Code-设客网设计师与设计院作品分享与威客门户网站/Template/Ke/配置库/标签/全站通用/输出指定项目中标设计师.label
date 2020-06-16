@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>870</LabelID>
+    <LabelName>输出指定项目中标设计师</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>全站通用</LabelCate>
+    <LabelDesc />
+    <LabelParam>UserID,,1,用户ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_User left join {table1}.dbo.ZL_UserBase on {table1}.dbo.ZL_User.UserID={table1}.dbo.ZL_UserBase.UserID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_User.UserID,{table1}.dbo.ZL_User.UserName,{table1}.dbo.ZL_UserBase.UserFace,{table1}.dbo.ZL_UserBase.City</LabelField>
+    <LabelWhere />
+    <LabelOrder>{table1}.dbo.ZL_User.LastActiveTime DESC</LabelOrder>
+    <LabelContent>&lt;div class="evalu_tea"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 evalu_tea_r"&gt;
+&lt;a href="/Class_1/NodeNews.aspx?UID={Field="UserID"/}" title="{Field="UserName"/}"&gt;&lt;img src="{Field="UserFace"/}" alt="{Field="UserName"/}" onerror="javascript:this.src='/Images/userface/noface.gif';" /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 evalu_tea_c"&gt;
+&lt;div class="evalu_tea_ct"&gt;&lt;a href="/Class_1/NodeNews.aspx?UID={Field="UserID"/}"&gt;{Field="UserName"/}设计师&lt;/a&gt;&lt;span&gt;认证&lt;/span&gt;&lt;b&gt;一等&lt;/b&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span&gt;所在城市：{Field="City"/}&lt;/span&gt;&lt;span&gt;五年工作经验&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;擅长类型：住宅、办公楼&lt;/span&gt;&lt;span&gt;擅长风格：欧式&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;承接项目数：22&lt;/span&gt;&lt;span&gt;案例：9&lt;/span&gt;&lt;/p&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 evalu_tea_v"&gt;
+&lt;p&gt;&lt;i class="glyphicon glyphicon-envelope"&gt;&lt;/i&gt; 应标说明:&lt;/p&gt;
+&lt;span&gt;我只是想做一件好作品，希望能有这个机会&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 evalu_tea_l"&gt;
+&lt;p&gt;报价：2元/㎡&lt;/p&gt;
+&lt;a href="/Common/Chat/Chat.aspx?uid={Field="UserID"/}" class="btn btn-default" target="_blank"&gt;与TA联系&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount>1</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

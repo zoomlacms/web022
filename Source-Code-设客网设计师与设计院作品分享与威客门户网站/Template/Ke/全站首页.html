@@ -1,0 +1,213 @@
+{ZL.Source id="节点栏目信息数据源"/}
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>{$SiteName/}-用设计传递爱！</title>
+{$MetaKeywords/}
+{$MetaDescription/}
+{ZL:Boot()/}
+<script type="text/javascript" src="{$CssDir/}js/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="{$CssDir/}js/jquery.fullPage.min.js"></script>
+<script type="text/javascript" src="{$CssDir/}js/countUp.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{$CssDir/}jquery.fullPage.css" />
+<link href="{$CssDir/}global.css?id={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script>
+$(document).ready(function() {
+	$.fn.fullpage({
+		slidesColor: ['#0075D1', '#fff', '#000', '#000'],
+		anchors: ['page1', 'page2', 'page3', 'page4'],
+		menu: '#menu',
+		afterRender: function(){
+			$('.screen-main span').each(function(){
+				var $rel = $(this).attr('rel');
+				var $arr = $rel.split(',');
+				$(this).animate({
+					left: $arr[2] + 'px',
+					top: $arr[3] + 'px'
+				}, 500);
+			});
+			$('.inner a').each(function(){
+				var $rel = $(this).attr('rel');
+				var $arr = $rel.split(',');
+				$(this).animate({
+					left: $arr[0] + 'px',
+					top: $arr[1] + 'px'
+				}, 500);
+			});
+		},
+		afterLoad: function(anchorLink, index){
+			if(index == 1){
+				$('.screen-main span').each(function(){
+					var $rel = $(this).attr('rel');
+					var $arr = $rel.split(',');
+					$(this).animate({
+						left: $arr[2] + 'px',
+						top: $arr[3] + 'px'
+					}, 500);
+				});
+			}
+			if(index == 2 || index == 3 || index == 4 || index == 5){
+				$('.inner').eq(index - 2).find('a').each(function(){
+					var $rel = $(this).attr('rel');
+					var $arr = $rel.split(',');
+					$(this).animate({
+						left: $arr[2] + 'px',
+						top: $arr[3] + 'px'
+					}, 500);
+				});
+			}
+			if(index == 6){
+				$('.zanzhu-con a').fadeIn(1000);
+			}
+		},
+		onLeave: function(index, direction){
+			if(index == 1){
+				$('.screen-main span').each(function(){
+					var $rel = $(this).attr('rel');
+					var $arr = $rel.split(',');
+					$(this).animate({
+						left: $arr[0] + 'px',
+						top: $arr[1] + 'px'
+					}, 500);
+				});
+			}
+			if(index == 2 || index == 3 || index == 4 || index == 5){
+				$('.inner').eq(index - 2).find('a').each(function(){
+					var $rel = $(this).attr('rel');
+					var $arr = $rel.split(',');
+					$(this).animate({
+						left: $arr[0] + 'px',
+						top: $arr[1] + 'px'
+					}, 500);
+				});
+			}
+			if(index == 6){
+				$('.zanzhu-con a').fadeOut(1000);
+			}
+		}
+	});
+});
+</script>
+<style>
+.mypeo_comp_top { top:50px;}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" id="login_nav">
+<div class="container">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/"><img src="{$CssDir/}images/login1.png" alt="{$SiteName/}" /></a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="{ZL:GetNodeLinkUrl(1)/}">找设计师</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(2)/}">作品图库</a></li>
+{ZL.Label id="会员登录状态"/}
+<li><a href="/Index" target="_blank">设计论坛</a></li>
+<li><a class="all_phone" href="tel:4000580238">400-0580-238</a></li>
+</ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+<ul id="menu" class="list-unstyled">
+<li data-menuanchor="page1" class="active"><a href="#page1"></a></li>
+<li data-menuanchor="page2"><a href="#page2"></a></li>
+<li data-menuanchor="page3"><a href="#page3"></a></li>
+<li data-menuanchor="page4"><a href="#page4"></a></li> 
+</ul>
+<div class="section section1">
+<div class="container section1_c">
+<div class="section1_c_t">
+<h1>用设计传递爱！</h1>
+<p>找建筑设计师上设客网，优秀设计师都在这里</p>
+<form action="/Search/SearchList.aspx" method="get" target="_blank">
+<input type="text" class="form-control" name="keyword" placeholder="输入设计师或作品关键字检索" />
+<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+</form>
+</div>
+<div class="section1_c_b">
+<span><a href="{ZL:GetNodeLinkUrl(5)/}">我是设计院</a><br/>上设客网发布项目，找到优秀设计师</span>
+<span><a href="/Class_1/NodePage.aspx">我是设计师</a><br/>上设客网承接项目，众多项目等着你</span>
+</div>
+<div class="section1_c_n" hidden>
+<ul class="list-unstyled">
+<li><span id="CountUp1">3,015</span>个著名设计师</li>
+<li><span id="CountUp2">1,817</span>家设计机构</li>
+<li><span id="CountUp3">1,000,000</span>元的设计分成</li>
+<li><span id="CountUp4">2500</span><i class="fa fa-certificate fa-spin"></i><a href="{ZL:GetNodeLinkUrl(1)/}">个精品项目等待应标</a></li>
+</ul>
+</div>
+</div>
+</div> 
+ 
+
+<div class="section section2">
+<div class="container">
+<h2 class="text-center">优秀设计师推荐</h2>
+<div class="section-content">
+{ZL.Label id="首页输出设计师列表" ShowNum="6" /} 
+</div>
+</div>
+</div>
+<div class="section section3">
+<h2 class="text-center">最新作品赏析</h2>
+{ZL.Label id="首页推荐作品"/}
+</div> 
+<div class="section section4">
+<h2>马上开展设客网自由之旅!</h2>
+<div class="section5_b">
+<a href="{ZL:GetNodeLinkUrl(5)/}">我是设计院</a>
+<a href="/Class_1/NodePage.aspx">我是设计师</a>
+</div>
+<div class="section5_c">
+<p>{$Copyright/}</p>
+</div>
+</div>
+</body>
+</html>
+<script>
+var options = {
+	useEasing : true, 
+	useGrouping : true, 
+	separator : ',', 
+	decimal : '.', 
+	prefix : '', 
+	suffix : '' 
+};
+var demo1 = new CountUp("CountUp1", 0, 3015, 0, 2, options);
+var demo2 = new CountUp("CountUp2", 0, 1817, 0, 2, options);
+var demo3 = new CountUp("CountUp3", 0, 1000000, 0, 2, options);
+var demo4 = new CountUp("CountUp4", 0, 2500, 0, 2, options);
+demo1.start();
+demo2.start();
+demo3.start();
+demo4.start();
+$().ready(function(e) {
+   	if(IsPC())
+		$(".all_phone").attr("href","javascript:alert('请用手机直接拨打400-0580-238')");
+});
+//判断是否手机
+function IsPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
+</script>

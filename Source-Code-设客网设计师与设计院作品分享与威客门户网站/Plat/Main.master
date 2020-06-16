@@ -1,0 +1,261 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="Plat_New_Main, App_Web_wgc0fbnq" clientidmode="Static" %><!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="renderer" content="webkit" />
+<meta name="msapplication-TileColor" content="#1A0066" />
+<meta name="msapplication-TileImage" content="/images/win8_symbol_140x140.png" />
+<link type="text/css" rel="stylesheet" href="/dist/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="/dist/css/font-awesome.min.css"/>
+<link type="text/css" rel="stylesheet" href="/App_Themes/Guest.css" />  
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/JS/jquery-1.11.0.min.js"></script>
+<asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+<script type="text/javascript" src="/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/JS/DesktopNotify.js"></script>
+<script type="text/javascript" src="/JS/scrolltopcontrol.js"></script>
+<style>
+.top{ height:auto;}
+.navbar-nav>li>a{ padding-top:10px; padding-bottom:10px;}
+</style>
+</head>
+<body>
+<form id="form1" runat="server">
+<div class="page-header top plat_top all0">
+<div class="container-fluid">
+<div class="row padding0">
+<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+<h1 class="all0 hidden-xs">
+<img id="Comp_Img" runat="server" src="#" class="topimg" /><asp:Label runat="server" ID="M_CompName_L" /><small>
+<a runat="server" id="Comp_Href" href="http://zoomla.1th.cn" target="_blank" style="color: white;"></a></small></h1>
+<h1 class="all0 visible-xs"> 
+<a href="/Plat/Blog/"><i class="fa fa-home"></i></a>
+<a href="javascript:;" onclick="javascript:location.reload();"><i class="fa fa-refresh"></i></a></h1>
+</div> 
+<div class="col-lg-3 col-md-7 col-sm-12 col-xs-12 top_r">
+<div class="input-group pull-left hidden-xs hidden-sm headsearch">
+<asp:TextBox runat="server" ID="Main_Skey_T" placeholder="信息搜索" class="form-control pull-left" EnableViewState="false" />
+<span class="input-group-btn">
+<asp:Button runat="server" ID="Search_Btn" class="btn btn-default" OnClick="Search_Btn_Click" Text="搜索" />
+</span>
+</div>
+</div>
+<div class="col-lg-3 col-md-7 col-sm-12 col-xs-12 top_r hidden-xs">
+<div class="pull-right">
+<div class="dropdown">
+<a href="#" class=" dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">应用市场<span class="caret"></span></a>
+<a href="/User/Logout.aspx">退出</a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+<li role="presentation"><a role="menuitem" tabindex="-1" href="/User/Default.aspx" target="_blank">官方应用</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="#">第三方应用</a></li>
+</u>
+</div>
+</div>
+<div class="pull-right hidden-xs">
+<a href="/User/" target="_blank">会员中心</a>
+<a href="http://www.zoomla.cn/help/" target="_blank">独立部署</a>
+<a href="http://www.zoomla.cn/help/" target="_blank">帮助中心</a>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="navbar navbar-default plat_nav">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" id="scolls">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="sr-only">移动下拉</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand normal" href="#"  onmouseover="showMoreSoftware(this,'softList')" onmouseout="hideMoreSoftware()"></a>
+</div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+    <li class="active"><a href="/Plat/Blog/">主页</a></li>
+    <li><a href="/Plat/Blog/">交流</a></li>
+    <li><a href="/Plat/Email/">邮件</a></li>
+    <li><a href="/Plat/Mail/">消息</a></li>
+    <li><a href="/Mis/KE/DailyPlan.aspx">日程</a></li>
+    <li><a href="/Plat/OA/">办公</a></li>
+    <li><a href="/Plat/Group/CompDetail.aspx">公司</a></li>
+    <li><a href="/Plat/UPCenter.aspx">资料</a></li>
+    <li><a href="/Plat/Admin/">管理</a></li>
+    <li>
+        <a href="/Plat/Blog/?Filter=atuser" style="padding-top:10px; padding-bottom:8px;">
+        <span title="提到我的">@</span>
+            <asp:Literal runat="server" ID="At_Lit" EnableViewState="false"></asp:Literal></a></li>
+    <li><a href="/Plat/Mail/" style="padding-top:8px; padding-bottom:6px;"><span class="glyphicon glyphicon-envelope" title="站内邮件"></span>
+            <asp:Literal runat="server" ID="Email_Lit" EnableViewState="false"></asp:Literal></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="visible-xs xs_func">
+<div class="xs_func_btn" onclick="show_func();"><i class="fa fa-angle-double-right"></i></div>
+<ul class="list-unstyled"> 
+<li data-url="/Plat/Blog/"><span class="glyphicon glyphicon-home"></span><span class="litxt">信息中心</span></li>
+<li data-url="/Plat/Task/"><span class="glyphicon glyphicon-th-list"></span><span class="litxt">任务</span></li>
+<li><a href="/Mis/KE/DailyPlan.aspx" target="_blank" style="display:block;"><span class="glyphicon glyphicon-calendar"></span><span class="litxt">日程</span></a></li>
+<li data-url="/Plat/Blog/Project.aspx"><span class="glyphicon glyphicon-pushpin"></span><span class="litxt">项目</span></li>
+<li data-url="/Plat/Group/MyGroup.aspx"><span class="glyphicon glyphicon-th-large"></span><span class="litxt">部门</span></li>
+<li data-url="/Plat/Mail/"><span class="glyphicon glyphicon-comment"></span><span class="litxt">站内消息</span></li>
+<li data-url="/Plat/EMail/"><span class="glyphicon glyphicon-envelope"></span><span class="litxt">在线邮件</span></li>
+<li data-url="/Plat/Blog/Contact.aspx"><span class="glyphicon glyphicon-list-alt"></span><span class="litxt">通讯录</span></li>
+<li data-url="/Plat/Doc/MyDoc.aspx"><span class="glyphicon glyphicon-book"></span><span class="litxt">我的文库</span></li>
+<li data-url="/Plat/Doc/CompDoc.aspx"><span class="glyphicon glyphicon-hdd"></span><span class="litxt">公司文库</span></li>
+<li><a href="/" target="_blank"><span class="glyphicon glyphicon-home"></span><span class="litxt">公司门户</span></a></li>
+<li><a href="/User/Logout.aspx" target="_blank"><span class="glyphicon glyphicon-off"></span><span class="litxt">退出</span></a></li>
+<li  class="lastli" style="color:#fff;">当前版本:V3.0.1</li>
+<span class="func_close" onclick="func_close(this);"><i class="fa fa-angle-double-left"></i></span>
+</ul>
+</div>
+<div class="container-fluid main">
+<div class="row">
+<div class="col-lg-2 col-md-2 col-sm-2 hidden-xs padding5">
+<ul id="main_left_ul" class="main_left_ul">
+    <li>
+        <img runat="server" id="Main_UserFace_Img" src="#" onerror="this.src='/Images/userface/noface.gif';" class="uface_main"/>
+        <span class="uinfo_name"><asp:Label runat="server" ID="Main_UName_T" /></span>
+        <span class="glyphicon glyphicon-chevron-right pull-right margin_r5"></span>
+    </li>
+    <li data-url="/Plat/Blog/"><span class="glyphicon glyphicon-home"></span><span class="litxt">信息中心</span></li>
+    <li data-url="/Plat/Task/"><span class="glyphicon glyphicon-th-list"></span><span class="litxt">任务</span></li>
+    <li><a href="/Mis/KE/DailyPlan.aspx" target="_blank" style="display:block;"><span class="glyphicon glyphicon-calendar"></span><span class="litxt">日程</span></a></li>
+    <li data-url="/Plat/Blog/Project.aspx"><span class="glyphicon glyphicon-pushpin"></span><span class="litxt">项目</span></li>
+    <li data-url="/Plat/Group/MyGroup.aspx"><span class="glyphicon glyphicon-th-large"></span><span class="litxt">部门</span></li>
+    <li data-url="/Plat/Mail/"><span class="glyphicon glyphicon-comment"></span><span class="litxt">站内消息</span></li>
+<%--    <li data-url="#"><span class="glyphicon glyphicon-envelope"></span><span class="litxt">在线邮件</span></li>--%>
+    <li data-url="/Plat/Blog/Contact.aspx"><span class="glyphicon glyphicon-list-alt"></span><span class="litxt">通讯录</span></li>
+<%--    <li data-url="/Plat/Doc/MyDoc.aspx"><span class="glyphicon glyphicon-book"></span><span class="litxt">我的文库</span></li>--%>
+    <li data-url="/Plat/Doc/CompDoc.aspx"><span class="glyphicon glyphicon-hdd"></span><span class="litxt">公司文库</span></li>
+    <li><a href="/" target="_blank"><span class="glyphicon glyphicon-home"></span><span class="litxt">公司门户</span></a></li>
+    <li class="lastli"><a href="/User/Logout.aspx"><span class="glyphicon glyphicon-off"></span><span class="litxt">退出</span></a></li>
+</ul>
+<div class="panel panel-default" id="bar_relate" runat="server">
+<asp:Repeater ID="Cate_RPT" runat="server" EnableViewState="false" OnItemDataBound="Cate_RPT_ItemDataBound">
+    <ItemTemplate>
+        <div class="panel-heading">
+        <h3 class="panel-title"><%#Eval("Catename") %> <a title="在该板块发表贴子" target="_blank" href="/EditContent?ID=-1&Cid=<%#Eval("Cateid") %>"><span class="glyphicon glyphicon-plus-sign" style="color:#1796BF; "></span></a><span class='badge pull-right'><a target="_blank" style="color:white;" href='/<%#ZoomLa.BLL.B_Guest_Bar.CreateUrl(1,Convert.ToInt32(Eval("Cateid"))) %>'>more</a></span></h3>
+         </div>
+          <ul class="list-group">
+              <asp:Repeater ID="Bar_RPT" EnableViewState="false" runat="server">
+                  <ItemTemplate>
+                      <li class="list-group-item"><%#getTitle() %></li>
+                  </ItemTemplate>
+              </asp:Repeater>
+          </ul>
+    </ItemTemplate>
+</asp:Repeater>
+</div>
+</div>
+<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 padding5">
+        <asp:ContentPlaceHolder ID="Content" runat="server"></asp:ContentPlaceHolder>
+    </div>
+</div>
+</div>
+<div class="notify_div" id="NotifyDiv" onclick="NotifyClick();">
+<div class="notify_left">
+	<img id="notifyimg" src="" />
+</div>
+<div class="notify_body">
+	<div id="notifytitle"></div>
+	<div id="notifycontent" class="paddin5"></div>
+</div>
+    <div class="clearfix"></div>
+</div>
+<asp:ContentPlaceHolder ID="ScriptContent" runat="server"> </asp:ContentPlaceHolder>
+<script>
+	$().ready(function () {
+		$("#main_left_ul li[data-url]").click(function () { location = $(this).attr("data-url"); });
+		DesktopNotify.requestPermission(function () { });//后期改为个人配置
+		setInterval(GetNotify, 5000);
+		if (window.screen.width < 768) {
+		    $("#topcontrol").addClass("hidden");
+		    $("#topcontrol").removeAttr("title");
+		}
+	});
+	if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+		var msViewportStyle = document.createElement("style");
+		msViewportStyle.appendChild(
+		  document.createTextNode(
+			"@-ms-viewport{width:auto!important}"
+		  )
+		);
+		document.getElementsByTagName("head")[0].
+		  appendChild(msViewportStyle);
+	}
+	//@与邮件提醒
+	function GetNotify() {
+	    $.post("/Plat/Common/Common.ashx", { action: "getnotify" }, function (data) { DisNotify(data); });
+	}
+	function DisNotify(data) {
+		if (!data || data == "") {return; }
+		//检测返回的data是否有信息
+		data = JSON.parse(data);//json数组<img src="../test/at.png" />
+		var img = "/App_Themes/User/at.png";//根据类型放置不同的图片
+		var title = data[0].title;
+		var content = data[0].content;
+		if (DesktopNotify.isSupported && DesktopNotify.permissionLevel() == DesktopNotify.PERMISSION_GRANTED) {
+			var contentText = $("<div />").html(content).text();
+			DesktopNotify.createNotification(title, {
+				body: contentText,
+				icon: img,
+				tag: "notice1",
+				onClick: function () {
+					NotifyClick();
+					//afterClickDesktopNotify(linkUrl, pageWidth);
+				}
+			});
+		}
+		else//如果不支持,则使用Div的形式
+		{
+			var closeTlp = "<span class='glyphicon glyphicon-remove' style='float:right;margin-right:5px;' onclick=\"$('#NotifyDiv').hide();\"></span>";
+			$("#notifyimg").attr("src", img);
+			$("#notifytitle").html(closeTlp);
+			$("#notifycontent").html(content);
+			$("#NotifyDiv").show();
+		}
+	}
+	function NotifyClick() {
+		location = "/Plat/Blog/?Filter=atuser";
+	}
+	function show_func() {
+	    $(".xs_func .xs_func_btn").hide();
+	    $(".xs_func ul").show();
+	}
+	function func_close() {
+	    $(".xs_func .xs_func_btn").show();
+	    $(".xs_func ul").hide();
+	}
+	var nStartY, nStartX, nChangY, nChangX, current_index;
+	document.getElementsByTagName('body')[0].addEventListener('touchstart', function (e) {
+	    nStartY = e.targetTouches[0].pageY;
+	    nStartX = e.targetTouches[0].pageX;
+	});
+	document.getElementsByTagName('body')[0].addEventListener('touchmove', function (e) {
+	    nChangY = e.changedTouches[0].pageY;
+	    nChangX = e.changedTouches[0].pageX;
+	    if (nChangX - nStartX>60) {
+	        $(".xs_func ul").show();
+	        $(".xs_func .xs_func_btn").hide();
+	    }
+	    else {
+	        $(".xs_func .xs_func_btn").show();
+	        $(".xs_func ul").hide();
+	    }
+	});
+
+</script>
+</form>
+</body>
+</html>

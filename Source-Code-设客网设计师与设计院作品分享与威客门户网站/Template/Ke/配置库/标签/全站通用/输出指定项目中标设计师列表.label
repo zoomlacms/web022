@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>903</LabelID>
+    <LabelName>输出指定项目中标设计师列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>全站通用</LabelCate>
+    <LabelDesc />
+    <LabelParam>GeneralID,,1,项目ID|NodeID,,1,节点ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_jbfa on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_jbfa.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_CommonModel.Inputer,{table1}.dbo.ZL_CommonModel.Title,{table1}.dbo.ZL_C_jbfa.wdyhbj,{table1}.dbo.ZL_C_jbfa.fwcn</LabelField>
+    <LabelWhere> ModelID=49 And Status&gt;=13 And szxm='@GeneralID'</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;div class="evalu_tea"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 evalu_tea_r"&gt;
+{ZL.Label id="输出指定设计师图片" UserName="{Field="Inputer"/}" /}
+&lt;/div&gt;
+&lt;div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 evalu_tea_c"&gt;
+{ZL.Label id="输出指定设计师信息" UserName="{Field="Inputer"/}" /}
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 evalu_tea_v"&gt;
+&lt;div class="evalu_tea_vt"&gt;&lt;i class="glyphicon glyphicon-envelope"&gt;&lt;/i&gt; 应标说明:&lt;/div&gt;
+&lt;p&gt;{Field="fwcn"/}&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" target="_blank"&gt;查看详情&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 evalu_tea_l" data-stu="{ZL.Label id="输出指定项目竞标完成状态" SID="{Field="GeneralID"/}" GID="@GeneralID" /}" data-ping="{ZL.Label id="获取指定项目评价总数" GID="@GeneralID" SID="{Field="GeneralID"/}" /}"&gt;
+&lt;p&gt;报价：{Field="wdyhbj"/}{ZL.Label id="获取指定项目计费方式" GID="@GeneralID" /}&lt;br/&gt;电话：{ZL.Label id="输出指定设计师电话" UserName="{Field="Inputer"/}" /}&lt;/p&gt;
+&lt;a href="/Class_13/NodeElite.aspx?GID=@GeneralID&amp;SID={Field="GeneralID"/}" class="btn btn-danger"&gt;立即评价&lt;/a&gt;
+&lt;a href="/Class_@NodeID/NodeHot.aspx?GID=@GeneralID&amp;SID={Field="GeneralID"/}" class="btn btn-success"&gt;查看进度&lt;/a&gt;
+&lt;a href="/User/Message/MessageSend.aspx?userid={ZL.Label id="根据会员名抽取用户ID" Uname="{Field="Inputer"/}" /}" class="btn btn-warning" target="_blank"&gt;&lt;i class="fa fa-comments"&gt;&lt;/i&gt; 与TA联系&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;{/Repeate}</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>sheke</DataSourceType>
+    <ConnectString>DBO</ConnectString>
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

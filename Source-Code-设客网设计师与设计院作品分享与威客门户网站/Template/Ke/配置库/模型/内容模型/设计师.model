@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>48</ModelID>
+    <ModelName>设计师</ModelName>
+    <Description />
+    <TableName>ZL_C_Designer</TableName>
+    <ItemName>设计师</ItemName>
+    <ItemUnit>名</ItemUnit>
+    <ItemIcon>glyphicon glyphicon-user</ItemIcon>
+    <ModelType>1</ModelType>
+    <ContentModule>内容页/默认设计师内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>true</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail>0</Thumbnail>
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

@@ -1,0 +1,49 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <NodeID>127</NodeID>
+    <NodeName>人才招聘</NodeName>
+    <NodeType>1</NodeType>
+    <NodeDir>rczp</NodeDir>
+    <ParentID>123</ParentID>
+    <OrderID>37</OrderID>
+    <Child>0</Child>
+    <Depth>2</Depth>
+    <OpenType>false</OpenType>
+    <PurviewType>false</PurviewType>
+    <CommentType>1</CommentType>
+    <HitsOfHot>0</HitsOfHot>
+    <IndexTemplate>店铺模版/店铺信息列表页.html</IndexTemplate>
+    <ListTemplateFile>栏目列表/店铺信息列表页.html</ListTemplateFile>
+    <ContentModel>2</ContentModel>
+    <ItemOpenType>false</ItemOpenType>
+    <ContentHtmlRule>2</ContentHtmlRule>
+    <ListPageHtmlEx>3</ListPageHtmlEx>
+    <ContentFileEx>3</ContentFileEx>
+    <HtmlPosition>1</HtmlPosition>
+    <NodeListType>1</NodeListType>
+    <ConsumePoint>0</ConsumePoint>
+    <ConsumeType>0</ConsumeType>
+    <ConsumeTime>0</ConsumeTime>
+    <ConsumeCount>0</ConsumeCount>
+    <Shares>0</Shares>
+    <Custom />
+    <SafeGuard>0</SafeGuard>
+    <ItemOpenTypeTrue>_blank</ItemOpenTypeTrue>
+    <OpenTypeTrue>_self</OpenTypeTrue>
+    <NodeBySite>0</NodeBySite>
+    <Contribute>0</Contribute>
+    <SiteContentAudit>0</SiteContentAudit>
+    <AddPoint>0</AddPoint>
+    <AddMoney>0.0000</AddMoney>
+    <ClickTimeout>1</ClickTimeout>
+    <Purview>&lt;View&gt;allUser&lt;/View&gt;&lt;ViewGroup&gt;-1,1,2&lt;/ViewGroup&gt;&lt;ViewSunGroup&gt;-1,1,2&lt;/ViewSunGroup&gt;&lt;input&gt;-1,1,2&lt;/input&gt;&lt;forum&gt;1,2&lt;/forum&gt;</Purview>
+    <AddUserExp>0</AddUserExp>
+    <DeducUserExp>0</DeducUserExp>
+    <ListPageEx>3</ListPageEx>
+    <LastinfoPageEx>3</LastinfoPageEx>
+    <HotinfoPageEx>3</HotinfoPageEx>
+    <ProposePageEx>3</ProposePageEx>
+    <Viewinglimit>1=0|2=0</Viewinglimit>
+  </Table>
+</NewDataSet>

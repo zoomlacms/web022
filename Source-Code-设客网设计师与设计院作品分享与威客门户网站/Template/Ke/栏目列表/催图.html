@@ -1,0 +1,407 @@
+﻿
+{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<link href="{$CssDir/}fix.css" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+</head>
+<body> 
+<div class="into_top">
+<div class="container">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 into_top_r">
+<a href="/"><img src="{$CssDir/}images/logo.png" alt="{$SiteName/}" /></a>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 into_top_c">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand visible-xs" href="/">{$SiteName/}</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav">
+<li class="active"><a href="#">首页</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(1)/}">找设计师</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(2)/}">作品图库</a></li>
+<li><a href="/Index">设计论坛</a></li>
+</ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 into_top_l">
+<form method="get" action="/Search/SearchList.apsx" target="_blank">
+<div class="input-group">
+<input type="text" class="form-control" name="KeyWord" placeholder="请输入关键字...">
+<span class="input-group-btn">
+<button class="btn btn-default" type="button">搜索</button>
+</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div class="into_wor">
+<div class=" container">
+
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 into_wor_r">
+<h2>天津六建设计院公司的工作台</h2>
+</div>
+<div class="col-lg-6 col-md-5 col-sm-5 col-xs-12 into_wor_c">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand visible-xs" href="/">{$SiteName/}</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav">
+<li class="active"><a href="{ZL:GetNodeLinkUrl(13)/}">资料管理</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(13)/}">项目管理</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(12)/}">人才库</a></li>
+<li><a href="#">档案维护</a></li>
+<li><a href="/User/Logout.aspx">退出登录</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 into_wor_l">
+<ul class="nav navbar-nav navbar-center">
+<li><a href="#">
+<span class="fa-stack fa-lg">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+</span>
+</a></li>
+<li><a href="#">
+<span class="fa-stack fa-lg">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-weixin fa-stack-1x fa-inverse"></i>
+</span>
+</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="#"></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mypeo_banner">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<!-- Indicators -->
+<ol class="carousel-indicators">
+<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+</ol>
+
+<!-- Wrapper for slides -->
+<div class="carousel-inner" role="listbox">
+<div class="item mypeo_banner1 active">
+<div class="carousel-caption">
+<a href="#">立即发表项目<span class="fa fa-play-circle-o"></span></a>
+      </div>
+</div>
+<div class="item mypeo_banner2">
+<div class="carousel-caption">
+<a href="#">立即发表项目<span class="fa fa-play-circle-o"></span></a>
+      </div>
+</div>
+<div class="item mypeo_banner3">
+<div class="carousel-caption">
+<a href="#">立即发表项目<span class="fa fa-play-circle-o"></span></a>
+      </div>
+</div>
+</div>
+
+<!-- Controls -->
+<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+
+
+<div class="container" style="position:relative;">
+<div class="mypeo_comp_l">
+<h2><span>|</span>设计院信息</h2>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 mypeo_comp_l1">
+<img src="{$CssDir/}images/design_case1.jpg">
+</div>
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 mypeo_comp_l2">
+<p>我们已经为您服务了412小时您共发布了0次项目</p>
+<span>您的积分为：0分</span>
+</div>
+<h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12">北京创新建筑设计院</h3>
+<ul class="list-unstyled mypeo_compe">
+<li><i class="glyphicon glyphicon-erase"></i>手机：2121212<a href="#">修改</a></li>
+<li><i class="glyphicon glyphicon-erase"></i>手机：2121212<a href="#">修改</a></li>
+</ul>
+<ul class="list-unstyled mypeo_compe1">
+<li><a href="#">身份认证（已完成70%）</a></li>
+<li><a href="#">我的消息</a><span class="glyphicon glyphicon-envelope"></span></li>
+<li><a href="#">账号设置</a><span class="glyphicon glyphicon-envelope"></span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container evalu_new">
+<div class="row">
+<h3>项目名称：北京建安小区的建设设计<a href="#">
+<span class="fa-stack fa-lg evalu_news">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-cny fa-stack-1x fa-inverse"></i>
+</span>打赏激励</a></h3>
+<div class="evalu_new_d">
+<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12 evalu_newd">
+<i class="fa fa-cog fa-spin"></i>
+</div>
+<div class="col-lg-8 col-md-9 col-sm-9 col-xs-12 evalu_newd_l">
+<p>设计师正在拼命赶图中</p>
+<p>是否还要催促他尽快完成设计</p>
+</div>
+</div>
+<div class="checked_bott">
+<a class="btn btn-default" href="#" role="button">幸苦了请按时完成</a>
+<a class="btn btn-default" href="#" role="button">请加紧进度</a>
+<a class="btn btn-default" href="#" role="button">增加需求</a>
+</div>
+</div>
+</div>
+
+<div class="container checked_speed">
+<div class="row">
+<h3>项目进度</h3>
+<img src="{$CssDir/}images/hot13.jpg" alt=""/>
+<div class="checked_speed_d">
+<table class="table table-responsive table-bordered">
+<tr>
+<th class="td_width100">进度名称</th><th class="td_width200">日期</th><th class="td_width300">状态</th>
+</tr>
+<tr>
+<td>第一次付款</td><td>2015年6月1日</td><td><i class="glyphicon glyphicon-ok-circle"></i>完成</td>
+</tr> 
+<tr>
+<td>第二次付款</td><td>2015年6月2日</td><td><i class="glyphicon glyphicon-ok-circle"></i>完成</td>
+</tr> 
+<tr>
+<td>第三次付款</td><td>2015年6月3日</td><td><i class="glyphicon glyphicon-time"></i>进行中</td>
+</tr> 
+<tr>
+<td>第四次付款</td><td>2015年6月4日</td><td><span><i class="glyphicon glyphicon-adjust"></i>未进行</span></td>
+</tr>
+<tr>
+<td>第五次付款</td><td>2015年6月5日</td><td><i class="glyphicon glyphicon-adjust"></i>未进行</td>
+</tr>  
+</table>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="design_bottom">
+<a href="#">公司简介</a><span>|</span>
+<a href="#">招贤纳士</a><span>|</span>
+<a href="#">广告服务</a><span>|</span>
+<a href="#">银行汇款账号</a><span>|</span>
+<a href="#">联系方式</a><span>|</span>
+<a href="#">版权声明</a><span>|</span>
+<a href="#">法律顾问</a><span>|</span>
+<a href="#">合作伙伴</a><span>|</span>
+<a href="#">论坛反馈</a>
+</div>
+<div class="design_copy">{$Copyright/}</div>
+</body>
+</html>
+<script>
+//左右滚动效果
+var Speed = 3; //速度(毫秒)
+var Space = 7; //每次移动(px)
+var PageWidth = 400; //翻页宽度
+var fill = 0; //整体移位
+var MoveLock = false;
+var MoveTimeObj;
+var Comp = 0;
+var AutoPlayObj = null;
+GetObj("List2").innerHTML = GetObj("List1").innerHTML;
+GetObj('ISL_Cont').scrollLeft = fill;
+GetObj("ISL_Cont").onmouseover = function(){clearInterval(AutoPlayObj);}
+GetObj("ISL_Cont").onmouseout = function(){AutoPlay();}
+AutoPlay();
+
+function GetObj(objName)
+{
+	if(document.getElementById)
+	return eval('document.getElementById("'+objName+'")')
+	else
+	return eval('document.all.'+objName)
+}
+function AutoPlay()
+{//自动滚动
+	clearInterval(AutoPlayObj);
+	AutoPlayObj = setInterval('ISL_GoDown();ISL_StopDown();',3000); //间隔时间
+}
+function ISL_GoUp()
+{ //上翻开始
+	if(MoveLock) return;
+	clearInterval(AutoPlayObj);
+	MoveLock = true;
+	MoveTimeObj = setInterval('ISL_ScrUp();',Speed);
+}
+function ISL_StopUp()
+{ //上翻停止
+	clearInterval(MoveTimeObj);
+	if(GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0)
+	{
+		Comp = fill - (GetObj('ISL_Cont').scrollLeft % PageWidth);
+		CompScr();
+	}
+	else
+		MoveLock = false;
+	AutoPlay();
+}
+function ISL_ScrUp()
+{ //上翻动作
+	if(GetObj('ISL_Cont').scrollLeft <= 0)
+	{
+		GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft + GetObj('List1').offsetWidth
+	}
+	GetObj('ISL_Cont').scrollLeft -= Space ;
+}
+function ISL_GoDown(){ //下翻
+	clearInterval(MoveTimeObj);
+	if(MoveLock) return;
+	clearInterval(AutoPlayObj);
+	MoveLock = true;
+	ISL_ScrDown();
+	MoveTimeObj = setInterval('ISL_ScrDown()',Speed);
+}
+function ISL_StopDown(){ //下翻停止
+	clearInterval(MoveTimeObj);
+	if(GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0 )
+	{
+		Comp = PageWidth - GetObj('ISL_Cont').scrollLeft % PageWidth + fill;
+		CompScr();
+	}
+	else
+	{
+		MoveLock = false;
+	}
+	AutoPlay();
+}
+function ISL_ScrDown()
+{ //下翻动作
+	if(GetObj('ISL_Cont').scrollLeft >= GetObj('List1').scrollWidth){GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft - GetObj('List1').scrollWidth;}
+	GetObj('ISL_Cont').scrollLeft += Space ;
+}
+function CompScr()
+{
+	var num;
+	if(Comp == 0){MoveLock = false;return;}
+	if(Comp < 0)
+	{ //上翻
+		if(Comp < -Space)
+		{
+			Comp += Space;
+			num = Space;
+		}
+		else
+		{
+			num = -Comp;
+			Comp = 0;
+		}
+		GetObj('ISL_Cont').scrollLeft -= num;
+		setTimeout('CompScr()',Speed);
+	}
+	else
+	{ //下翻
+		if(Comp > Space)
+		{
+			Comp -= Space;
+			num = Space;
+		}
+		else
+		{
+			num = Comp;
+			Comp = 0;
+		}
+		GetObj('ISL_Cont').scrollLeft += num;
+		setTimeout('CompScr()',Speed);
+	}
+}
+
+//触控效果
+window.onload=function(){
+var home_roll=document.getElementById("home_roll");
+var d2=document.getElementById("d2");
+var d3=document.getElementById("d3");
+home_roll.onmouseover=function(){
+d2.style.display="block";
+d3.style.display="block";
+}
+home_roll.onmouseout=function(){
+d2.style.display="none";
+d3.style.display="none";
+}
+}
+
+
+var IO=document.getElementById('design_nav'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+	".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+ if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+//]]>
+//兼容wp8
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+var msViewportStyle = document.createElement("style");
+msViewportStyle.appendChild(
+document.createTextNode(
+  "@-ms-viewport{width:auto!important}"
+)
+);
+document.getElementsByTagName("head")[0].
+appendChild(msViewportStyle);
+}
+
+</script>

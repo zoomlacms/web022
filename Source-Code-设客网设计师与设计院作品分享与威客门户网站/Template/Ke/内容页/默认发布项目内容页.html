@@ -1,0 +1,101 @@
+﻿{ZL.Source id="发布项目数据源标签"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{SField sid="发布项目数据源标签" FD="Title" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="发布项目数据源标签" FD="Tagkey" page="0"/}">
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script type="text/javascript" src="/JS/DatePicker/WdatePicker.js"></script>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+
+<div class="item_banner"></div>
+<div class="container item_con">
+<div class="item_con_t">
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">项目详情</a></li>
+<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">附加资料</a></li>
+<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">发包状态</a></li>
+<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">资金认证</a></li>
+</ul>
+<a href="#" class="btn btn-success"><i class="fa fa-building-o"></i> 我要应标</a>
+<div class="clearfix"></div>
+</div>
+<div class="item_con_tc">
+<div class="row padding10">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 padding5">
+<div class="item_con_tcl">
+<div class="item_con_tclt">
+<h1>{SField sid="发布项目数据源标签" FD="Title" page="0"/}</h1>
+<a href="#" class="btn btn-success pull-right">我要应标</a>
+<span class="pull-right">已有{ZL.Label id="获取指定项目应标人数" GID="{SField sid="发布项目数据源标签" FD="GeneralID" page="0"/}" /}人应标</span>
+<div class="clearfix"></div>
+<p>
+{SField sid="发布项目数据源标签" FD="synopsis" page="0"/}
+</p>
+</div>
+<div class="item_con_tclc">                                  
+<a href="#" class="btn btn-default btn-sm">资金已托管</a>
+<a href="#" class="btn btn-default btn-sm"> 共55人应标</a>
+<a href="#" class="btn btn-default btn-sm">国企招标</a>
+<a href="#" class="btn btn-default btn-sm">月度结现</a>
+<p>{ZL:FormatDate({SField sid="发布项目数据源标签" FD="CreateTime" page="0"/},yyyy-MM-dd HH:mm:ss)/}更新</p>
+</div>
+<div class="item_con_tcly">
+<div class="item_con_tclyt"><a href="#" class="btn btn-success pull-right">我要应标</a><div class="clearfix"></div></div>
+<div class="item_con_tclyc">
+<h3>竞标方案</h3>
+<iframe src="/User/Content/AddContent3.aspx?ModelID=49&NodeID=37&GID={SField sid="发布项目数据源标签" FD="GeneralID" page="0"/}" frameborder="0" scrolling="no" width="100%" onload="this.height = $(this).contents().height() + 'px';"></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 padding5">
+<div class="item_con_tcr">
+<div class="item_con_tcrt">
+<h3>公司信息</h3>
+<div class="media">
+<div class="media-left">
+<a href="#"><img class="media-object" src="{$CssDir/}images/bar2.jpg" alt="..."></a>
+</div>
+<div class="media-body">
+<h4 class="media-heading">该公司信息已保护！</h4>
+<span class="btn btn-info btn-sm">已认证</span>
+</div>
+<p>设客网严格保障每一个发标单位和应标设计师 关于匿名保护政策<a href="#">点此了解></a></p>
+</div>
+</div>
+<div class="item_con_tcrb">
+
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+<!-- Tab panes -->
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="home">
+
+</div>
+<div role="tabpanel" class="tab-pane" id="profile">...</div>
+<div role="tabpanel" class="tab-pane" id="messages">...</div>
+<div role="tabpanel" class="tab-pane" id="settings">...</div>
+</div>
+
+</div>
+
+
+
+
+
+{ZL.Label id="全站底部"/}
+
+</body>
+</html>

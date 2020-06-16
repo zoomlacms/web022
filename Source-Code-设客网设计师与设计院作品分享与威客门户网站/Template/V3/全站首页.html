@@ -1,0 +1,623 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="msapplication-TileColor" content="#1A0066"/>
+<meta name="msapplication-TileImage" content="/images/win8_symbol_140x140.png"/>
+<title>{$SiteName/}_首页</title>
+{$MetaKeywords/}
+{$MetaDescription/}
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?id={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="{$CssDir/}js/server.js"></script>
+<script src="http://code.zoomla.cn/jquery/snowfall.jquery.js"></script>
+<script src="/js/scrolltopcontrol.js"></script>
+<script src="/JS/Controls/B_User.js"></script>
+</head>
+<body> 
+<div class="relative">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" id="home_scolls">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="sr-only">智能切换导航</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/"><img alt='{$SiteName/}' id='logos' onerror="this.onerror=null;this.src='{$LogoUrl/}'" /></a>
+</div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="active"><a href="{ZL:GetNodeListUrl(1)/}" target="_blank">首页</a></li>
+<li><a href="{ZL:GetNodeListUrl(1)/}">门户网站</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank">线上商城</a></li>
+<li><a href="/office" target="_blank">办公平台</a></li>
+<li><a href="/Index" target="_blank">社区贴吧</a></li>
+</ul>
+<form class="navbar-form navbar-left" role="search" method="get" action="/Search/SearchList.aspx" target="_blank">
+<div class="form-group">
+<input type="text" class="form-control" name="keyword" placeholder="全站检索">
+</div>
+<button type="submit" class="btn btn-default">搜索</button>
+</form>
+<ul class="nav navbar-nav navbar-right">
+<li class="dropdown nav_list">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-navicon"></i></a>
+<ul class="dropdown-menu" role="menu">
+{ZL.Label id="蓝色经典_顶部节点列表" ParentID="0" ShowNum="7" /}
+</ul>
+</li>
+<li class="nav_user"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>登录 <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="/User/" target="_blank">用户登录</a></li>
+<li><a href="/User/Register.aspx" target="_blank">用户注册</a></li>
+<li><a href="/User/Info/UserInfo.aspx" target="_blank">注册信息</a></li>
+<li><a href="javascript:;" onClick="LogoutFun();">安全退出</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- 导航到此结束 -->
+
+<div class="home_body">
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+<div><img class="img-responsive center-block" src="{$CssDir/}images/logobg.gif" alt="第三代CMS领导者" /></div>
+<div class="page_main_l" id="pagemain1">
+<div class="bic_left">
+<div class="page_main_icon" onmouseover="show(this)" onmouseout="hide(this)"><img src="{$CssDir/}images/nic1.jpg" class="center-block img-responsive"  /> <a id="a1" href="{ZL:GetNodeListUrl(1)/}" style="display:none" target="_blank"><img src="{$CssDir/}images/nic1_1.jpg" class="center-block img-responsive" /></a> </div>
+<div class="page_main_icon" onmouseover="show(this)" onmouseout="hide(this)"><img src="{$CssDir/}images/nic2.jpg" class="center-block img-responsive"  /> <a id="a2" href="{ZL:GetNodeLinkUrl(2)/}" style="display:none" target="_blank" ><img src="{$CssDir/}images/nic2_1.jpg" class="center-block img-responsive" /></a> </div>
+<div class="page_main_icon" onmouseover="show(this)" onmouseout="hide(this)"><img src="{$CssDir/}images/nic3.jpg" class="center-block img-responsive"/> <a id="a3" href="http://pano.zoomla.cn/" style="display:none" target="_blank" ><img src="{$CssDir/}images/nic3_1.jpg" class="center-block img-responsive" /></a> </div>
+<div class="page_main_icon" onmouseover="show(this)" onmouseout="hide(this)"> <img src="{$CssDir/}images/nic4.jpg" class="center-block img-responsive"/><a id="a4" href="/Edit/" style="display:none" target="_blank" ><img src="{$CssDir/}images/nic4_1.jpg" class="center-block img-responsive" /></a> </div>
+</div>
+<div class="bic_more">
+<div class="page_main_icon2" onmouseover="show(this)" onmouseout="hide(this)"> <img src="{$CssDir/}images/nic5.jpg" /> <a href="javascript:void(0)" style="display:none"><img src="{$CssDir/}images/nic5_1.jpg" onclick="advshow2()"/></a> </div>
+</div>
+</div>
+<!--第二屏-->
+<div class="page_main_l loginNone" id="pagemain2" >
+<div class="page_main_icon"><a href="/try/" target="_blank" ><img src="{$CssDir/}images/metro1.jpg" alt="在线试戴" /></a></div>
+<div class="page_main_icon"><a href="Prompt/EmailSender.aspx" target="_blank" ><img src="{$CssDir/}images/metro2.jpg" alt="邮件发送" /></a></div>
+<div class="page_main_icon"><a href="/Questions/Default.aspx?id=1" target="_blank" ><img src="{$CssDir/}images/metro3.jpg" alt="智能组卷" /></a></div>
+<div class="page_main_icon"><a href="/Baike" target="_blank" ><img src="{$CssDir/}images/metro4.jpg" alt="百科" /></a></div>
+<div class="page_main_icon"><a href="/Ask" target="_blank" ><img src="{$CssDir/}images/metro5.jpg" alt="问答" /></a></div>
+<div class="page_main_icon"><a href="/Site/Domain.aspx" target="_blank" ><img src="{$CssDir/}images/metro11.jpg" alt="域名注册" /></a></div>
+<div class="page_main_icon"><a href="/Guest" target="_blank" ><img src="{$CssDir/}images/metro6.jpg" alt="留言" /></a></div>
+<div class="page_main_icon"><a href="{ZL:GetNodeLinkUrl(85)/}" target="_blank" ><img src="{$CssDir/}images/metro7.jpg" alt="图库" /></a></div>
+<div class="page_main_icon"><a href="{ZL:GetNodeLinkUrl(86)/}" target="_blank" ><img src="{$CssDir/}images/metro8.jpg" alt="视频" /></a></div>
+<div class="page_main_icon"><a href="{ZL:GetNodeLinkUrl(3)/}" target="_blank" ><img src="{$CssDir/}images/metro9.jpg" alt="网店" /></a></div>
+<div class="page_main_icon"><a href="{ZL:GetNodeLinkUrl(143)/}" target="_blank" ><img src="{$CssDir/}images/metro10.jpg" alt="文件工厂" /></a></div>
+<div class="page_main_icon"><a href="/Site/Default.aspx" target="_blank" ><img src="{$CssDir/}images/metro12.jpg" alt="极速建站" /></a></div>
+</div>
+<div class="ac">
+<div class="acleft"><img src="{$CssDir/}images/al.jpg" onclick="advshow1()"></div>
+<div class="accenter" id="imagediv">
+<div class="as"><img src="{$CssDir/}images/asbg.jpg"/></div>
+<div onclick="advshow3()" style="cursor:pointer;">&nbsp;</div>
+</div>
+<div class="acright"><img src="{$CssDir/}images/ar.jpg" onclick="advshow2()"/></div>
+</div>
+</div><!--轮播广告-->
+<div class="col-lg-3 col-md-4 col-xs-12 e-bx_banner hidden-xs">
+<div style="width:242px; height:242px; overflow:hidden; position:relative;_z-index:-999">
+<div class="e-bx_banner_img" name="sun" onmouseover="over(0)" onmouseout="out(0)"  ><a id="a16"  href="User/info/AdPlan.aspx" target="_blank"><img src="{$CssDir/}images/pic4.jpg" alt="智能广告" /></a></div>
+<div class="e-bx_banner_img" name="sun" onmouseover="over(1)" onmouseout="out(1)" ><a href="User/Magazine/AddMagazine.aspx" target="_blank"><img src="{$CssDir/}images/pic5.jpg" alt="电子杂志" /></a></div>
+<div class="e-bx_banner_img" name="sun" onmouseover="over(2)" onmouseout="out(2)" ><a id="a17" href="Plugins/Doc.aspx" target="_blank"><img src="{$CssDir/}images/pic3.jpg" alt="文件工厂" /></a></div>
+<div class="dot" style="position:absolute; top:232px; left:140px">
+<ul>
+<li id="s0" class="hsdot" onmouseover="over(0)" onmouseout="out(0)" style="display:none"></li>
+<li id="s1" class="zsdot" onmouseover="over(1)" onmouseout="out(1)" style="display:none"></li>
+<li id="s2" class="zsdot" onmouseover="over(2)" onmouseout="out(2)" style="display:none"></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+<!--通栏块结束 -->
+
+<div class="container">
+<div class="home_news">
+<div class="home_news_t"><h1>最新资讯</h1></div>
+<div class="home_news_c">
+<div class="row">
+<ul class="list-unstyled">
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<a href="#" class="list-group-item active">
+<h4 class="list-group-item-heading">资讯快递</h4>
+<p class="list-group-item-text">用于快速发布资讯展示新闻.</p>
+</a>
+{ZL.Label id="首页输出最新资讯列表" NodeID="1" ShowNum="1" TitleNum="30" SysNum="68" /}
+</li>
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<a href="#" class="list-group-item active">
+<h4 class="list-group-item-heading">图库风景</h4>
+<p class="list-group-item-text">发布图库、图像以及您的相册.</p>
+</a>
+{ZL.Label id="首页输出最新资讯列表_图库" NodeID="85" ShowNum="1" TitleNum="30" SysNum="68" /}
+</li>
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<a href="#" class="list-group-item active">
+<h4 class="list-group-item-heading">商城热卖中</h4>
+<p class="list-group-item-text">发起购买、发布商品及电子商务交易.</p>
+</a>
+{ZL.Label id="首页输出最新资讯列表_商城" NodeID="2" ShowNum="1" TitleNum="30" SysNum="68" /}
+</li>
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<a href="#" class="list-group-item active">
+<h4 class="list-group-item-heading">社区帖吧</h4>
+<p class="list-group-item-text">论坛帖吧问答应有尽有.</p>
+</a>
+{ZL.Label id="首页输出最新资讯列表_社区" ShowNum="1" TitleNum="30" SysNum="68" /}
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!--通栏块结束 -->
+
+<div  class="tt"><img src="{$CssDir/}images/cross_1.png" alt="">
+</div>
+<!--通栏块结束 -->
+
+
+<div class="container">
+
+<div class="home_class">
+<div class="row">
+<ul class="list-unstyled">
+<li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<h3><i class="fa fa-reorder"></i> 开放免费</h3>
+<p>完全开放、永久免费，并提供多种服务方案满足用户成长，超过10万的网站选用Zoomla!逐浪CMS。</p>
+</li>
+<li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<h3><i class="fa fa-users"></i> 面向大数据和企业管理</h3>
+<p>只能做网站？那不是逐浪CMS的目标，我们融入开发模板可以自由组装，是WEB系统的中间件！</p>
+</li>
+<li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<h3><i class="fa fa-cloud"></i> 云端模板自由妆扮</h3>
+<p>独有的逐浪模板云台，可以让你自由的下载各类免费的模板方案，V商发挥到了极致。</p>
+</li>
+<li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<h3><i class="fa fa-heart"></i> 强大的二次开发</h3>
+<p>编程接口使你应对数据库、代码、表现层轻松自如。</p>
+</li>
+<li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<h3><i class="fa fa-cubes"></i> 电商应用</h3>
+<p>商城、网站、三维全景、在线试戴，使电商具备了灵活的基因。</p>
+</li>
+<li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<h3><i class="fa fa-certificate"></i> 中国特色能力中心与ERP</h3>
+<p>CRM管理、OA管理，这一切使逐浪CMS具备了智能办公的条件，而不局限于内容发布。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!--通栏块结束 -->
+
+<div class="home_phone_t">
+<div class="container"><img class="img-responsive center-block" src="{$CssDir/}images/home_phone.png" alt="" /></div>
+</div>
+<!--通栏块结束 -->
+
+<div class="home_phone_c">
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-md-offset-2 home_phone_list">
+<ul class="list-unstyled">
+<li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+<i class="fa fa-laptop"></i><br />
+<a href="/Office" class="btn btn-warning" target="_blank">办公系统</a>
+</li>
+<li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+<i class="fa fa-users"></i><br />
+<a href="/Index" class="btn btn-warning" target="_blank">社区贴吧</a>
+</li>
+<li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+<i class="fa fa-sitemap"></i><br />
+<a href="{$ManageDir/}Site/SiteConfig.aspx" class="btn btn-warning" target="_blank">站群系统</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!--通栏块结束 -->
+
+<div class="container">
+<div class="home_club">
+<div class="row">
+<div class="padding5">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding10">
+<div class="home_club_l">
+<div id="carousel-example-generic" class="carousel slide clubShow" data-ride="carousel">
+<ol class="carousel-indicators">
+<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+<li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+<li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+<li data-target="#carousel-example-generic" data-slide-to="3" class=""></li>
+</ol>
+<div class="carousel-inner" role="listbox">
+<div class="item next left">
+<a href="PItem?id=14"><img src="/UploadFiles/demo/ad5.jpg" alt="设计人应该知道设计中常见的劫难，和秒秒学来看看吧！" style=""></a>
+<div class="carousel-caption">设计人应该知道设计中常见的劫难，和秒秒学来看看吧！</div>
+</div>
+<div class="item">
+<a href="PItem?id=13"><img src="/UploadFiles/demo/ad2.jpg" alt="11款导航PNG源文件" style=""></a>
+<div class="carousel-caption">11款导航PNG源文件</div>
+</div>
+<div class="item">
+<a href="PItem?id=2"><img src="/UploadFiles/demo/ad3.jpg" alt="商城网站php源码模板 时尚简约大方 支持电脑手机微信app版本" style=""></a>
+<div class="carousel-caption">商城网站php源码模板 时尚简约大方 支持电脑手机微信app版本</div>
+</div>
+<div class="item active left">
+<a href="PItem?id=1"><img src="/UploadFiles/demo/ad4.jpg" alt="11个实用经典的SQL小贴士" style=""></a>
+<div class="carousel-caption">11个实用经典的SQL小贴士</div>
+</div>
+</div>
+<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 padding10">
+<div class="row">
+<div class="padding10">
+<ul class="list-unstyled home_club_m">
+{ZL.Label id="首页输出帖子列表" TitleNum="40" ShowNum="20" /}
+<div class="clearfix"></div>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="home_link">
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 home_link_l">
+<div class="row">
+<ul class="list-unstyled">
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+<h3><a href="{ZL:GetNodeLinkUrl(86)/}" target="_blank"><i class="fa fa-video-camera"></i></a></h3>
+<p><a href="{ZL:GetNodeLinkUrl(86)/}" target="_blank">视频</a></p>
+</li>
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+<h3><a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank"><i class="fa fa-shopping-cart"></i></a></h3>
+<p><a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank">商城</a></p>
+</li>
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+<h3><a href="/Office" target="_blank"><i class="fa fa-cloud"></i></a></h3>
+<p><a href="/Office" target="_blank">办公</a></p>
+</li>
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+<h3><a href="/Try/" target="_blank"><i class="fa fa-eye"></i></a></h3>
+<p><a href="/Try/" target="_blank">试戴</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 home_link_r">
+<div class="row">
+<ul class="list-unstyled">
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+<h3><a href="http://pano.zoomla.cn/" target="_blank"><i class="fa fa-binoculars"></i></a></h3>
+<p><a href="http://pano.zoomla.cn/" target="_blank">全景</a></p>
+</li>
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+<h3><a href="/Questions/Default.aspx?id=1" target="_blank"><i class="fa fa-shopping-cart"></i></a></h3>
+<p><a href="/Questions/Default.aspx?id=1" target="_blank">组卷</a></p>
+</li>
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+<h3><a href="/Plat/Blog/" target="_blank"><i class="fa fa-pencil-square-o"></i></a></h3>
+<p><a href="/Plat/Blog/" target="_blank">助写</a></p>
+</li>
+<li class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+<h3><a href="{ZL:GetNodeLinkUrl(86)/}" target="_blank"><i class="fa fa-music"></i></a></h3>
+<p><a href="{ZL:GetNodeLinkUrl(86)/}" target="_blank">音乐</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--通栏块结束 -->
+
+<div class="container"><img class="img-responsive center-block" src="{$CssDir/}images/home_bottombg.jpg" alt="" /></div>
+<div class="home_footer">
+<div class="container">
+<ul class="list-inline">
+<li><a href="{ZL:GetNodeLinkUrl(106)/}" target="_blank">网站地图</a></li>
+<li><a href="{ZL:GetInfoUrl(22)/}" target="_blank">法律声明</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(77)/}" target="_blank">帮助中心</a></li>
+<li><a href="{ZL:GetInfoUrl(21)/}" target="_blank">联系我们</a></li>
+<li><a href="{ZL:GetInfoUrl(20)/}" target="_blank">关于我们</a></li>  
+<li><a href="/Scha.aspx" target="_blank">防伪查询</a></li>
+<li><a href="/guest/" target="_blank">留言反馈</a></li>
+<li><a href="/Plugins/Camera.aspx" target="_blank">在线拍照</a></li> 
+<li><a href="{$ManageDir/}Default.aspx" target="_blank">管理登录</a></li>
+</ul>
+<p>{$Copyright/}</p>
+</div>
+</div>
+<!--下面是浮动最下面的客服代码，通过CSS中的MYbottom定义-->
+<div class="navbar navbar-fixed-bottom MYbottom">
+<div class="container BottomLink" >
+<div class="col-lg-7 col-md-6 col-xs-12">
+<ul>
+<li><a href="pub/listpage.shtml">Zoomla!逐浪CMS内核</a></li>
+<li><a href="m">Z-Mobile智能移动手机应用开发</a></li>
+<li><a href="#" Onclick="javaScript:alert('抱歉当前仅对商业用户开放')">RIA交互体验与桌面智能软件</a></li>
+</ul>
+</div>
+<div class="col-lg-5 col-md-6 col-xs-12">
+<span>
+<div class="dl"><a href="/pub/" target="_blank" title="Free Download">DownLoad></a></div>
+<div class="sp"><a href="/shop/" target="_blank" title="Buy Now">Buy Now</a></div>
+<div class="ins"><a href="/help/Install/692.shtml" target="_blank" title="快速安装">快速安装></a></div>
+</span>
+</div>
+</div>
+<div class="container Mytel">
+<div class="col-lg-12">
+<span class="glyphicon glyphicon-phone-alt"><a href="tel:021-50391046">联系官方服务热线</a></span>
+<span class="glyphicon glyphicon-phone"><a href="tel:13177777714">24小时移动专家在线</a></span>
+</div></div>
+</div>
+
+<div class="Micro">
+<div class="Micro_r"> <img src="{$CssDir/}images/Micro.gif"   class="tigger" id="Micro1" alt="微信" onMouseMove="Micro()" /> </div>
+<div id="Micro_l" style="display:none;"   onMouseMove="Micro()" onMouseout="Micro_none()" >
+<div class="Mic_l"> <img src="{$CssDir/}images/Big_Micro.jpg" /></div>
+<div class="Mic_r">
+<ul>
+<li>打开微信:</li>
+<li>1.或选择魔术棒,扫一扫</li>
+<li>2.或选择"朋友们",扫一扫</li>
+<li>3.或查找微信号:逐浪CMS</li>
+</ul>
+</div>
+</div>
+</div>
+<div id=floatTools class="float0831 hidden-xs">
+<div class=floatL><a id=aFloatTools_Show class=btnOpen title=查看在线客服 onclick="javascript:$('#divFloatToolsView').animate({width: 'show', opacity: 'show'}, 'normal',function(){ $('#divFloatToolsView').show();kf_setCookie('RightFloatShown', 0, '', '/', 'www.zoomla.cn'); });$('#aFloatTools_Show').attr('style','display:none');$('#aFloatTools_Hide').attr('style','display:block');" 
+href="javascript:void(0);">展开</a> <a  style="DISPLAY: none" id=aFloatTools_Hide class=btnCtn title=关闭在线客服 onclick="javascript:$('#divFloatToolsView').animate({width: 'hide', opacity: 'hide'}, 'normal',function(){ $('#divFloatToolsView').hide();kf_setCookie('RightFloatShown', 1, '', '/', 'www.zoomla.cn'); });$('#aFloatTools_Show').attr('style','display:block');$('#aFloatTools_Hide').attr('style','display:none');" 
+href="javascript:void(0);">收缩</a></div>
+<div id=divFloatToolsView class=floatR style="display:none;">
+<div class=tp></div>
+<div class=cn>
+<ul class="floattoolserver list-unstyled">
+<li class=top><h3 class=titZx>QQ咨询</h3></li>
+<!--<li><SPAN class=icoZx>在线咨询</SPAN> </li>-->
+<li><a class=icoTc href="http://wpa.qq.com/msgrd?v=3&amp;uin=184886758&amp;site=qq&amp;menu=yes">京沪苏粤售前</a> </li>
+<li><a class=icoTc href="http://wpa.qq.com/msgrd?v=3&amp;uin=1799661890&amp;site=qq&amp;menu=yes">软件授权售前</a> </li>
+<li><a class=icoTc href="http://wpa.qq.com/msgrd?v=3&amp;uin=524979923&amp;site=qq&amp;menu=yes">高端订制售前</a> </li>
+<li class=bot><a class=icoTc href="http://wpa.qq.com/msgrd?v=3&amp;uin=1579153275&amp;site=qq&amp;menu=yes">教育系统集成</a> </li>
+</ul>
+<ul class=webZx>
+<li class=webZx-in><a href="/guest/" target="_blank" style="FLOAT: left" title="查看更多联系方式"><IMG src="{$CssDir/}images/right_float_web.png" alt="网页咨询"></a> </li>
+</ul>
+<ul>
+<li><h3 class=titDh>电话咨询</h3></li>
+<li><span class=icoTl>1317777714</span></li>
+<li class=bot><h3 class=titDc><a href="http://zoomla.cn/pub/" target="_blank">免费下载逐浪CMS</a></h3></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<div id="Plat_show" class="hidden-xs">
+<ul class="list-unstyled">
+<li><a rel="nofollow" href="/Plat/Blog/" title="事务处理" target="_blank"></a></li>
+<li><a rel="nofollow" href="/Plat/Blog/" title="美工咨询" target="_blank"></a></li>
+<li><a rel="nofollow" href="/Plat/Blog/" title="技术咨询" target="_blank"></a></li>
+<li><a rel="nofollow" href="/Plat/Blog/" title="优化咨询" target="_blank"></a></li>
+<li><a rel="nofollow" href="/Plat/Blog/" title="售后咨询" target="_blank"></a></li>
+<li><a rel="nofollow" href="/Plat/Blog/" title="财务咨询" target="_blank"></a></li>
+<li><a href="http://sc.admin5.com/" title="联系方式" target="_blank"></a></li>
+</ul>
+<div class="kfleft" title="能力中心"></div>
+</div>
+</body>
+</html>
+<script>
+//能力中心展示代码
+$(function() {
+$(".kfleft").click(function(){
+	var i=$("#Plat_show").css("left");
+	if (i=='0px'){
+		$('#Plat_show').animate({left:-80}, 200);
+	} else {
+		$('#Plat_show').animate({left:0}, 200);
+	}
+});
+});
+
+
+
+//兼容wp8
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+  var msViewportStyle = document.createElement("style");
+  msViewportStyle.appendChild(
+    document.createTextNode(
+      "@-ms-viewport{width:auto!important}"
+    )
+  );
+  document.getElementsByTagName("head")[0].
+    appendChild(msViewportStyle);
+}
+
+//功能位
+$("#a1").attr("href", "{ZL:GetNodeListUrl(1)/}" );
+$("#a2").attr("href", "{ZL:GetNodeLinkUrl(2)/}" );
+$("#a3").attr("href", "http://pano.zoomla.cn/"  );
+$("#a4").attr("href", "/Edit/"  );
+$("#a5").attr("href", "/try/"  );
+$("#a6").attr("href", "Prompt/EmailSender.aspx"  );
+$("#a7").attr("href", "/Questions/Default.aspx?id=1" );
+$("#a8").attr("href", "Guest/Baike/" );
+$("#a9").attr("href", "Guest/Ask/" );
+$("#a10").attr("href", "Guest/"  );
+$("#a11").attr("href", "{ZL:GetNodeLinkUrl(85)/}" );
+$("#a12").attr("href", "{ZL:GetNodeLinkUrl(86)/}" );
+$("#a13").attr("href", "{ZL:GetNodeLinkUrl(3)/}" );
+$("#a14").attr("href", "Plugins/Doc.aspx"  );
+
+//通栏广告脚本---------------------------
+var now = 0;
+var max = $(".e-bx_banner_img").length - 1;
+for (var i = 0; i <= max; i++) {
+$("#s" + i).show();
+}
+function change() {
+
+$($(".e-bx_banner_img")[now]).css({
+    "display": "block"
+});
+//$($(".e-bx_banner_img")[now]).fadeIn("slow");
+var spid = document.getElementById("s" + now);
+spid.className = "zsdot";
+for (var i = 0; i <= max; i++) {
+    if (i != now) {
+        $($(".e-bx_banner_img")[i]).css({
+            "display": "none"
+        });
+        var spid = document.getElementById("s" + i);
+        spid.className = "hsdot";
+    }
+}
+if (now == max) {
+    now = 0;
+} else {
+    now += 1;
+}
+timerID = setTimeout("change()", 3000);
+}
+
+//鼠标放上去
+function over(num) {
+now = num;
+$($(".e-bx_banner_img")[now]).css({
+    "display": "block"
+});
+//$($(".e-bx_banner_img")[now]).fadeIn("slow");
+var spid = document.getElementById("s" + now);
+spid.className = "zsdot";
+
+for (var i = 0; i <= max; i++) {
+    if (i != now) {
+        $($(".e-bx_banner_img")[i]).css({
+            "display": "none"
+        });
+        var spid = document.getElementById("s" + i);
+        spid.className = "hsdot";
+    }
+}
+//clearTimeout(timerID);
+}
+
+//鼠标离开
+function out(num) {
+now = num;
+change();
+}
+
+function show(ele) {
+$(ele.children[0]).hide();
+$(ele.children[1]).show();
+}
+
+function hide(ele) {
+$(ele.children[0]).show();
+$(ele.children[1]).hide();
+}
+function advshow1() {
+document.getElementById("pagemain1").style.display = 'block';
+document.getElementById("pagemain2").style.display = 'none';
+$("#imagediv").empty();
+$("#imagediv").append('<div class="as"><img src="{$CssDir/}images/asbg.jpg"/></div><div onclick="advshow3()"  style="cursor:pointer;">&nbsp;</div>');
+}
+function advshow2() {
+document.getElementById("pagemain1").style.display = 'none';
+document.getElementById("pagemain2").style.display = 'block';
+$("#imagediv").empty();
+$("#imagediv").append('<div class="as1"><img src="{$CssDir/}images/asbg.jpg"/></div><div onclick="advshow3()"  style="cursor:pointer;">&nbsp;</div>');
+}
+function advshow3() {
+if (document.getElementById("pagemain1").style.display == 'none') {
+    document.getElementById("pagemain1").style.display = 'block';
+    document.getElementById("pagemain2").style.display = 'none';
+    $("#imagediv").empty();
+    $("#imagediv").append('<div class="as"><img src="{$CssDir/}images/asbg.jpg"/></div><div onclick="advshow3()"  style="cursor:pointer;">&nbsp;</div>');
+} else {
+    document.getElementById("pagemain1").style.display = 'none';
+    document.getElementById("pagemain2").style.display = 'block';
+    $("#imagediv").empty();
+    $("#imagediv").append('<div class="as1"><img src="{$CssDir/}images/asbg.jpg"/></div><div onclick="advshow3()"  style="cursor:pointer;">&nbsp;</div>');
+}
+}
+
+$(function () {
+$("#pagemain2").find(".text1").hide();
+//鼠标在图片上的变幻
+$("#pagemain2").find(".tou").mouseover(function () {
+//$(this).next(".text1").show("2000");	
+//$(this).next(".text1").fadeIn("2000");		
+$(this).next(".text1").slideDown("2000");
+$("#pagemain2").find(".page_main_icon").css("z-index", "1");
+$(this).parent().css("z-index", 99);
+});
+//移除鼠标
+$("#pagemain2").find(".tou").mouseout(function () {
+//$(this).next(".text1").hide();
+//$(this).next(".text1").fadeOut();		
+$(this).next(".text1").slideUp(100);
+});
+});
+
+today = new Date();//取当前日期
+date1 = ''  + (today.getMonth() + 1 ) +  today.getDate() +  '';
+document.getElementById("logos").src="http://zoomla.cn/logo/"+date1+".jpg";
+// document.write(date1);//能显示出时间
+
+//无缝滚动
+
+
+//<i class="fa fa-ge"></i>   fa-yelp春花，fa-futbol-o夏足球，fa-asterisk冬雪，fa-leaf秋叶，fa-tree松树，fa-umbrella心情伞 雪花❄   汤♨   乐符♬  爱心♥ ♡ 笑脸☻☺
+$(function(){
+	$(document).snowfall('clear');
+	$(document).snowfall({round:true,minSize:4,maxSize:35,text:'<i class="fa fa-leaf"></i>',flakeColor:'',flakeCount:500});
+});
+var buser = new B_User();
+buser.IsLogged(function(data,flag){
+	if(flag)
+	{
+		data=JSON.parse(data);
+		$(".nav_user>a").html(data.UserName+"的会员中心");
+		$(".nav_user .dropdown-menu li:nth-child(1) a").html("会员中心");
+		$(".nav_user .dropdown-menu li:nth-child(2)").remove();
+	}
+});
+function LogoutFun()
+{
+	buser.Logout(function(){location=location;});
+}
+</script>
